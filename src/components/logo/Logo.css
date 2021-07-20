@@ -1,0 +1,27 @@
+.Logo {
+    display: inline-block;
+}
+
+.Logo h1 {
+    font-size: 6.667vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-align: center;
+    margin: 0;
+    width: 44vw;
+}
+
+.Logo h2 {
+    color: #ffffff;
+    font-size: 2.5vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.48em;
+    text-align: center;
+    background-color: #266829;
+    margin: 0;
+    width: 44vw;
+    height: 4.8vw;
+    line-height: 4.8vw;
+}

@@ -1,0 +1,14 @@
+.Logo-Wrapper {
+    background-image: url('./SplashScreen.png');
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    background-color: #C5D5D2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.Logo {
+    margin-top: 6.667vh;
+}

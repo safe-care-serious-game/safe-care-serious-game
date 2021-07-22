@@ -1,7 +1,8 @@
 .Logo-Wrapper {
-    background-image: url('./SplashScreen.png');
-    background-size: 100vw 100vh;
+    background-image: url('../../images/SplashScreen.png');
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
     background-color: #C5D5D2;
     width: 100vw;
     height: 100vh;

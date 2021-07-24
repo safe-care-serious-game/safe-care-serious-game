@@ -1,4 +1,4 @@
-.Logo-Wrapper {
+.Splash-Screen {
     background-image: url('../../images/SplashScreen.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -7,9 +7,32 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Splash-Screen-Logo-Wrapper {
+    margin-top: 6.667vh;
+    display: flex;
     justify-content: center;
 }
 
-.Logo {
-    margin-top: 6.667vh;
+.Splash-Screen .Splash-Screen-Press-To-Start {
+    font-size: 3vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    margin-bottom: 3.33vh;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 8px #000000;
+    animation: scaling 1s linear 3s infinite alternate;
 }
+
+@keyframes scaling {
+    from {
+        transform: scale(1, 1);
+    }
+    to {
+        transform: scale(1.1, 1.1);
+    }
+} 

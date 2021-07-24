@@ -1,26 +1,40 @@
 .Card {
     width: 33vw;
     height: 59vh;
+    overflow: hidden;
 }
 
 .Card-Image {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #C5D5D2;
+    background-color: #94A3A0;
     width: 33vw;
     height: 45vh;
 }
 
 .Card-Title {
+    position: absolute;
     color: #FFFFFF;
     font-size: 2.5vw;
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;
     letter-spacing: 0.1em;
     text-align: center;
-    background-color: #94A3A0;
+    background-color: #566862;
     width: 33vw;
     height: 14vh;
     line-height: 14vh;
+}
+
+.Card:hover .Card-Image,
+.Card:active .Card-Image {
+    transform: scale(1.2, 1.2);
+    cursor: pointer;
+}
+
+.Card:hover .Card-Title,
+.Card:active .Card-Title {
+    background-color: #266829;
+    cursor: pointer;
 }

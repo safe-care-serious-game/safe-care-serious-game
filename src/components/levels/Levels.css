@@ -1,0 +1,17 @@
+.Levels {
+    background-color: #C5D5D2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.Levels-Logo-Wrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.Levels-Logo-Wrapper .Logo {
+    transform: scale(0.5, 0.5);
+}

@@ -1,10 +1,27 @@
+import Levels from './components/levels/Levels';
+import MainMenu from './components/main-menu/MainMenu';
 import SplashScreen from './components/splash-screen/SplashScreen';
-import './App.css';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <SplashScreen />
+    <Router>
+      <Switch>
+        <Route path="/menu">
+          <MainMenu />
+        </Route>
+        <Route path="/levels">
+          <Levels />
+        </Route>
+        <Route path="/">
+          <SplashScreen />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 

@@ -13,7 +13,21 @@
 }
 
 .Main-Menu-Logo-Wrapper .Logo {
-    transform: scale(0.5, 0.5);
+    margin-top: 5.92vh;
+}
+
+.Main-Menu-Logo-Wrapper .Logo h1 {
+    font-size: 3.33vw;
+    letter-spacing: 0.1em;
+    width: 22vw;
+}
+
+.Main-Menu-Logo-Wrapper .Logo h2 {
+    font-size: 1.25vw;
+    letter-spacing: 0.48em;
+    width: 22vw;
+    height: 2.4vw;
+    line-height: 2.4vw;
 }
 
 .Main-Menu-Options {

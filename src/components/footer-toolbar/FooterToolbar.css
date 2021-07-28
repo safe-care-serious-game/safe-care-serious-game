@@ -1,0 +1,9 @@
+.Footer-Toolbar {
+    background-color: #3B4844;
+    height: 7.4vh;
+    padding: 0 6.25vw 0 6.25vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

@@ -4,6 +4,7 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .Levels-Logo-Wrapper {
@@ -13,5 +14,49 @@
 }
 
 .Levels-Logo-Wrapper .Logo {
-    transform: scale(0.5, 0.5);
+    margin-top: 4vh;
+}
+
+.Levels-Logo-Wrapper .Logo h1 {
+    font-size: 3.33vw;
+    letter-spacing: 0.1em;
+    width: 22vw;
+}
+
+.Levels-Logo-Wrapper .Logo h2 {
+    font-size: 1.25vw;
+    letter-spacing: 0.48em;
+    width: 22vw;
+    height: 2.4vw;
+    line-height: 2.4vw;
+}
+
+.Levels-Title {
+    font-size: 3.33vw;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0 6.25vw;
+}
+
+.Levels-List {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    align-items: center;
+}
+
+.Levels-List .Card {
+    flex-shrink: 0;
+    margin: 0 1.5vw 0 1.5vw;
+}
+
+.Levels-List .Card:first-child {
+    margin-left: 6.25vw;
+}
+
+.Levels-List .Card:last-child {
+    margin-right: 3.33vw;
 }

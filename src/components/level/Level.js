@@ -97,6 +97,9 @@ const data = {
             shot: Level4Shot15
         },
         {
+            transitionText: 'Após avaliação da enfermeira e do fisioterapeuta, eles irão discutir quais estratégias irão realizar com o paciente para melhoria de seu padrão respiratório e evitar a incidência da LPP. Avalie a seguir a conduta da equipe de saúde:'
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Irei reforçar diariamente a avaliação da pele, a utilização da escala de Braden e a inspeção da presença de edemas com a equipe de enfermagem.',
             shot: Level4Shot5
@@ -159,6 +162,11 @@ function Level() {
     const [score, setScore] = useState(0);
     const [characterName, setCharacterName] = useState('');
     const [dialogue, setDialogue] = useState('');
+    const [transitionText, setTransitionText] = useState('');
+
+    const transitionTextStyle = {
+        display: transitionText ? 'block' : 'none'
+    };
 
     useEffect(() => {
         if (!levelId) {
@@ -166,9 +174,10 @@ function Level() {
         }
 
         let d = data[levelId];
-        setShot(d[levelDataIndex].shot)
-        setCharacterName(d[levelDataIndex].characterName)
-        setDialogue(d[levelDataIndex].dialogue)
+        setShot(d[levelDataIndex].shot ? d[levelDataIndex].shot : '')
+        setCharacterName(d[levelDataIndex].characterName ? d[levelDataIndex].characterName : '')
+        setDialogue(d[levelDataIndex].dialogue ? d[levelDataIndex].dialogue : '')
+        setTransitionText(d[levelDataIndex].transitionText ? d[levelDataIndex].transitionText : '')
         setHasPrevious(levelDataIndex != 0);
         setHasNext(levelDataIndex + 1 < data[levelId].length);
 
@@ -203,6 +212,8 @@ function Level() {
                     <span>{score}</span>
                     <button onClick={() => history.replace('/levels')}>Sair</button>
                 </LevelToolbar>
+
+                <p className="Transition-Text" style={transitionTextStyle}>{transitionText}</p>
 
                 <LevelDialogue
                     characterName={characterName}

@@ -1,5 +1,7 @@
-import LevelToolbar from '../level-toolbar/LevelToolbar'
 import LevelDialogue from '../level-dialogue/LevelDialogue'
+import LevelEnd from '../level-end/LevelEnd'
+import LevelOptions from '../level-options/LevelOptions'
+import LevelToolbar from '../level-toolbar/LevelToolbar'
 import Level4Shot1 from '../../videos/level4/Level4Shot1.mp4'
 import Level4Shot2 from '../../videos/level4/Level4Shot2.mp4'
 import Level4Shot3 from '../../videos/level4/Level4Shot3.mp4'
@@ -15,6 +17,7 @@ import Level4Shot12 from '../../videos/level4/Level4Shot12.mp4'
 import Level4Shot13 from '../../videos/level4/Level4Shot13.mp4'
 import Level4Shot14 from '../../videos/level4/Level4Shot14.mp4'
 import Level4Shot15 from '../../videos/level4/Level4Shot15.mp4'
+import Level4Shot16 from '../../videos/level4/Level4Shot16.mp4'
 import './Level.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
@@ -42,6 +45,21 @@ const data = {
             shot: Level4Shot4
         },
         {
+            shot: Level4Shot4,
+            options: [
+                {
+                    dialogue: 'Cefaleia, náuseas, hematomas, prurido.',
+                    score: 0,
+                    correct: false
+                },
+                {
+                    dialogue: 'Lesões por pressão, trombose venosa profunda, distrofias musculares, maceração da pele, constipação, entre outros.',
+                    score: 10,
+                    correct: true
+                }
+            ]
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Fico feliz que você entende esses riscos. Quais estratégias você sugere para que esse paciente possa melhorar seu estado respiratório e evitar esses riscos, principalmente o desenvolvimento de LPP?',
             shot: Level4Shot5
@@ -55,6 +73,21 @@ const data = {
             characterName: 'Florence',
             dialogue: '...',
             shot: Level4Shot7
+        },
+        {
+            shot: Level4Shot7,
+            options: [
+                {
+                    dialogue: 'Avaliação diária da pele, mudança de decúbito a cada duas horas, manter a pele hidratada, evitar cisalhamento, observar roupa de cama para evitar drobraduras.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Uso da escala de Morse, evitar deambulação e reduzir ingesta hídrica.',
+                    score: 0,
+                    correct: false
+                }
+            ]
         },
         {
             characterName: 'Waldo',
@@ -97,6 +130,21 @@ const data = {
             shot: Level4Shot15
         },
         {
+            shot: Level4Shot15,
+            options: [
+                {
+                    dialogue: 'O fisioterapeuta deverá avaliar o paciente, traçar um plano de cuidados adequado e colocá-lo em prática.',
+                    score: 0,
+                    correct: false
+                },
+                {
+                    dialogue: 'O fisioterapeuta e a enfermeira deverão higienizar as mãos, avaliar o paciente em conjunto e traçar cuidados que podem ser adotados.',
+                    score: 10,
+                    correct: true
+                }
+            ]
+        },
+        {
             transitionText: 'Após avaliação da enfermeira e do fisioterapeuta, eles irão discutir quais estratégias irão realizar com o paciente para melhoria de seu padrão respiratório e evitar a incidência da LPP. Avalie a seguir a conduta da equipe de saúde:'
         },
         {
@@ -105,9 +153,43 @@ const data = {
             shot: Level4Shot5
         },
         {
+            shot: Level4Shot5,
+            dialogue: 'Irei reforçar diariamente a avaliação da pele, a utilização da escala de Braden e a inspeção da presença de edemas com a equipe de enfermagem.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Também irei prescrever a utilização de solução hidratante seis vezes ao dia nas proeminências ósseas.',
             shot: Level4Shot3
+        },
+        {
+            shot: Level4Shot3,
+            dialogue: 'Também irei prescrever a utilização de solução hidratante seis vezes ao dia nas proeminências ósseas.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 0,
+                    correct: false
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 10,
+                    correct: true
+                }
+            ]
         },
         {
             characterName: 'Waldo',
@@ -115,9 +197,43 @@ const data = {
             shot: Level4Shot6
         },
         {
+            shot: Level4Shot6,
+            dialogue: 'Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.',
             shot: Level4Shot2
+        },
+        {
+            shot: Level4Shot2,
+            dialogue: 'Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
         },
         {
             characterName: 'Florence',
@@ -125,9 +241,43 @@ const data = {
             shot: Level4Shot3
         },
         {
+            shot: Level4Shot3,
+            dialogue: 'Solicitarei uma avalição da nutricionista, a fim de promover o suporte nutricional adequado e avaliar o estado nutricional do paciente.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Irei prescrever a utilização de coberturas adequadas nas áreas de proeminências ósseas.',
             shot: Level4Shot2
+        },
+        {
+            shot: Level4Shot2,
+            dialogue: 'Irei prescrever a utilização de coberturas adequadas nas áreas de proeminências ósseas.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
         },
         {
             characterName: 'Florence',
@@ -135,9 +285,43 @@ const data = {
             shot: Level4Shot3
         },
         {
+            shot: Level4Shot3,
+            dialogue: 'Irei prescrever a utilização de coxins para diminuir a pressão nas proeminências ósseas do paciente.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
+        },
+        {
             characterName: 'Florence',
             dialogue: 'Também irei prescrever a manutenção da cabeceira do leito do paciente em 45 graus para melhorar o seu estado respiratório e reduzir as chances de cisalhamento do paciente no leito.',
             shot: Level4Shot2
+        },
+        {
+            shot: Level4Shot2,
+            dialogue: 'Também irei prescrever a manutenção da cabeceira do leito do paciente em 45 graus para melhorar o seu estado respiratório e reduzir as chances de cisalhamento do paciente no leito.',
+            levelSubject: 'para prevenção de LPP',
+            options: [
+                {
+                    dialogue: 'Verdadeira.',
+                    score: 10,
+                    correct: true
+                },
+                {
+                    dialogue: 'Falsa.',
+                    score: 0,
+                    correct: false
+                }
+            ]
         },
         {
             characterName: 'Waldo',
@@ -147,7 +331,7 @@ const data = {
         {
             characterName: 'Florence',
             dialogue: 'Certo Waldo.',
-            shot: Level4Shot5
+            shot: Level4Shot16
         }
     ]
 }
@@ -155,41 +339,69 @@ const data = {
 function Level() {
     const history = useHistory();
     let { levelId } = useParams();
-    const [levelDataIndex, setLevelDataIndex] = useState(0);
+
+    const [levelData, setLevelData] = useState([]);
+    const [levelDataIndex, setLevelDataIndex] = useState(-1);
     const [hasPrevious, setHasPrevious] = useState(false);
     const [hasNext, setHasNext] = useState(false);
-    const [shot, setShot] = useState('');
     const [score, setScore] = useState(0);
+    const [shot, setShot] = useState('');
     const [characterName, setCharacterName] = useState('');
     const [dialogue, setDialogue] = useState('');
     const [transitionText, setTransitionText] = useState('');
+    const [options, setOptions] = useState([]);
+    const [levelSubject, setLevelSubject] = useState('');
 
     const transitionTextStyle = {
         display: transitionText ? 'block' : 'none'
     };
 
+    const optionsStyle = {
+        display: options && options.length != 0 ? 'block' : 'none'
+    };
+
+    const dialogueStyle = {
+        display: options && options.length != 0 ? 'none' : 'block'
+    };
+
     useEffect(() => {
-        if (!levelId) {
+        setLevelData([...data[levelId]]);
+    }, [levelId]);
+
+    useEffect(() => {
+        setLevelDataIndex(0);
+        setHasPrevious(levelDataIndex != 0);
+        setHasNext(levelDataIndex + 1 < levelData.length);
+    }, [levelData]);
+
+    useEffect(() => {
+        if (!levelData || Object.keys(levelData).length == 0 || levelData.length == 0) {
             return;
         }
 
-        let d = data[levelId];
-        setShot(d[levelDataIndex].shot ? d[levelDataIndex].shot : '')
-        setCharacterName(d[levelDataIndex].characterName ? d[levelDataIndex].characterName : '')
-        setDialogue(d[levelDataIndex].dialogue ? d[levelDataIndex].dialogue : '')
-        setTransitionText(d[levelDataIndex].transitionText ? d[levelDataIndex].transitionText : '')
+        // Previous/next
         setHasPrevious(levelDataIndex != 0);
         setHasNext(levelDataIndex + 1 < data[levelId].length);
 
+        // Other data
+        setShot(levelData[levelDataIndex].shot ? levelData[levelDataIndex].shot : '');
+        setCharacterName(levelData[levelDataIndex].characterName ? levelData[levelDataIndex].characterName : '');
+        setDialogue(levelData[levelDataIndex].dialogue ? levelData[levelDataIndex].dialogue : '');
+        setTransitionText(levelData[levelDataIndex].transitionText ? levelData[levelDataIndex].transitionText : '');
+        setOptions(levelData[levelDataIndex].options ? [...levelData[levelDataIndex].options] : [...[]]);
+        setLevelSubject(levelData[levelDataIndex].levelSubject ? levelData[levelDataIndex].levelSubject : '');
+    }, [levelDataIndex]);
+
+    useEffect(() => {
+        //console.log('shot hook', shot);
         document.querySelector('video').play();
-    })
+    }, [shot])
 
     function previous() {
         if (!hasPrevious) {
             return;
         }
         setLevelDataIndex(levelDataIndex - 1);
-        setHasPrevious(levelDataIndex != 0);
     }
 
     function next() {
@@ -197,12 +409,27 @@ function Level() {
             return;
         }
         setLevelDataIndex(levelDataIndex + 1);
-        setHasNext(levelDataIndex + 1 < data[levelId].length);
     }
 
     function end() {
-        // TODO: 
+        document.querySelector('.Options-Wrapper').style.display = 'none';
+        document.querySelector('.Transition-Text').style.display = 'none';
+        document.querySelector('.Dialogue-Wrapper').style.display = 'none';
+        document.querySelector('.End-Wrapper').style.display = 'block';
     }
+
+    function selectOption(option) {
+        if (option.correct) {
+            setScore(score + option.score);
+        }
+        next();
+    }
+
+    const listOptions = options.map((option) =>
+        <button className="Option-Item" onClick={() => selectOption(option)}>
+            {option.dialogue}
+        </button>
+    );
 
     return (
         <div className="Level">
@@ -215,14 +442,26 @@ function Level() {
 
                 <p className="Transition-Text" style={transitionTextStyle}>{transitionText}</p>
 
-                <LevelDialogue
-                    characterName={characterName}
-                    dialogue={dialogue}
-                    hasPrevious={hasPrevious}
-                    onPrevious={() => previous()}
-                    hasNext={hasNext}
-                    onNext={() => next()}
-                    onEnd={() => end()} />
+                <div className="Options-Wrapper" style={optionsStyle}>
+                    <LevelOptions options={options} dialogue={dialogue} levelSubject={levelSubject} style={optionsStyle}>
+                        {listOptions}
+                    </LevelOptions>
+                </div>
+
+                <div className="End-Wrapper">
+                    <LevelEnd levelId={levelId} score={score} />
+                </div>
+
+                <div className="Dialogue-Wrapper" style={dialogueStyle}>
+                    <LevelDialogue
+                        characterName={characterName}
+                        dialogue={dialogue}
+                        hasPrevious={hasPrevious}
+                        onPrevious={() => previous()}
+                        hasNext={hasNext}
+                        onNext={() => next()}
+                        onEnd={() => end()} />
+                </div>
             </div>
         </div>
     );

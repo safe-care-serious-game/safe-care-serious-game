@@ -28,6 +28,7 @@
     color: #FFFFFF;
     font-size: 1.25vw;
     font-weight: 900;
+    letter-spacing: 0.1em;
 }
 
 .Level .Level-UI .Level-Toolbar button {
@@ -46,5 +47,21 @@
     color: #FFFFFF;
     font-size: 2.5vw;
     font-weight: 900;
+    letter-spacing: 0.1em;
     text-align: center;
+}
+
+.Level .Level-UI .Options-Wrapper .Option-Item {
+    height: initial;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 1.25vw;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0 0 1.85vh 0;
+    padding: 1.48vh 1.25vw;
+}
+
+.Level .Level-UI .End-Wrapper {
+    display: none;
 }

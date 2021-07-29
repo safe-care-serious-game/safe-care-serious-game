@@ -1,3 +1,4 @@
+import Level from './components/level/Level';
 import Levels from './components/levels/Levels';
 import MainMenu from './components/main-menu/MainMenu';
 import SplashScreen from './components/splash-screen/SplashScreen';
@@ -13,6 +14,9 @@ function App() {
       <Switch>
         <Route path="/menu">
           <MainMenu />
+        </Route>
+        <Route path="/levels/:levelId">
+          <Level />
         </Route>
         <Route path="/levels">
           <Levels />

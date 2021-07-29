@@ -25,7 +25,7 @@ function Levels() {
         <Card image={Level1} title="Identificação do Paciente" />
         <Card image={Level2} title="Cirurgia Segura" />
         <Card image={Level3} title="Segurança na administração de mediacamentos" />
-        <Card image={Level4} title="Prevenção de Lesão por pressão" />
+        <Card image={Level4} title="Prevenção de Lesão por pressão" onClick={() => history.push('/levels/4')} />
         <Card image={Level5} title="Prevenção de Quedas" />
         <Card image={Level6} title="Higienização das mãos" />
       </div>

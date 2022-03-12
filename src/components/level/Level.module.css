@@ -1,10 +1,10 @@
-.Level {
+.level {
     width: 100vw;
     height: 100vh;
     background-color: #000000;
 }
 
-.Level .Level-Video {
+.levelVideo {
     position: absolute;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     height: 100vh;
 }
 
-.Level .Level-UI {
+.levelUI {
     position: absolute;
     top: 0;
     left: 0;
@@ -24,26 +24,26 @@
     justify-content: space-between;
 }
 
-.Level .Level-UI .Level-Toolbar span {
+.levelToolbarScore {
     color: #FFFFFF;
     font-size: 1.25vw;
     font-weight: 900;
     letter-spacing: 0.1em;
 }
 
-.Level .Level-UI .Level-Toolbar button {
+.levelToolbarButton {
     background-color: transparent;
 }
 
-.Level .Level-UI .Level-Toolbar button:hover {
+.levelToolbarButton:hover {
     background-color: #328936;
 }
 
-.Level .Level-UI .Level-Toolbar button:active {
+.levelToolbarButton:active {
     background-color: #266829;
 }
 
-.Level .Level-UI .Transition-Text {
+.levelUITransitionText {
     color: #FFFFFF;
     font-size: 2.5vw;
     font-weight: 900;
@@ -51,7 +51,7 @@
     text-align: center;
 }
 
-.Level .Level-UI .Options-Wrapper .Option-Item {
+.levelUIOptionItem {
     height: initial;
     text-align: left;
     color: #FFFFFF;
@@ -62,6 +62,6 @@
     padding: 1.48vh 1.25vw;
 }
 
-.Level .Level-UI .End-Wrapper {
+.levelUIEndWrapper {
     display: none;
 }

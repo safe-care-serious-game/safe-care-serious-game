@@ -1,0 +1,22 @@
+.mainMenu {
+    background-color: #C5D5D2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainMenuLogoWrapper {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 5.92vh;
+}
+
+.mainMenuOptions {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: auto 0;
+}

@@ -1,16 +1,16 @@
 import { useHistory } from 'react-router-dom';
 import Logo from '../logo/Logo';
-import './SplashScreen.css';
+import css from './SplashScreen.module.css';
 
 function SplashScreen() {
   const history = useHistory();
 
   return (
-    <div className="Splash-Screen" onClick={() => history.replace('/menu')}>
-      <div className="Splash-Screen-Logo-Wrapper">
+    <div className={css.splashScreen} onClick={() => history.replace('/menu')}>
+      <div className={css.splashScreenLogoWrapper}>
         <Logo/>
       </div>
-      <h1 className="Splash-Screen-Press-To-Start">Clique para começar</h1>
+      <h1 className={css.splashScreenPressToStart}>Clique para começar</h1>
     </div>
   );
 }

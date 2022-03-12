@@ -1,4 +1,4 @@
-import './Card.css';
+import css from './Card.module.css';
 
 function Card(props) {
 
@@ -13,9 +13,9 @@ function Card(props) {
     }
 
     return (
-        <div className="Card" onClick={onClick}>
-            <div className="Card-Image" style={cardImageStyle}></div>
-            <div className="Card-Title">{props.title}</div>
+        <div className={css.card} onClick={onClick}>
+            <div className={css.cardImage} style={cardImageStyle}></div>
+            <div className={css.cardTitle}>{props.title}</div>
         </div>
     );
 }

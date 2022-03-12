@@ -1,8 +1,8 @@
-.Level-Dialogue .Level-Dialogue-Character-Name {
+.levelDialogueCharacterName {
     border-bottom: 1.11vh solid #266829;
 }
 
-.Level-Dialogue .Level-Dialogue-Character-Name span {
+.levelDialogueCharacterName span {
     color: #FFFFFF;
     font-size: 2.5vw;
     font-weight: 900;
@@ -11,7 +11,7 @@
     padding: 1.11vh 1.45vw;
 }
 
-.Level-Dialogue .Level-Dialogue-Text {
+.levelDialogueText {
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
@@ -19,7 +19,7 @@
     justify-content: space-between;
 }
 
-.Level-Dialogue .Level-Dialogue-Text p {
+.levelDialogueText p {
     color: #FFFFFF;
     font-size: 1.875vw;
     font-weight: 600;
@@ -28,7 +28,7 @@
     padding: 3.7vh 2.08vw;
 }
 
-.Level-Dialogue .Level-Dialogue-Text .Level-Dialogue-Text-Toolbar {
+.levelDialogueTextToolbar {
     background-color: transparent;
     height: 7.4vh;
     padding: 0 2.08vw;
@@ -38,16 +38,16 @@
     align-items: center;
 }
 
-.Level-Dialogue .Level-Dialogue-Text .Level-Dialogue-Text-Toolbar button {
+.levelDialogueTextToolbar button {
     font-size: 1.25vw;
     background-color: transparent;
     border-color: transparent;
 }
 
-.Level-Dialogue .Level-Dialogue-Text .Level-Dialogue-Text-Toolbar button:hover {
+.levelDialogueTextToolbar button:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.Level-Dialogue .Level-Dialogue-Text .Level-Dialogue-Text-Toolbar button:active {
+.levelDialogueTextToolbar button:active {
     background-color: transparent;
 }

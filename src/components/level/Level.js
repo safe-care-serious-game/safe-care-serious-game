@@ -18,7 +18,7 @@ import Level4Shot13 from '../../videos/level4/Level4Shot13.mp4'
 import Level4Shot14 from '../../videos/level4/Level4Shot14.mp4'
 import Level4Shot15 from '../../videos/level4/Level4Shot15.mp4'
 import Level4Shot16 from '../../videos/level4/Level4Shot16.mp4'
-import './Level.css';
+import css from './Level.module.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
@@ -412,10 +412,10 @@ function Level() {
     }
 
     function end() {
-        document.querySelector('.Options-Wrapper').style.display = 'none';
-        document.querySelector('.Transition-Text').style.display = 'none';
-        document.querySelector('.Dialogue-Wrapper').style.display = 'none';
-        document.querySelector('.End-Wrapper').style.display = 'block';
+        document.querySelector('#optionsWrapper').style.display = 'none';
+        document.querySelector('#transitionText').style.display = 'none';
+        document.querySelector('#dialogueWrapper').style.display = 'none';
+        document.querySelector('#endWrapper').style.display = 'block';
     }
 
     function selectOption(option) {
@@ -426,33 +426,33 @@ function Level() {
     }
 
     const listOptions = options.map((option) =>
-        <button className="Option-Item" onClick={() => selectOption(option)}>
+        <button className={css.levelUIOptionItem} onClick={() => selectOption(option)}>
             {option.dialogue}
         </button>
     );
 
     return (
-        <div className="Level">
-            <video className="Level-Video" src={shot}></video>
-            <div className="Level-UI">
+        <div className={css.level}>
+            <video className={css.levelVideo} src={shot}></video>
+            <div className={css.levelUI}>
                 <LevelToolbar>
-                    <span>{score}</span>
-                    <button onClick={() => history.replace('/levels')}>Sair</button>
+                    <span className={css.levelToolbarScore}>{score}</span>
+                    <button className={css.levelToolbarButton} onClick={() => history.replace('/levels')}>Sair</button>
                 </LevelToolbar>
 
-                <p className="Transition-Text" style={transitionTextStyle}>{transitionText}</p>
+                <p id="transitionText" className={css.levelUITransitionText} style={transitionTextStyle}>{transitionText}</p>
 
-                <div className="Options-Wrapper" style={optionsStyle}>
+                <div id="optionsWrapper" style={optionsStyle}>
                     <LevelOptions options={options} dialogue={dialogue} levelSubject={levelSubject} style={optionsStyle}>
                         {listOptions}
                     </LevelOptions>
                 </div>
 
-                <div className="End-Wrapper">
+                <div id="endWrapper" className={css.levelUIEndWrapper}>
                     <LevelEnd levelId={levelId} score={score} />
                 </div>
 
-                <div className="Dialogue-Wrapper" style={dialogueStyle}>
+                <div id="dialogueWrapper" style={dialogueStyle}>
                     <LevelDialogue
                         characterName={characterName}
                         dialogue={dialogue}

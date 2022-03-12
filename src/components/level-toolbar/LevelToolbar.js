@@ -1,8 +1,8 @@
-import './LevelToolbar.css';
+import css from './LevelToolbar.module.css';
 
 function LevelToolbar(props) {
   return (
-    <div className="Level-Toolbar">
+    <div className={css.levelToolbar}>
       {props.children}
     </div>
   );

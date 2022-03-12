@@ -1,4 +1,4 @@
-.Level-End-Overlay {
+.levelEndOverlay {
     width: 100vw;
     height: 91.49vh;
     background-color: rgba(0, 0, 0, 0.75);
@@ -7,7 +7,7 @@
     justify-content: center;
 }
 
-.Level-End-Overlay .Level-End-Dialog {
+.levelEndDialog {
     background-color: #FFFFFF;
     width: 45.83vw;
     height: 44.44vh;
@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-.Level-End-Overlay .Level-End-Dialog .Level-End-Header {
+.levelEndHeader {
     position: relative;
     color: #FFFFFF;
     font-size: 2vw;
@@ -34,7 +34,7 @@
     align-items: center;
 }
 
-.Level-End-Overlay .Level-End-Dialog p {
+.levelEndDialog p {
     color: #000000;
     font-size: 1.875vw;
     font-weight: 900;
@@ -43,12 +43,12 @@
     margin: 0;
 }
 
-.Level-End-Overlay .Level-End-Dialog .Level-End-Buttons {
+.levelEndButtons {
     display: flex;
     flex-direction: row;
 }
 
-.Level-End-Overlay .Level-End-Dialog .Level-End-Buttons button {
+.levelEndButtons button {
     width: 22.415vw;
     flex-grow: 1;
 }

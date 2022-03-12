@@ -1,4 +1,4 @@
-.Splash-Screen {
+.splashScreen {
     background-image: url('../../images/SplashScreen.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,13 +11,13 @@
     justify-content: space-between;
 }
 
-.Splash-Screen-Logo-Wrapper {
+.splashScreenLogoWrapper {
     margin-top: 6.667vh;
     display: flex;
     justify-content: center;
 }
 
-.Splash-Screen .Splash-Screen-Press-To-Start {
+.splashScreenPressToStart {
     font-size: 3vw;
     font-family: 'Orbitron', sans-serif;
     font-weight: 900;

@@ -1,4 +1,4 @@
-.Level-Options {
+.levelOptions {
     width: 91.68vw;
     height: 85.57vh;
     background-color: rgba(0, 0, 0, 0.75);
@@ -8,7 +8,7 @@
     padding: 0 4.16vw 5.92vh 4.16vw;
 }
 
-.Level-Options .Level-Options-Header {
+.levelOptionsHeader {
     color: #FFFFFF;
     font-size: 1.875vw;
     font-weight: 900;

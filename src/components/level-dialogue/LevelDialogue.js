@@ -1,4 +1,4 @@
-import './LevelDialogue.css';
+import css from './LevelDialogue.module.css';
 
 function LevelDialogue(props) {
     const characterNameStyle = {
@@ -40,14 +40,14 @@ function LevelDialogue(props) {
     }
 
     return (
-        <div className="Level-Dialogue">
-            <div className="Level-Dialogue-Character-Name">
+        <div className={css.levelDialogue}>
+            <div className={css.levelDialogueCharacterName}>
                 <span style={characterNameStyle}>{props.characterName}</span>
             </div>
-            <div className="Level-Dialogue-Text">
+            <div className={css.levelDialogueText}>
                 <p style={dialogueStyle}>{props.dialogue}</p>
 
-                <div className="Level-Dialogue-Text-Toolbar">
+                <div className={css.levelDialogueTextToolbar}>
                     <button onClick={() => previous()} style={previousButtonStyle}>Anterior</button>
                     <button onClick={() => next()} style={nextButtonStyle}>Próximo</button>
                     <button onClick={() => end()} style={endButtonStyle}>Fim</button>

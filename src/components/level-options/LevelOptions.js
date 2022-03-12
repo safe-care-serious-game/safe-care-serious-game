@@ -1,4 +1,4 @@
-import './LevelOptions.css';
+import css from './LevelOptions.module.css';
 
 function LevelOptions(props) {
     const additionalHeaderStyle = {
@@ -6,9 +6,9 @@ function LevelOptions(props) {
     }
 
     return (
-        <div className="Level-Options">
-            <h1 className="Level-Options-Header" style={additionalHeaderStyle}>A conduta "{props.dialogue}" é adequada para {props.levelSubject}?</h1>
-            <h1 className="Level-Options-Header">Escolha uma opção:</h1>
+        <div className={css.levelOptions}>
+            <h1 className={css.levelOptionsHeader} style={additionalHeaderStyle}>A conduta "{props.dialogue} é adequada para {props.levelSubject}?</h1>
+            <h1 className={css.levelOptionsHeader}>Escolha uma opção:</h1>
             {props.children}
         </div>
     );

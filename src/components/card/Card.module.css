@@ -1,10 +1,10 @@
-.Card {
+.card {
     width: 33vw;
     height: 59vh;
     overflow: hidden;
 }
 
-.Card-Image {
+.cardImage {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -13,7 +13,7 @@
     height: 45vh;
 }
 
-.Card-Title {
+.cardTitle {
     position: relative;
     color: #FFFFFF;
     font-size: 2vw;
@@ -30,14 +30,14 @@
     align-items: center;
 }
 
-.Card:hover .Card-Image,
-.Card:active .Card-Image {
+.card:hover .cardImage,
+.card:active .cardImage {
     transform: scale(1.2, 1.2);
     cursor: pointer;
 }
 
-.Card:hover .Card-Title,
-.Card:active .Card-Title {
+.card:hover .cardTitle,
+.card:active .cardTitle {
     background-color: #266829;
     cursor: pointer;
 }

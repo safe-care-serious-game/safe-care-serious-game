@@ -1,3 +1,4 @@
+import Button from '../button/Button'
 import Logo from '../logo/Logo';
 import Card from '../card/Card';
 import FooterToolbar from '../footer-toolbar/FooterToolbar';
@@ -37,8 +38,8 @@ function Levels() {
       </div>
 
       <FooterToolbar>
-        <button onClick={() => history.goBack()}>Voltar</button>
-        <button>Login</button>
+        <Button onClick={() => history.goBack()}>Voltar</Button>
+        <Button>Login</Button>
       </FooterToolbar>
     </div>
   );

@@ -1,0 +1,20 @@
+.button {
+  color: #FFFFFF;
+  font-size: 1.25vw;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  background-color: #3B4844;
+  height: 5.92vh;
+  border: 2px solid #94A3A0;
+  border-radius: 0;
+  padding: 0 1.04vw;
+}
+
+.button:hover {
+  background-color: #566862;
+}
+
+.button:active {
+  background-color: #3B4844;
+}

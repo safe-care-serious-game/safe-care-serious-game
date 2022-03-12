@@ -38,16 +38,16 @@
     align-items: center;
 }
 
-.levelDialogueTextToolbar button {
+.levelDialogueTextToolbarButton {
     font-size: 1.25vw;
     background-color: transparent;
     border-color: transparent;
 }
 
-.levelDialogueTextToolbar button:hover {
+.levelDialogueTextToolbarButton:hover {
     background-color: rgba(255, 255, 255, 0.25);
 }
 
-.levelDialogueTextToolbar button:active {
+.levelDialogueTextToolbarButton:active {
     background-color: transparent;
 }

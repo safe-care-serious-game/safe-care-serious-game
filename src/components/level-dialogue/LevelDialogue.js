@@ -1,3 +1,4 @@
+import Button from '../button/Button';
 import css from './LevelDialogue.module.css';
 
 function LevelDialogue(props) {
@@ -48,9 +49,9 @@ function LevelDialogue(props) {
                 <p style={dialogueStyle}>{props.dialogue}</p>
 
                 <div className={css.levelDialogueTextToolbar}>
-                    <button onClick={() => previous()} style={previousButtonStyle}>Anterior</button>
-                    <button onClick={() => next()} style={nextButtonStyle}>Próximo</button>
-                    <button onClick={() => end()} style={endButtonStyle}>Fim</button>
+                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => previous()} style={previousButtonStyle}>Anterior</Button>
+                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => next()} style={nextButtonStyle}>Próximo</Button>
+                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => end()} style={endButtonStyle}>Fim</Button>
                 </div>
             </div>
         </div>

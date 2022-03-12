@@ -48,7 +48,7 @@
     flex-direction: row;
 }
 
-.levelEndButtons button {
+.levelEndButton {
     width: 22.415vw;
     flex-grow: 1;
 }

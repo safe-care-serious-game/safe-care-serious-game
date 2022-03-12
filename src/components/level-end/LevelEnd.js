@@ -1,3 +1,4 @@
+import Button from '../button/Button';
 import { useHistory } from 'react-router-dom';
 import css from './LevelEnd.module.css';
 
@@ -16,8 +17,8 @@ function LevelEnd(props) {
                 <p>Parabéns! Fase concluída!</p>
                 <p>Pontuação: {props.score}</p>
                 <div className={css.levelEndButtons}>
-                    <button onClick={() => playAgain()}>Jogar novamente</button>
-                    <button onClick={() => history.replace('/levels')}>Sair</button>
+                    <Button className={css.levelEndButton} onClick={() => playAgain()}>Jogar novamente</Button>
+                    <Button className={css.levelEndButton} onClick={() => history.replace('/levels')}>Sair</Button>
                 </div>
             </div>
         </div>

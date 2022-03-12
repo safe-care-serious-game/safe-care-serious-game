@@ -1,3 +1,4 @@
+import Button from '../button/Button'
 import LevelDialogue from '../level-dialogue/LevelDialogue'
 import LevelEnd from '../level-end/LevelEnd'
 import LevelOptions from '../level-options/LevelOptions'
@@ -426,9 +427,9 @@ function Level() {
     }
 
     const listOptions = options.map((option) =>
-        <button className={css.levelUIOptionItem} onClick={() => selectOption(option)}>
+        <Button className={css.levelUIOptionItem} onClick={() => selectOption(option)}>
             {option.dialogue}
-        </button>
+        </Button>
     );
 
     return (
@@ -437,7 +438,7 @@ function Level() {
             <div className={css.levelUI}>
                 <LevelToolbar>
                     <span className={css.levelToolbarScore}>{score}</span>
-                    <button className={css.levelToolbarButton} onClick={() => history.replace('/levels')}>Sair</button>
+                    <Button className={css.levelToolbarButton} onClick={() => history.replace('/levels')}>Sair</Button>
                 </LevelToolbar>
 
                 <p id="transitionText" className={css.levelUITransitionText} style={transitionTextStyle}>{transitionText}</p>

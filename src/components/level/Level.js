@@ -358,11 +358,11 @@ function Level() {
     };
 
     const optionsStyle = {
-        display: options && options.length != 0 ? 'block' : 'none'
+        display: options && options.length !== 0 ? 'block' : 'none'
     };
 
     const dialogueStyle = {
-        display: options && options.length != 0 ? 'none' : 'block'
+        display: options && options.length !== 0 ? 'none' : 'block'
     };
 
     useEffect(() => {
@@ -371,17 +371,15 @@ function Level() {
 
     useEffect(() => {
         setLevelDataIndex(0);
-        setHasPrevious(levelDataIndex != 0);
-        setHasNext(levelDataIndex + 1 < levelData.length);
     }, [levelData]);
 
     useEffect(() => {
-        if (!levelData || Object.keys(levelData).length == 0 || levelData.length == 0) {
+        if (!levelData || Object.keys(levelData).length === 0 || levelData.length === 0) {
             return;
         }
 
         // Previous/next
-        setHasPrevious(levelDataIndex != 0);
+        setHasPrevious(levelDataIndex !== 0);
         setHasNext(levelDataIndex + 1 < data[levelId].length);
 
         // Other data
@@ -391,7 +389,7 @@ function Level() {
         setTransitionText(levelData[levelDataIndex].transitionText ? levelData[levelDataIndex].transitionText : '');
         setOptions(levelData[levelDataIndex].options ? [...levelData[levelDataIndex].options] : [...[]]);
         setLevelSubject(levelData[levelDataIndex].levelSubject ? levelData[levelDataIndex].levelSubject : '');
-    }, [levelDataIndex]);
+    }, [levelId, levelData, levelDataIndex]);
 
     useEffect(() => {
         //console.log('shot hook', shot);
@@ -426,8 +424,8 @@ function Level() {
         next();
     }
 
-    const listOptions = options.map((option) =>
-        <Button className={css.levelUIOptionItem} onClick={() => selectOption(option)}>
+    const listOptions = options.map((option, index) =>
+        <Button key={index} className={css.levelUIOptionItem} onClick={() => selectOption(option)}>
             {option.dialogue}
         </Button>
     );

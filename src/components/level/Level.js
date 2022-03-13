@@ -16,6 +16,7 @@ function Level() {
     const [levelDataIndex, setLevelDataIndex] = useState(-1);
     const [hasPrevious, setHasPrevious] = useState(false);
     const [hasNext, setHasNext] = useState(false);
+    const [hasEnded, setHasEnded] = useState(false);
     const [score, setScore] = useState(0);
     const [shot, setShot] = useState('');
     const [characterName, setCharacterName] = useState('');
@@ -24,17 +25,13 @@ function Level() {
     const [options, setOptions] = useState([]);
     const [levelSubject, setLevelSubject] = useState('');
 
-    const transitionTextStyle = {
-        display: transitionText ? 'block' : 'none'
-    };
+    const shouldRenderTransitionText = () => transitionText && !hasEnded
 
-    const optionsStyle = {
-        display: options && options.length !== 0 ? 'block' : 'none'
-    };
+    const shouldRenderOptions = () => options.length !== 0 && !hasEnded
 
-    const dialogueStyle = {
-        display: options && options.length !== 0 ? 'none' : 'block'
-    };
+    const shouldRenderLevelEnd = () => hasEnded
+
+    const shouldRenderDialog = () => options.length === 0 && !hasEnded
 
     useEffect(() => {
         setLevelData([...data[levelId]]);
@@ -82,10 +79,7 @@ function Level() {
     }
 
     function end() {
-        document.querySelector('#optionsWrapper').style.display = 'none';
-        document.querySelector('#transitionText').style.display = 'none';
-        document.querySelector('#dialogueWrapper').style.display = 'none';
-        document.querySelector('#endWrapper').style.display = 'block';
+        setHasEnded(true);
     }
 
     function selectOption(option) {
@@ -110,19 +104,23 @@ function Level() {
                     <Button className={css.levelToolbarButton} onClick={() => history.replace('/levels')}>Sair</Button>
                 </LevelToolbar>
 
-                <p id="transitionText" className={css.levelUITransitionText} style={transitionTextStyle}>{transitionText}</p>
+                {shouldRenderTransitionText() && 
+                    <p className={css.levelUITransitionText}>
+                        {transitionText}
+                    </p>
+                }
 
-                <div id="optionsWrapper" style={optionsStyle}>
-                    <LevelOptions options={options} dialogue={dialogue} levelSubject={levelSubject} style={optionsStyle}>
+                {shouldRenderOptions() &&
+                    <LevelOptions options={options} dialogue={dialogue} levelSubject={levelSubject}>
                         {listOptions}
                     </LevelOptions>
-                </div>
+                }
 
-                <div id="endWrapper" className={css.levelUIEndWrapper}>
+                {shouldRenderLevelEnd() &&
                     <LevelEnd levelId={levelId} score={score} />
-                </div>
+                }
 
-                <div id="dialogueWrapper" style={dialogueStyle}>
+                {shouldRenderDialog() &&
                     <LevelDialogue
                         characterName={characterName}
                         dialogue={dialogue}
@@ -131,7 +129,7 @@ function Level() {
                         hasNext={hasNext}
                         onNext={() => next()}
                         onEnd={() => end()} />
-                </div>
+                }
             </div>
         </div>
     );

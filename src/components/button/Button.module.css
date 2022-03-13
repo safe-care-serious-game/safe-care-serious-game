@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   color: #FFFFFF;
   font-size: 1.25vw;
   font-family: 'Orbitron', sans-serif;

@@ -2,25 +2,15 @@ import Button from '../button/Button';
 import css from './LevelDialogue.module.css';
 
 function LevelDialogue(props) {
-    const characterNameStyle = {
-        visibility: props.characterName ? 'visible' : 'hidden'
-    };
+    const shouldRenderCharacterName = () => props.characterName
 
-    const dialogueStyle = {
-        display: props.dialogue ? 'block' : 'none'
-    };
+    const shouldRenderDialogue = () => props.dialogue
 
-    const previousButtonStyle = {
-        visibility: props.hasPrevious ? 'visible' : 'hidden'
-    };
-    
-    const nextButtonStyle = {
-        display: props.hasNext ? 'inline-block' : 'none'
-    };
+    const shouldRenderPreviousButton = () => props.hasPrevious
 
-    const endButtonStyle = {
-        display: props.hasNext ? 'none' : 'inline-block'
-    };
+    const shouldRenderNextButton = () => props.hasNext
+
+    const shouldRenderEndButton = () => !props.hasNext
     
     function previous() {
         if (props.onPrevious) {
@@ -43,15 +33,28 @@ function LevelDialogue(props) {
     return (
         <div className={css.levelDialogue}>
             <div className={css.levelDialogueCharacterName}>
-                <span style={characterNameStyle}>{props.characterName}</span>
+                {shouldRenderCharacterName() &&
+                    <span>{props.characterName}</span>
+                }
             </div>
             <div className={css.levelDialogueText}>
-                <p style={dialogueStyle}>{props.dialogue}</p>
+                {shouldRenderDialogue() &&
+                    <p>{props.dialogue}</p>
+                }
 
                 <div className={css.levelDialogueTextToolbar}>
-                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => previous()} style={previousButtonStyle}>Anterior</Button>
-                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => next()} style={nextButtonStyle}>Próximo</Button>
-                    <Button className={css.levelDialogueTextToolbarButton} onClick={() => end()} style={endButtonStyle}>Fim</Button>
+                    {shouldRenderPreviousButton()
+                        ? <Button className={css.levelDialogueTextToolbarButton} onClick={() => previous()}>Anterior</Button>
+                        : <Button style={{visibility: 'hidden'}} />
+                    }
+                    
+                    {shouldRenderNextButton() &&
+                        <Button className={css.levelDialogueTextToolbarButton} onClick={() => next()}>Próximo</Button>
+                    }
+
+                    {shouldRenderEndButton() &&
+                        <Button className={css.levelDialogueTextToolbarButton} onClick={() => end()}>Fim</Button>
+                    }
                 </div>
             </div>
         </div>

@@ -6,7 +6,7 @@ import LevelToolbar from '../level-toolbar/LevelToolbar'
 import data from '../../data'
 import css from './Level.module.css';
 import { useHistory, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { createRef, useEffect, useState } from 'react';
 
 function Level() {
     const history = useHistory();
@@ -24,6 +24,7 @@ function Level() {
     const [transitionText, setTransitionText] = useState('');
     const [options, setOptions] = useState([]);
     const [levelSubject, setLevelSubject] = useState('');
+    const videoRef = createRef();
 
     const shouldRenderTransitionText = () => transitionText && !hasEnded
 
@@ -60,9 +61,21 @@ function Level() {
     }, [levelId, levelData, levelDataIndex]);
 
     useEffect(() => {
-        //console.log('shot hook', shot);
-        document.querySelector('video').play();
-    }, [shot])
+        if (videoRef.current) {
+            // Abort current playback
+            videoRef.current.src = '';
+            videoRef.current.load();
+
+            // Start new playback
+            videoRef.current.src = shot;
+            videoRef.current.load();
+            let playbackPromise = videoRef.current.play();
+            if (playbackPromise) {
+                playbackPromise
+                    .catch(() => /* Capture exception to avoid flooding the logs */ {})
+            }
+        }
+    }, [shot, videoRef])
 
     function previous() {
         if (!hasPrevious) {
@@ -97,7 +110,7 @@ function Level() {
 
     return (
         <div className={css.level}>
-            <video className={css.levelVideo} src={shot}></video>
+            <video className={css.levelVideo} ref={videoRef}></video>
             <div className={css.levelUI}>
                 <LevelToolbar>
                     <span className={css.levelToolbarScore}>{score}</span>

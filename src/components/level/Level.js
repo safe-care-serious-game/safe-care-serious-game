@@ -48,7 +48,7 @@ function Level() {
         }
 
         // Previous/next
-        setHasPrevious(levelDataIndex !== 0);
+        setHasPrevious(levelDataIndex !== 0 && levelData[levelDataIndex - 1].options === undefined);
         setHasNext(levelDataIndex + 1 < data[levelId].length);
 
         // Other data

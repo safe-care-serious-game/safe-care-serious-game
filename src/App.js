@@ -1,3 +1,4 @@
+import GameMode from './components/game-mode/GameMode';
 import Level from './components/level/Level';
 import Levels from './components/levels/Levels';
 import MainMenu from './components/main-menu/MainMenu';
@@ -15,10 +16,13 @@ function App() {
         <Route path="/menu">
           <MainMenu />
         </Route>
-        <Route path="/levels/:levelId">
+        <Route path="/game-mode">
+          <GameMode />
+        </Route>
+        <Route path="/:gameMode/levels/:levelId">
           <Level />
         </Route>
-        <Route path="/levels">
+        <Route path="/:gameMode/levels">
           <Levels />
         </Route>
         <Route path="/">

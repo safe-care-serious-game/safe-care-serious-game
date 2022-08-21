@@ -14,7 +14,7 @@ function MainMenu() {
         <Logo small />
       </div>
       <div className={css.mainMenuOptions}>
-        <Card image={Play} title="Jogar" onClick={() => history.push('/levels')} />
+        <Card image={Play} title="Jogar" onClick={() => history.push('/game-mode')} />
         <Card image={KnowMore} title="Saiba Mais" />
       </div>
     </div>

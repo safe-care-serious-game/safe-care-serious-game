@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
 import MainMenu from './MainMenu';
 
-test('renders splash screen', () => {
+test('renders main menu', () => {
   const {container} = render(<MainMenu />);
   expect(container.firstChild.firstChild.firstChild.firstChild.tagName.toLowerCase()).toEqual('h1');
   expect(container.firstChild.firstChild.firstChild.firstChild).toHaveTextContent('Safe Care');

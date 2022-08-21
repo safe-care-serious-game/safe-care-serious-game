@@ -11,7 +11,7 @@ import isEqual from 'lodash.isequal';
 
 function Level() {
     const history = useHistory();
-    let { levelId } = useParams();
+    const { levelId } = useParams();
 
     const [levelData, setLevelData] = useState([]);
     const [levelDataIndex, setLevelDataIndex] = useState(-1);

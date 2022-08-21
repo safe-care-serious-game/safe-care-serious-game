@@ -9,10 +9,11 @@ import Level3 from '../../images/Level3.png'
 import Level4 from '../../images/Level4.png'
 import Level5 from '../../images/Level5.png'
 import Level6 from '../../images/Level6.png'
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 
 function Levels() {
   const history = useHistory();
+  const { gameMode } = useParams();
 
   const level = (image, title, onClick) => {
     return <div className={css.levelsListCard}>
@@ -32,7 +33,7 @@ function Levels() {
         {level(Level1, "Identificação do Paciente")}
         {level(Level2, "Cirurgia Segura")}
         {level(Level3, "Segurança na administração de mediacamentos")}
-        {level(Level4, "Prevenção de Lesão por pressão", () => history.push('/levels/4'))}
+        {level(Level4, "Prevenção de Lesão por pressão", () => history.push(`/${gameMode}/levels/4`))}
         {level(Level5, "Prevenção de Quedas")}
         {level(Level6, "Higienização das mãos")}
       </div>

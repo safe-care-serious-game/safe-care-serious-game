@@ -1,43 +1,155 @@
-import Level4Shot1 from '../videos/level4/Level4Shot1.mp4'
-import Level4Shot2 from '../videos/level4/Level4Shot2.mp4'
-import Level4Shot3 from '../videos/level4/Level4Shot3.mp4'
-import Level4Shot4 from '../videos/level4/Level4Shot4.mp4'
-import Level4Shot5 from '../videos/level4/Level4Shot5.mp4'
-import Level4Shot6 from '../videos/level4/Level4Shot6.mp4'
-import Level4Shot7 from '../videos/level4/Level4Shot7.mp4'
-import Level4Shot8 from '../videos/level4/Level4Shot8.mp4'
-import Level4Shot9 from '../videos/level4/Level4Shot9.mp4'
-import Level4Shot10 from '../videos/level4/Level4Shot10.mp4'
-import Level4Shot11 from '../videos/level4/Level4Shot11.mp4'
-import Level4Shot12 from '../videos/level4/Level4Shot12.mp4'
-import Level4Shot13 from '../videos/level4/Level4Shot13.mp4'
-import Level4Shot14 from '../videos/level4/Level4Shot14.mp4'
-import Level4Shot15 from '../videos/level4/Level4Shot15.mp4'
-import Level4Shot16 from '../videos/level4/Level4Shot16.mp4'
+import Level4Shot1Mp4 from '../videos/level4/Level4Shot1.mp4'
+import Level4Shot1Ogg from '../videos/level4/Level4Shot1.ogg'
+import Level4Shot1WebM from '../videos/level4/Level4Shot1.webm'
+import Level4Shot2Mp4 from '../videos/level4/Level4Shot2.mp4'
+import Level4Shot2Ogg from '../videos/level4/Level4Shot2.ogg'
+import Level4Shot2WebM from '../videos/level4/Level4Shot2.webm'
+import Level4Shot3Mp4 from '../videos/level4/Level4Shot3.mp4'
+import Level4Shot3Ogg from '../videos/level4/Level4Shot3.ogg'
+import Level4Shot3WebM from '../videos/level4/Level4Shot3.webm'
+import Level4Shot4Mp4 from '../videos/level4/Level4Shot4.mp4'
+import Level4Shot4Ogg from '../videos/level4/Level4Shot4.ogg'
+import Level4Shot4WebM from '../videos/level4/Level4Shot4.webm'
+import Level4Shot5Mp4 from '../videos/level4/Level4Shot5.mp4'
+import Level4Shot5Ogg from '../videos/level4/Level4Shot5.ogg'
+import Level4Shot5WebM from '../videos/level4/Level4Shot5.webm'
+import Level4Shot6Mp4 from '../videos/level4/Level4Shot6.mp4'
+import Level4Shot6Ogg from '../videos/level4/Level4Shot6.ogg'
+import Level4Shot6WebM from '../videos/level4/Level4Shot6.webm'
+import Level4Shot7Mp4 from '../videos/level4/Level4Shot7.mp4'
+import Level4Shot7Ogg from '../videos/level4/Level4Shot7.ogg'
+import Level4Shot7WebM from '../videos/level4/Level4Shot7.webm'
+import Level4Shot8Mp4 from '../videos/level4/Level4Shot8.mp4'
+import Level4Shot8Ogg from '../videos/level4/Level4Shot8.ogg'
+import Level4Shot8WebM from '../videos/level4/Level4Shot8.webm'
+import Level4Shot9Mp4 from '../videos/level4/Level4Shot9.mp4'
+import Level4Shot9Ogg from '../videos/level4/Level4Shot9.ogg'
+import Level4Shot9WebM from '../videos/level4/Level4Shot9.webm'
+import Level4Shot10Mp4 from '../videos/level4/Level4Shot10.mp4'
+import Level4Shot10Ogg from '../videos/level4/Level4Shot10.ogg'
+import Level4Shot10WebM from '../videos/level4/Level4Shot10.webm'
+import Level4Shot11Mp4 from '../videos/level4/Level4Shot11.mp4'
+import Level4Shot11Ogg from '../videos/level4/Level4Shot11.ogg'
+import Level4Shot11WebM from '../videos/level4/Level4Shot11.webm'
+import Level4Shot12Mp4 from '../videos/level4/Level4Shot12.mp4'
+import Level4Shot12Ogg from '../videos/level4/Level4Shot12.ogg'
+import Level4Shot12WebM from '../videos/level4/Level4Shot12.webm'
+import Level4Shot13Mp4 from '../videos/level4/Level4Shot13.mp4'
+import Level4Shot13Ogg from '../videos/level4/Level4Shot13.ogg'
+import Level4Shot13WebM from '../videos/level4/Level4Shot13.webm'
+import Level4Shot14Mp4 from '../videos/level4/Level4Shot14.mp4'
+import Level4Shot14Ogg from '../videos/level4/Level4Shot14.ogg'
+import Level4Shot14WebM from '../videos/level4/Level4Shot14.webm'
+import Level4Shot15Mp4 from '../videos/level4/Level4Shot15.mp4'
+import Level4Shot15Ogg from '../videos/level4/Level4Shot15.ogg'
+import Level4Shot15WebM from '../videos/level4/Level4Shot15.webm'
+import Level4Shot16Mp4 from '../videos/level4/Level4Shot16.mp4'
+import Level4Shot16Ogg from '../videos/level4/Level4Shot16.ogg'
+import Level4Shot16WebM from '../videos/level4/Level4Shot16.webm'
 
 const data = [
   {
     characterName: 'Enfermeira Florence Nightingale',
     dialogue: 'Bom dia Waldo, tudo bem? Queria conversar com você sobre o paciente do 303C.',
-    shot: Level4Shot1
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot1Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot1Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot1WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: 'Eu e o Hipócrates constatamos que o paciente do 303C, o senhor Oswaldo Cruz, teve piora no seu estado respiratório nos últimos três dias. Ele está ficando por um período maior de tempo restrito ao leito.',
-    shot: Level4Shot2
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: 'Nas últimas 24 horas, não houve relato nem pela equipe de efermagem nem pelo próprio paciente ou seu cuidador que esse paciente tenha deambulado. Estou começando a ficar preocupada. Você conhece os riscos de um paciente restrito ao leito?',
-    shot: Level4Shot3
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Fisioterapeuta Waldo de Moraes',
     dialogue: '...',
-    shot: Level4Shot4
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot4Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot4Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot4WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot4,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot4Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot4Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot4WebM,
+        type: 'video/webm'
+      },
+    ],
     options: [
       {
         dialogue: 'Cefaleia, náuseas, hematomas, prurido.',
@@ -54,20 +166,84 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Fico feliz que você entende esses riscos. Quais estratégias você sugere para que esse paciente possa melhorar seu estado respiratório e evitar esses riscos, principalmente o desenvolvimento de LPP?',
-    shot: Level4Shot5
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot5Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot5Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot5WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Waldo',
     dialogue: 'Florence, a Orem me informou que esse paciente já está recebendo os cuidados para previnir LPP. Quais cuidados vocês estão realizando?',
-    shot: Level4Shot6
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot6Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot6Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot6WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: '...',
-    shot: Level4Shot7
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot7Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot7Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot7WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot7,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot7Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot7Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot7WebM,
+        type: 'video/webm'
+      },
+    ],
     options: [
       {
         dialogue: 'Avaliação diária da pele, mudança de decúbito a cada duas horas, manter a pele hidratada, evitar cisalhamento, observar roupa de cama para evitar drobraduras.',
@@ -84,45 +260,189 @@ const data = [
   {
     characterName: 'Waldo',
     dialogue: 'Florence, acredito que os cuidados que vocês estão realizando são excelentes. Mas vamos avaliar o paciente e ver o que mais podemos definir para melhorar seu estado de saúde e previnir possíveis complicações.',
-    shot: Level4Shot8
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot8Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot8Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot8WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: '',
     dialogue: '',
-    shot: Level4Shot9
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot9Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot9Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot9WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: 'Bom dia senhor Oswaldo, como o senhor está se sentindo hoje?',
-    shot: Level4Shot10
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot10Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot10Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot10WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Oswaldo Cruz',
     dialogue: 'Bom dia enfermeira, estou do mesmo jeito, sem conseguir respirar direito.',
-    shot: Level4Shot11
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot11Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot11Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot11WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: 'O que o senhor tem feito durante o dia?',
-    shot: Level4Shot12
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot12Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot12Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot12WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Oswaldo Cruz',
     dialogue: 'Estou passando o dia inteiro deitado aqui. Ontem tentei caminhar, mas não consegui. Pela manhã me colocaram na poltrona, não fiquei cinco minutos, e ainda senti falta de ar.',
-    shot: Level4Shot13
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot13Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot13Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot13WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Waldo',
     dialogue: 'Entendo sua situação. O senhor sabe que é importante que caminhe e se movimente para ajudar na sua recuperação e assim poder ter alta mais rápido.',
-    shot: Level4Shot14
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot14Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot14Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot14WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Waldo',
     dialogue: 'Vamos examinar o senhor, para que possamos ver como melhorar sua condição respiratória e assim sair desse leito.',
-    shot: Level4Shot15
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot15Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot15Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot15WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot15,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot15Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot15Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot15WebM,
+        type: 'video/webm'
+      },
+    ],
     options: [
       {
         dialogue: 'O fisioterapeuta deverá avaliar o paciente, traçar um plano de cuidados adequado e colocá-lo em prática.',
@@ -142,10 +462,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Irei reforçar diariamente a avaliação da pele, a utilização da escala de Braden e a inspeção da presença de edemas com a equipe de enfermagem.',
-    shot: Level4Shot5
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot5Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot5Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot5WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot5,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot5Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot5Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot5WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Irei reforçar diariamente a avaliação da pele, a utilização da escala de Braden e a inspeção da presença de edemas com a equipe de enfermagem.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -164,10 +516,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Também irei prescrever a utilização de solução hidratante seis vezes ao dia nas proeminências ósseas.',
-    shot: Level4Shot3
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot3,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Também irei prescrever a utilização de solução hidratante seis vezes ao dia nas proeminências ósseas.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -186,10 +570,42 @@ const data = [
   {
     characterName: 'Waldo',
     dialogue: 'Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito.',
-    shot: Level4Shot6
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot6Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot6Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot6WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot6,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot6Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot6Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot6WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -208,10 +624,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.',
-    shot: Level4Shot2
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot2,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -230,10 +678,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Solicitarei uma avalição da nutricionista, a fim de promover o suporte nutricional adequado e avaliar o estado nutricional do paciente.',
-    shot: Level4Shot3
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot3,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Solicitarei uma avalição da nutricionista, a fim de promover o suporte nutricional adequado e avaliar o estado nutricional do paciente.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -252,10 +732,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Irei prescrever a utilização de coberturas adequadas nas áreas de proeminências ósseas.',
-    shot: Level4Shot2
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot2,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Irei prescrever a utilização de coberturas adequadas nas áreas de proeminências ósseas.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -274,10 +786,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Irei prescrever a utilização de coxins para diminuir a pressão nas proeminências ósseas do paciente.',
-    shot: Level4Shot3
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot3,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot3Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot3Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot3WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Irei prescrever a utilização de coxins para diminuir a pressão nas proeminências ósseas do paciente.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -296,10 +840,42 @@ const data = [
   {
     characterName: 'Florence',
     dialogue: 'Também irei prescrever a manutenção da cabeceira do leito do paciente em 45 graus para melhorar o seu estado respiratório e reduzir as chances de cisalhamento do paciente no leito.',
-    shot: Level4Shot2
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
-    shot: Level4Shot2,
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot2Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot2Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot2WebM,
+        type: 'video/webm'
+      },
+    ],
     dialogue: 'Também irei prescrever a manutenção da cabeceira do leito do paciente em 45 graus para melhorar o seu estado respiratório e reduzir as chances de cisalhamento do paciente no leito.',
     levelSubject: 'para prevenção de LPP',
     options: [
@@ -318,12 +894,44 @@ const data = [
   {
     characterName: 'Waldo',
     dialogue: 'Acredito que já consideramos importantes intervenções para realizar com o paciente Oswaldo. Vamos colocá-las em prática e reavaliar o paciente amanhã novamente.',
-    shot: Level4Shot8
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot8Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot8Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot8WebM,
+        type: 'video/webm'
+      },
+    ]
   },
   {
     characterName: 'Florence',
     dialogue: 'Certo Waldo.',
-    shot: Level4Shot16
+    shots: [
+      {
+        id: 1,
+        src: Level4Shot16Mp4,
+        type: 'video/mp4'
+      },
+      {
+        id: 2,
+        src: Level4Shot16Ogg,
+        type: 'video/ogg'
+      },
+      {
+        id: 3,
+        src: Level4Shot16WebM,
+        type: 'video/webm'
+      },
+    ]
   }
 ];
 

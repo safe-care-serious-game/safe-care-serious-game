@@ -7,6 +7,7 @@ import data from '../../data'
 import css from './Level.module.css';
 import { useHistory, useParams } from 'react-router-dom';
 import { createRef, useEffect, useState } from 'react';
+import isEqual from 'lodash.isequal';
 
 function Level() {
     const history = useHistory();
@@ -18,7 +19,7 @@ function Level() {
     const [hasNext, setHasNext] = useState(false);
     const [hasEnded, setHasEnded] = useState(false);
     const [score, setScore] = useState(0);
-    const [shot, setShot] = useState('');
+    const [shots, setShots] = useState([]);
     const [characterName, setCharacterName] = useState('');
     const [dialogue, setDialogue] = useState('');
     const [transitionText, setTransitionText] = useState('');
@@ -52,30 +53,36 @@ function Level() {
         setHasNext(levelDataIndex + 1 < data[levelId].length);
 
         // Other data
-        setShot(levelData[levelDataIndex].shot ? levelData[levelDataIndex].shot : '');
+        if (!levelData[levelDataIndex].shots) {
+            setShots([...[]]);
+        } else if (!isEqual(levelData[levelDataIndex].shots, shots)) {
+            setShots([...levelData[levelDataIndex].shots]);
+        }
         setCharacterName(levelData[levelDataIndex].characterName ? levelData[levelDataIndex].characterName : '');
         setDialogue(levelData[levelDataIndex].dialogue ? levelData[levelDataIndex].dialogue : '');
         setTransitionText(levelData[levelDataIndex].transitionText ? levelData[levelDataIndex].transitionText : '');
         setOptions(levelData[levelDataIndex].options ? [...levelData[levelDataIndex].options] : [...[]]);
         setLevelSubject(levelData[levelDataIndex].levelSubject ? levelData[levelDataIndex].levelSubject : '');
-    }, [levelId, levelData, levelDataIndex]);
+    }, [levelId, levelData, levelDataIndex, shots]);
 
     useEffect(() => {
-        if (videoRef.current) {
-            // Abort current playback
-            videoRef.current.src = '';
-            videoRef.current.load();
-
-            // Start new playback
-            videoRef.current.src = shot;
-            videoRef.current.load();
-            let playbackPromise = videoRef.current.play();
-            if (playbackPromise) {
-                playbackPromise
-                    .catch(() => /* Capture exception to avoid flooding the logs */ {})
-            }
+        if (!videoRef.current) {
+            return;
         }
-    }, [shot, videoRef])
+
+        // Abort current playback
+        videoRef.current.src = '';
+        videoRef.current.load();
+
+        // Start new playback
+        videoRef.current.removeAttribute('src');
+        videoRef.current.load();
+        let playbackPromise = videoRef.current.play();
+        if (playbackPromise) {
+            playbackPromise
+                .catch(() => /* Capture exception to avoid flooding the logs */ {})
+        }
+    }, [shots, videoRef])
 
     function previous() {
         if (!hasPrevious) {
@@ -110,7 +117,11 @@ function Level() {
 
     return (
         <div className={css.level}>
-            <video className={css.levelVideo} ref={videoRef}></video>
+            <video className={css.levelVideo} ref={videoRef}>
+                {shots.map((shot) =>
+                    <source key={shot.id} src={shot.src} type={shot.type} />
+                )}
+            </video>
             <div className={css.levelUI}>
                 <LevelToolbar>
                     <span className={css.levelToolbarScore}>{score}</span>

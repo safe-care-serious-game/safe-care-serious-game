@@ -1,0 +1,6 @@
+{
+    "name": "Deploy",
+    "description": "Deploy to GitHub Pages.",
+    "iconName": "html",
+    "categories": ["Pages", "HTML", "JavaScript", "CSS"]
+}

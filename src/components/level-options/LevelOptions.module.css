@@ -1,16 +1,16 @@
 .levelOptions {
-    width: 91.68vw;
-    height: 85.57vh;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 4.16vw 5.92vh 4.16vw;
+  width: 91.68vw;
+  height: 85.57vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 4.16vw 5.92vh 4.16vw;
 }
 
 .levelOptionsHeader {
-    color: #FFFFFF;
-    font-size: 1.875vw;
-    font-weight: 900;
-    letter-spacing: 0.1em;
+  color: #ffffff;
+  font-size: 1.875vw;
+  font-weight: 900;
+  letter-spacing: 0.1em;
 }

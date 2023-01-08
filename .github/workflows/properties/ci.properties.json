@@ -1,6 +1,6 @@
 {
-    "name": "CI",
-    "description": "Build and test.",
-    "iconName": "nodejs",
-    "categories": ["Continuous integration", "JavaScript", "npm", "React"]
+  "name": "CI",
+  "description": "Build and test.",
+  "iconName": "nodejs",
+  "categories": ["Continuous integration", "JavaScript", "npm", "React"]
 }

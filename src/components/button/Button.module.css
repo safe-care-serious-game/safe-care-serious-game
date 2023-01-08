@@ -1,13 +1,13 @@
 .button {
   display: inline-block;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 1.25vw;
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   font-weight: 900;
   letter-spacing: 0.1em;
-  background-color: #3B4844;
+  background-color: #3b4844;
   height: 5.92vh;
-  border: 2px solid #94A3A0;
+  border: 2px solid #94a3a0;
   border-radius: 0;
   padding: 0 1.04vw;
 }
@@ -17,5 +17,5 @@
 }
 
 .button:active {
-  background-color: #3B4844;
+  background-color: #3b4844;
 }

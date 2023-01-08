@@ -1,9 +1,9 @@
-import Logo from '../logo/Logo';
-import Card from '../card/Card';
-import css from './GameMode.module.css';
-import SinglePlayer from '../../images/SinglePlayer.jpg'
-import MultiPlayer from '../../images/MultiPlayer.jpg'
-import { useHistory } from 'react-router-dom';
+import Logo from "../logo/Logo";
+import Card from "../card/Card";
+import css from "./GameMode.module.css";
+import SinglePlayer from "../../images/SinglePlayer.jpg";
+import MultiPlayer from "../../images/MultiPlayer.jpg";
+import { useHistory } from "react-router-dom";
 
 function GameMode() {
   const history = useHistory();
@@ -14,8 +14,16 @@ function GameMode() {
         <Logo small />
       </div>
       <div className={css.gameModeOptions}>
-        <Card image={SinglePlayer} title="Single Player" onClick={() => history.push('/single-player/levels')} />
-        <Card image={MultiPlayer} title="Multi Player" onClick={() => history.push('/multi-player/levels')} />
+        <Card
+          image={SinglePlayer}
+          title="Single Player"
+          onClick={() => history.push("/single-player/levels")}
+        />
+        <Card
+          image={MultiPlayer}
+          title="Multi Player"
+          onClick={() => history.push("/multi-player/levels")}
+        />
       </div>
     </div>
   );

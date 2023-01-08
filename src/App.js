@@ -1,13 +1,9 @@
-import GameMode from './components/game-mode/GameMode';
-import Level from './components/level/Level';
-import Levels from './components/levels/Levels';
-import MainMenu from './components/main-menu/MainMenu';
-import SplashScreen from './components/splash-screen/SplashScreen';
-import {
-  HashRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import GameMode from "./components/game-mode/GameMode";
+import Level from "./components/level/Level";
+import Levels from "./components/levels/Levels";
+import MainMenu from "./components/main-menu/MainMenu";
+import SplashScreen from "./components/splash-screen/SplashScreen";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (

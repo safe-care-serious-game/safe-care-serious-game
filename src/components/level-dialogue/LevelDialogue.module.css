@@ -1,53 +1,53 @@
 .levelDialogueCharacterName {
-    border-bottom: 1.11vh solid #266829;
+  border-bottom: 1.11vh solid #266829;
 }
 
 .levelDialogueCharacterName span {
-    color: #FFFFFF;
-    font-size: 2.5vw;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    background-color: #266829;
-    padding: 1.11vh 1.45vw;
+  color: #ffffff;
+  font-size: 2.5vw;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  background-color: #266829;
+  padding: 1.11vh 1.45vw;
 }
 
 .levelDialogueText {
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.75);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .levelDialogueText p {
-    color: #FFFFFF;
-    font-size: 1.875vw;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    margin: 0;
-    padding: 3.7vh 2.08vw;
+  color: #ffffff;
+  font-size: 1.875vw;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin: 0;
+  padding: 3.7vh 2.08vw;
 }
 
 .levelDialogueTextToolbar {
-    background-color: transparent;
-    height: 7.4vh;
-    padding: 0 2.08vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  background-color: transparent;
+  height: 7.4vh;
+  padding: 0 2.08vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .levelDialogueTextToolbarButton {
-    font-size: 1.25vw;
-    background-color: transparent;
-    border-color: transparent;
+  font-size: 1.25vw;
+  background-color: transparent;
+  border-color: transparent;
 }
 
 .levelDialogueTextToolbarButton:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
 
 .levelDialogueTextToolbarButton:active {
-    background-color: transparent;
+  background-color: transparent;
 }

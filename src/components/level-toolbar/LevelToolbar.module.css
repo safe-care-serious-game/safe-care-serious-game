@@ -1,10 +1,10 @@
 .levelToolbar {
-    background-color: #266829;
-    height: 7.4vh;
-    padding: 0 6.25vw 0 6.25vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1.11vh solid #94A3A0;
+  background-color: #266829;
+  height: 7.4vh;
+  padding: 0 6.25vw 0 6.25vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.11vh solid #94a3a0;
 }

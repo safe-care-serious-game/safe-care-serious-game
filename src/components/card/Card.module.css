@@ -1,43 +1,43 @@
 .card {
-    width: 33vw;
-    height: 59vh;
-    overflow: hidden;
+  width: 33vw;
+  height: 59vh;
+  overflow: hidden;
 }
 
 .cardImage {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #94A3A0;
-    width: 33vw;
-    height: 45vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #94a3a0;
+  width: 33vw;
+  height: 45vh;
 }
 
 .cardTitle {
-    position: relative;
-    color: #FFFFFF;
-    font-size: 2vw;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.1em;
-    text-align: center;
-    background-color: #566862;
-    width: 27vw;
-    height: 14vh;
-    padding: 0 3vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  color: #ffffff;
+  font-size: 2vw;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-align: center;
+  background-color: #566862;
+  width: 27vw;
+  height: 14vh;
+  padding: 0 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover .cardImage,
 .card:active .cardImage {
-    transform: scale(1.2, 1.2);
-    cursor: pointer;
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
 }
 
 .card:hover .cardTitle,
 .card:active .cardTitle {
-    background-color: #266829;
-    cursor: pointer;
+  background-color: #266829;
+  cursor: pointer;
 }

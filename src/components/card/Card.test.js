@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import Card from './Card';
-import Level1 from '../../images/Level1.png'
+import Level1 from '../../images/Level1.jpg'
 
 test('renders card with empty title and image', () => {
   const {container} = render(<Card />);

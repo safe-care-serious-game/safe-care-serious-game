@@ -1,8 +1,8 @@
 import Logo from '../logo/Logo';
 import Card from '../card/Card';
 import css from './MainMenu.module.css';
-import Play from '../../images/Play.png'
-import KnowMore from '../../images/KnowMore.png'
+import Play from '../../images/Play.jpg'
+import KnowMore from '../../images/KnowMore.jpg'
 import { useHistory } from 'react-router-dom';
 
 function MainMenu() {

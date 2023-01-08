@@ -1,8 +1,8 @@
 import Logo from '../logo/Logo';
 import Card from '../card/Card';
 import css from './GameMode.module.css';
-import SinglePlayer from '../../images/SinglePlayer.png'
-import MultiPlayer from '../../images/MultiPlayer.png'
+import SinglePlayer from '../../images/SinglePlayer.jpg'
+import MultiPlayer from '../../images/MultiPlayer.jpg'
 import { useHistory } from 'react-router-dom';
 
 function GameMode() {

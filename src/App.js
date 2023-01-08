@@ -4,7 +4,7 @@ import Levels from './components/levels/Levels';
 import MainMenu from './components/main-menu/MainMenu';
 import SplashScreen from './components/splash-screen/SplashScreen';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";

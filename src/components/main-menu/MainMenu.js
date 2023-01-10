@@ -4,9 +4,18 @@ import css from "./MainMenu.module.css";
 import Play from "../../images/Play.jpg";
 import KnowMore from "../../images/KnowMore.jpg";
 import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 
 function MainMenu() {
   const history = useHistory();
+
+  useEffect(() => {
+    if (!document.fullscreenElement) {
+      document.body.requestFullscreen().catch((err) => {
+        // Ignore error
+      });
+    }
+  }, []);
 
   return (
     <div className={css.mainMenu}>

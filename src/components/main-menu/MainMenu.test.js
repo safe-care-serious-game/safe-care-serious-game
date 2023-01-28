@@ -1,6 +1,17 @@
 import { render } from "@testing-library/react";
 import MainMenu from "./MainMenu";
 
+const requestFullscreen = document.body.requestFullscreen;
+
+beforeAll(() => {
+  // Mock `requestFullscreen` to always resolve
+  document.body.requestFullscreen = () => new Promise((resolve) => resolve());
+});
+
+afterAll(() => {
+  document.body.requestFullscreen = requestFullscreen;
+});
+
 test("renders main menu", () => {
   const { container } = render(<MainMenu />);
   expect(

@@ -8,7 +8,7 @@ function LevelOptions(props) {
     <div className={css.levelOptions}>
       {shouldRenderAdditionalHeader() && (
         <h1 className={css.levelOptionsHeader}>
-          A conduta "{props.dialogue} é adequada para {props.levelSubject}?
+          A conduta "{props.dialogue}" é adequada para {props.levelSubject}?
         </h1>
       )}
       <h1 className={css.levelOptionsHeader}>Escolha uma opção:</h1>

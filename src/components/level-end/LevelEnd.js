@@ -1,12 +1,13 @@
 import Button from "../button/Button";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import css from "./LevelEnd.module.css";
 
 function LevelEnd(props) {
   const history = useHistory();
+  const { gameMode } = useParams();
 
   function playAgain() {
-    history.push("/levels");
+    history.push(`/${gameMode}/levels`);
     history.goBack();
   }
 
@@ -22,7 +23,7 @@ function LevelEnd(props) {
           </Button>
           <Button
             className={css.levelEndButton}
-            onClick={() => history.replace("/levels")}
+            onClick={() => history.push(`/${gameMode}/levels`)}
           >
             Sair
           </Button>

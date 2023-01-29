@@ -11,7 +11,7 @@ import isEqual from "lodash.isequal";
 
 function Level() {
   const history = useHistory();
-  const { levelId } = useParams();
+  const { gameMode, levelId } = useParams();
 
   const [levelData, setLevelData] = useState([]);
   const [levelDataIndex, setLevelDataIndex] = useState(-1);
@@ -159,7 +159,7 @@ function Level() {
           <span className={css.levelToolbarScore}>{score}</span>
           <Button
             className={css.levelToolbarButton}
-            onClick={() => history.replace("/levels")}
+            onClick={() => history.push(`/${gameMode}/levels`)}
           >
             Sair
           </Button>

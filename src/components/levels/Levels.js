@@ -43,7 +43,7 @@ function Levels() {
       </div>
 
       <FooterToolbar>
-        <Button onClick={() => history.goBack()}>Voltar</Button>
+        <Button onClick={() => history.push("/game-mode")}>Voltar</Button>
         <Button>Login</Button>
       </FooterToolbar>
     </div>

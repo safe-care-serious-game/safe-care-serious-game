@@ -517,7 +517,7 @@ const data = [
     ],
     dialogue:
       "Irei reforçar diariamente a avaliação da pele, a utilização da escala de Braden e a inspeção da presença de edemas com a equipe de enfermagem.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -573,7 +573,7 @@ const data = [
     ],
     dialogue:
       "Também irei prescrever a utilização de solução hidratante seis vezes ao dia nas proeminências ósseas.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -629,7 +629,7 @@ const data = [
     ],
     dialogue:
       "Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -685,7 +685,7 @@ const data = [
     ],
     dialogue:
       "Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -741,7 +741,7 @@ const data = [
     ],
     dialogue:
       "Solicitarei uma avalição da nutricionista, a fim de promover o suporte nutricional adequado e avaliar o estado nutricional do paciente.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -797,7 +797,7 @@ const data = [
     ],
     dialogue:
       "Irei prescrever a utilização de coberturas adequadas nas áreas de proeminências ósseas.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -853,7 +853,7 @@ const data = [
     ],
     dialogue:
       "Irei prescrever a utilização de coxins para diminuir a pressão nas proeminências ósseas do paciente.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",
@@ -909,7 +909,7 @@ const data = [
     ],
     dialogue:
       "Também irei prescrever a manutenção da cabeceira do leito do paciente em 45 graus para melhorar o seu estado respiratório e reduzir as chances de cisalhamento do paciente no leito.",
-    levelSubject: "para prevenção de LPP",
+    levelSubject: "prevenção de LPP",
     options: [
       {
         dialogue: "Verdadeira.",

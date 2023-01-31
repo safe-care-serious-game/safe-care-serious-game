@@ -70,10 +70,9 @@ function Level() {
     setHasNext(levelDataIndex + 1 < data[levelId].length);
 
     // Other data
-    if (!levelData[levelDataIndex].shots) {
-      setShots([...[]]);
-    } else if (!isEqual(levelData[levelDataIndex].shots, shots)) {
-      setShots([...levelData[levelDataIndex].shots]);
+    const incomingShots = levelData[levelDataIndex].shots ?? [];
+    if (!isEqual(incomingShots, shots)) {
+      setShots([...incomingShots]);
     }
     setCharacterName(
       levelData[levelDataIndex].characterName

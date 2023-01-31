@@ -6,7 +6,7 @@ import LevelToolbar from "../level-toolbar/LevelToolbar";
 import data from "../../data";
 import css from "./Level.module.css";
 import { useHistory, useParams } from "react-router-dom";
-import { createRef, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import isEqual from "lodash.isequal";
 
 function Level() {
@@ -25,7 +25,7 @@ function Level() {
   const [transitionText, setTransitionText] = useState("");
   const [options, setOptions] = useState([]);
   const [levelSubject, setLevelSubject] = useState("");
-  const videoRef = createRef();
+  const videoRef = useRef();
 
   const shouldRenderTransitionText = () => transitionText && !hasEnded;
 

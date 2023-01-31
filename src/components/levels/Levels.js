@@ -32,7 +32,9 @@ function Levels() {
       <h1 className={css.levelsTitle}>Fases</h1>
 
       <div className={css.levelsList}>
-        {level(Level1, "Identificação do Paciente")}
+        {level(Level1, "Identificação do Paciente", () =>
+          history.push(`/${gameMode}/levels/1`)
+        )}
         {level(Level2, "Cirurgia Segura")}
         {level(Level3, "Segurança na administração de mediacamentos")}
         {level(Level4, "Prevenção de Lesão por pressão", () =>

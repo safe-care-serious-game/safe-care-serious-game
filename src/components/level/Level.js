@@ -23,6 +23,8 @@ function Level() {
   const [characterName, setCharacterName] = useState("");
   const [dialogue, setDialogue] = useState("");
   const [transitionText, setTransitionText] = useState("");
+  const [helperText, setHelperText] = useState("");
+  const [shouldRenderHelperText, setShouldRenderHelperText] = useState(false);
   const [options, setOptions] = useState([]);
   const [multipleOptions, setMultipleOptions] = useState([]);
   const [levelSubject, setLevelSubject] = useState("");
@@ -88,6 +90,12 @@ function Level() {
         ? levelData[levelDataIndex].transitionText
         : ""
     );
+    setHelperText(
+      levelData[levelDataIndex].helperText
+        ? levelData[levelDataIndex].helperText
+        : ""
+    );
+    setShouldRenderHelperText(false);
     setOptions(
       levelData[levelDataIndex].options
         ? [...levelData[levelDataIndex].options]
@@ -161,8 +169,15 @@ function Level() {
   }
 
   function selectOption(option) {
-    if (option.correct) {
+    const isCorrect = option.correct;
+    if (isCorrect) {
       setScore(score + option.score);
+    }
+    if (!isCorrect && helperText) {
+      setOptions([...[]]);
+      setHasPrevious(false);
+      setShouldRenderHelperText(true);
+      return;
     }
     next();
   }
@@ -227,6 +242,10 @@ function Level() {
 
         {shouldRenderTransitionText() && (
           <p className={css.levelUITransitionText}>{transitionText}</p>
+        )}
+
+        {shouldRenderHelperText && (
+          <p className={css.levelUIHelperText}>{helperText}</p>
         )}
 
         {shouldRenderOptions() && (

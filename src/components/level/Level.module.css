@@ -61,3 +61,37 @@
   margin: 0 0 1.85vh 0;
   padding: 1.48vh 1.25vw;
 }
+
+.levelUIMultipleOptionsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1vh 1vw;
+}
+
+.levelUIMultipleOptionsItem {
+  display: inline-block;
+  color: #ffffff;
+  font-size: 1.25vw;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  height: 5.92vh;
+  border-radius: 0;
+  padding: 0 1.04vw;
+  background-color: transparent;
+  border-color: transparent;
+  line-height: 5.92vh;
+}
+
+input:unchecked + .levelUIMultipleOptionsItem {
+  background-color: transparent;
+}
+
+input:checked + .levelUIMultipleOptionsItem {
+  background-color: rgba(38, 104, 41, 0.75);
+}
+
+.levelUIMultipleOptionsItemInput {
+  display: none;
+}

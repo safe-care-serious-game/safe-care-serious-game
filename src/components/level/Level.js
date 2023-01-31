@@ -24,6 +24,7 @@ function Level() {
   const [dialogue, setDialogue] = useState("");
   const [transitionText, setTransitionText] = useState("");
   const [options, setOptions] = useState([]);
+  const [multipleOptions, setMultipleOptions] = useState([]);
   const [levelSubject, setLevelSubject] = useState("");
   const videoRef = useRef();
 
@@ -31,9 +32,15 @@ function Level() {
 
   const shouldRenderOptions = () => options.length !== 0 && !hasEnded;
 
+  const shouldRenderMultipleOptions = () =>
+    multipleOptions.length !== 0 && !hasEnded;
+
   const shouldRenderLevelEnd = () => hasEnded;
 
   const shouldRenderDialog = () => options.length === 0 && !hasEnded;
+
+  const addCheckedTo = (array) =>
+    array.map((item) => ({ ...item, checked: false }));
 
   useEffect(() => {
     setLevelData([...data[levelId]]);
@@ -55,7 +62,8 @@ function Level() {
     // Previous/next
     setHasPrevious(
       levelDataIndex !== 0 &&
-        levelData[levelDataIndex - 1].options === undefined
+        levelData[levelDataIndex - 1].options === undefined &&
+        levelData[levelDataIndex - 1].multipleOptions === undefined
     );
     setHasNext(levelDataIndex + 1 < data[levelId].length);
 
@@ -83,6 +91,11 @@ function Level() {
     setOptions(
       levelData[levelDataIndex].options
         ? [...levelData[levelDataIndex].options]
+        : [...[]]
+    );
+    setMultipleOptions(
+      levelData[levelDataIndex].multipleOptions
+        ? [...addCheckedTo(levelData[levelDataIndex].multipleOptions)]
         : [...[]]
     );
     setLevelSubject(
@@ -123,6 +136,23 @@ function Level() {
     if (!hasNext) {
       return;
     }
+    if (multipleOptions.length !== 0) {
+      const scoreFromMultipleOptions = multipleOptions.reduce(
+        (accumulator, item) => {
+          if (
+            (item.checked && item.correct) ||
+            (!item.checked && !item.correct)
+          ) {
+            return accumulator + item.score;
+          }
+
+          return accumulator;
+        },
+        0
+      );
+
+      setScore(score + scoreFromMultipleOptions);
+    }
     setLevelDataIndex(levelDataIndex + 1);
   }
 
@@ -137,6 +167,15 @@ function Level() {
     next();
   }
 
+  function toggleOption(checked, index) {
+    multipleOptions[index] = {
+      ...multipleOptions[index],
+      checked: checked,
+    };
+
+    setMultipleOptions([...multipleOptions]);
+  }
+
   const listOptions = options.map((option, index) => (
     <Button
       key={index}
@@ -146,6 +185,27 @@ function Level() {
       {option.dialogue}
     </Button>
   ));
+
+  const listMultipleOptions = (
+    <div className={css.levelUIMultipleOptionsContainer}>
+      {multipleOptions.map((option, index) => (
+        <div key={index}>
+          <input
+            id={`option-${index + 1}`}
+            type="checkbox"
+            className={css.levelUIMultipleOptionsItemInput}
+            onChange={(event) => toggleOption(event.target.checked, index)}
+          />
+          <label
+            htmlFor={`option-${index + 1}`}
+            className={css.levelUIMultipleOptionsItem}
+          >
+            {option.text}
+          </label>
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div className={css.level}>
@@ -177,6 +237,10 @@ function Level() {
           >
             {listOptions}
           </LevelOptions>
+        )}
+
+        {shouldRenderMultipleOptions() && (
+          <LevelOptions multiple>{listMultipleOptions}</LevelOptions>
         )}
 
         {shouldRenderLevelEnd() && <LevelEnd levelId={levelId} score={score} />}

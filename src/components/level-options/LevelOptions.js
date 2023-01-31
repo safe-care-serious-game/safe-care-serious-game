@@ -11,7 +11,11 @@ function LevelOptions(props) {
           A conduta "{props.dialogue}" é adequada para {props.levelSubject}?
         </h1>
       )}
-      <h1 className={css.levelOptionsHeader}>Escolha uma opção:</h1>
+      <h1 className={css.levelOptionsHeader}>
+        {props.multiple
+          ? "Marque as opções que se aplicam:"
+          : "Escolha uma opção:"}
+      </h1>
       {props.children}
     </div>
   );

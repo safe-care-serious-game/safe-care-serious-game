@@ -35,8 +35,12 @@ function Levels() {
         {level(Level1, "Identificação do Paciente", () =>
           history.push(`/${gameMode}/levels/1`)
         )}
-        {level(Level2, "Cirurgia Segura")}
-        {level(Level3, "Segurança na administração de mediacamentos")}
+        {level(Level2, "Cirurgia Segura", () =>
+          history.push(`/${gameMode}/levels/2`)
+        )}
+        {level(Level3, "Segurança na administração de mediacamentos", () =>
+          history.push(`/${gameMode}/levels/3`)
+        )}
         {level(Level4, "Prevenção de Lesão por pressão", () =>
           history.push(`/${gameMode}/levels/4`)
         )}

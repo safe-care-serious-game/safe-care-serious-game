@@ -44,7 +44,15 @@
 }
 
 .levelUITransitionText {
+  width: 91.68vw;
+  height: 100vh;
+  padding: 0 4.16vw;
+  margin: 0;
   color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-size: 2.5vw;
   font-weight: 900;
   letter-spacing: 0.1em;

@@ -28,6 +28,7 @@ function Level() {
   const [options, setOptions] = useState([]);
   const [multipleOptions, setMultipleOptions] = useState([]);
   const [levelSubject, setLevelSubject] = useState("");
+  const [isVideoPlaying, setVideoPlaying] = useState(false);
   const videoRef = useRef();
 
   const shouldRenderTransitionText = transitionText && !hasEnded;
@@ -227,7 +228,15 @@ function Level() {
 
   return (
     <div className={css.level}>
-      <video className={css.levelVideo} ref={videoRef}>
+      {!isVideoPlaying && (
+        <p className={css.levelUILoadingIndicator}>{"Carregando..."}</p>
+      )}
+      <video
+        className={css.levelVideo}
+        ref={videoRef}
+        onLoadStart={() => setVideoPlaying(false)}
+        onPlaying={() => setVideoPlaying(true)}
+      >
         {shots.map((shot) => (
           <source key={shot.id} src={shot.src} type={shot.type} />
         ))}

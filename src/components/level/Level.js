@@ -2,6 +2,7 @@ import Button from "../button/Button";
 import LevelDialogue from "../level-dialogue/LevelDialogue";
 import LevelEnd from "../level-end/LevelEnd";
 import LevelOptions from "../level-options/LevelOptions";
+import LoadingScreen from "../loading-screen/LoadingScreen";
 import LevelToolbar from "../level-toolbar/LevelToolbar";
 import data from "../../data";
 import css from "./Level.module.css";
@@ -14,6 +15,8 @@ function Level() {
   const { gameMode, levelId } = useParams();
 
   const [levelData, setLevelData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState(0.0);
   const [levelDataIndex, setLevelDataIndex] = useState(-1);
   const [hasPrevious, setHasPrevious] = useState(false);
   const [hasNext, setHasNext] = useState(false);
@@ -30,24 +33,79 @@ function Level() {
   const [levelSubject, setLevelSubject] = useState("");
   const videoRef = useRef();
 
-  const shouldRenderTransitionText = transitionText && !hasEnded;
-
-  const shouldRenderOptions = options.length !== 0 && !hasEnded;
-
-  const shouldRenderMultipleOptions = multipleOptions.length !== 0 && !hasEnded;
-
-  const shouldRenderLevelEnd = hasEnded;
-
-  const shouldRenderDialog = options.length === 0 && !hasEnded;
-
   const addCheckedTo = (array) =>
     array.map((item) => ({ ...item, checked: false }));
 
   useEffect(() => {
-    setLevelData([...data[levelId]]);
+    const toLoadLevelData = data[levelId];
+    let progress = 0.0;
+
+    new Promise(async (resolve) => {
+      const toLoadShots = toLoadLevelData
+        .map((section) => section.shots)
+        .filter((shots) => shots);
+
+      const loadPromises = toLoadShots.map((shots) => {
+        return new Promise((resolve) => {
+          const sources = shots.map((shot) => {
+            const sourceElement = document.createElement("source");
+            sourceElement.setAttribute("src", shot.src);
+            sourceElement.setAttribute("type", shot.type);
+            return sourceElement;
+          });
+
+          const videoElement = document.createElement("video");
+          videoElement.setAttribute("src", "");
+          videoElement.setAttribute("preload", "auto");
+
+          sources.forEach((source) => videoElement.appendChild(source));
+
+          // Wait for video to finish loading
+          let done = false;
+          const finishedLoading = () => {
+            if (done) {
+              // Only do it once for each video element
+              return;
+            }
+            progress += (1 / toLoadShots.length) * 100;
+            setLoadingProgress(progress);
+            done = true;
+            resolve();
+          };
+
+          videoElement.addEventListener("canplay", finishedLoading);
+          videoElement.addEventListener("canplaythrough", finishedLoading);
+          videoElement.addEventListener("abort", finishedLoading);
+          videoElement.addEventListener("stalled", finishedLoading);
+          videoElement.addEventListener("suspend", finishedLoading);
+          // FIXME: error event should be considered a failure an prevent the player from continuing
+          videoElement.addEventListener("error", finishedLoading);
+
+          // Load
+          videoElement.removeAttribute("src");
+          videoElement.load();
+        });
+      });
+
+      await Promise.all(loadPromises);
+
+      resolve();
+    })
+      .then(() => {
+        setLoading(false);
+        setLoadingProgress(100.0);
+        setLevelData([...toLoadLevelData]);
+      })
+      .catch(() => {
+        // Ignore for now
+      });
   }, [levelId]);
 
   useEffect(() => {
+    if (levelData.length === 0) {
+      return;
+    }
+
     setLevelDataIndex(0);
   }, [levelData]);
 
@@ -55,7 +113,8 @@ function Level() {
     if (
       !levelData ||
       Object.keys(levelData).length === 0 ||
-      levelData.length === 0
+      levelData.length === 0 ||
+      levelDataIndex === -1
     ) {
       return;
     }
@@ -66,7 +125,7 @@ function Level() {
         levelData[levelDataIndex - 1].options === undefined &&
         levelData[levelDataIndex - 1].multipleOptions === undefined
     );
-    setHasNext(levelDataIndex + 1 < data[levelId].length);
+    setHasNext(levelDataIndex + 1 < levelData.length);
 
     // Other data
     const incomingShots = levelData[levelDataIndex].shots ?? [];
@@ -109,15 +168,15 @@ function Level() {
         ? levelData[levelDataIndex].levelSubject
         : ""
     );
-  }, [levelId, levelData, levelDataIndex, shots]);
+  }, [levelData, levelDataIndex, shots]);
 
   useEffect(() => {
-    if (!videoRef.current) {
+    if (shots.length === 0 || !videoRef.current) {
       return;
     }
 
     // Abort current playback
-    videoRef.current.src = "";
+    videoRef.current.setAttribute("src", "");
     videoRef.current.load();
 
     // Start new playback
@@ -130,6 +189,16 @@ function Level() {
       );
     }
   }, [shots, videoRef]);
+
+  const shouldRenderTransitionText = transitionText && !hasEnded;
+
+  const shouldRenderOptions = options.length !== 0 && !hasEnded;
+
+  const shouldRenderMultipleOptions = multipleOptions.length !== 0 && !hasEnded;
+
+  const shouldRenderLevelEnd = hasEnded;
+
+  const shouldRenderDialog = options.length === 0 && !hasEnded;
 
   function previous() {
     if (!hasPrevious) {
@@ -222,58 +291,63 @@ function Level() {
 
   return (
     <div className={css.level}>
+      {loading && (
+        <LoadingScreen progress={`${loadingProgress.toFixed(2)} %`} />
+      )}
       <video className={css.levelVideo} ref={videoRef}>
         {shots.map((shot) => (
           <source key={shot.id} src={shot.src} type={shot.type} />
         ))}
       </video>
-      <div className={css.levelUI}>
-        <LevelToolbar>
-          <span className={css.levelToolbarScore}>{score}</span>
-          <Button
-            className={css.levelToolbarButton}
-            onClick={() => history.push(`/${gameMode}/levels`)}
-          >
-            Sair
-          </Button>
-        </LevelToolbar>
+      {!loading && (
+        <div className={css.levelUI}>
+          <LevelToolbar>
+            <span className={css.levelToolbarScore}>{score}</span>
+            <Button
+              className={css.levelToolbarButton}
+              onClick={() => history.push(`/${gameMode}/levels`)}
+            >
+              Sair
+            </Button>
+          </LevelToolbar>
 
-        {shouldRenderTransitionText && (
-          <p className={css.levelUITransitionText}>{transitionText}</p>
-        )}
+          {shouldRenderTransitionText && (
+            <p className={css.levelUITransitionText}>{transitionText}</p>
+          )}
 
-        {shouldRenderHelperText && (
-          <p className={css.levelUIHelperText}>{helperText}</p>
-        )}
+          {shouldRenderHelperText && (
+            <p className={css.levelUIHelperText}>{helperText}</p>
+          )}
 
-        {shouldRenderOptions && (
-          <LevelOptions
-            options={options}
-            dialogue={dialogue}
-            levelSubject={levelSubject}
-          >
-            {listOptions}
-          </LevelOptions>
-        )}
+          {shouldRenderOptions && (
+            <LevelOptions
+              options={options}
+              dialogue={dialogue}
+              levelSubject={levelSubject}
+            >
+              {listOptions}
+            </LevelOptions>
+          )}
 
-        {shouldRenderMultipleOptions && (
-          <LevelOptions multiple>{listMultipleOptions}</LevelOptions>
-        )}
+          {shouldRenderMultipleOptions && (
+            <LevelOptions multiple>{listMultipleOptions}</LevelOptions>
+          )}
 
-        {shouldRenderLevelEnd && <LevelEnd levelId={levelId} score={score} />}
+          {shouldRenderLevelEnd && <LevelEnd levelId={levelId} score={score} />}
 
-        {shouldRenderDialog && (
-          <LevelDialogue
-            characterName={characterName}
-            dialogue={dialogue}
-            hasPrevious={hasPrevious}
-            onPrevious={() => previous()}
-            hasNext={hasNext}
-            onNext={() => next()}
-            onEnd={() => end()}
-          />
-        )}
-      </div>
+          {shouldRenderDialog && (
+            <LevelDialogue
+              characterName={characterName}
+              dialogue={dialogue}
+              hasPrevious={hasPrevious}
+              onPrevious={() => previous()}
+              hasNext={hasNext}
+              onNext={() => next()}
+              onEnd={() => end()}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }

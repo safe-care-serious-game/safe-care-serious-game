@@ -48,6 +48,10 @@ function Level() {
   }, [levelId]);
 
   useEffect(() => {
+    if (levelData.length === 0) {
+      return;
+    }
+
     setLevelDataIndex(0);
   }, [levelData]);
 
@@ -55,7 +59,8 @@ function Level() {
     if (
       !levelData ||
       Object.keys(levelData).length === 0 ||
-      levelData.length === 0
+      levelData.length === 0 ||
+      levelDataIndex === -1
     ) {
       return;
     }
@@ -66,7 +71,7 @@ function Level() {
         levelData[levelDataIndex - 1].options === undefined &&
         levelData[levelDataIndex - 1].multipleOptions === undefined
     );
-    setHasNext(levelDataIndex + 1 < data[levelId].length);
+    setHasNext(levelDataIndex + 1 < levelData.length);
 
     // Other data
     const incomingShots = levelData[levelDataIndex].shots ?? [];
@@ -109,7 +114,7 @@ function Level() {
         ? levelData[levelDataIndex].levelSubject
         : ""
     );
-  }, [levelId, levelData, levelDataIndex, shots]);
+  }, [levelData, levelDataIndex, shots]);
 
   useEffect(() => {
     if (!videoRef.current) {

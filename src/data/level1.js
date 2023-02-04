@@ -126,6 +126,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Você deveria se atentar as necessidades do paciente quanto a ventilação, medicação, dieta, mobilidade, etc.",
   },
   {
     characterName: "Florence",
@@ -374,10 +376,13 @@ const data = [
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Você deveria confirmar a identificação do paciente com no mínimo dois identificadores, conforme o protocolo de identificação do paciente do Ministério da Saúde.",
   },
   {
     characterName: "Florence",
-    dialogue: "O senhor sabe me informar se possui alguma alergia?",
+    dialogue:
+      "Obrigada por confirmar seus dados de identificação. Mais uma pergunta, o senhor sabe me informar se possui alguma alergia?",
     shots: [
       {
         id: 1,
@@ -444,11 +449,13 @@ const data = [
       },
       {
         dialogue:
-          "Identificar o paciente com seu prontuário, ressaltar a presença de alergia nas folhas do prontuário, na pulseira e na placa de identificação e acompanhá-lo até o leito.",
+          "Ressaltar a presença de alergia nas folhas do prontuário, na pulseira e na placa de identificação e acompanhá-lo até o leito.",
         score: 10,
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Você deveria atentar-se quanto a identificação de alergias e identificá-la no prontuário, pulseira e na placa de identificação, conforme o protocolo de identificação do paciente do Ministério da Saúde.",
   },
   {
     characterName: "Florence",
@@ -522,6 +529,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! É papel do profissional da saúde orientar o paciente e familiar quanto à importância da identificação do paciente e assim torná-los agentes ativos no processo de segurança do paciente, conforme o protocolo de identificação do paciente do Ministério da Saúde.",
   },
   {
     characterName: "Florence",
@@ -660,6 +669,8 @@ const data = [
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Antes de iniciar seus cuidados, você deverá executar os procedimentos de identificação do paciente, conforme o protocolo de identificação do paciente do Ministério da Saúde.",
   },
   {
     characterName: "Florence",

@@ -38,15 +38,29 @@ function Level() {
 
   useEffect(() => {
     const toLoadLevelData = data[levelId];
-    let progress = 0.0;
 
     new Promise(async (resolve) => {
+      let videoElement = document.createElement("video");
+      let progress = 0.0;
+
       const toLoadShots = toLoadLevelData
         .map((section) => section.shots)
         .filter((shots) => shots);
 
-      const loadPromises = toLoadShots.map((shots) => {
-        return new Promise((resolve) => {
+      //const loadPromises = 
+      
+      let previousPromise = null;
+
+      toLoadShots.forEach(async (shots, index) => {
+        const promiseCallback = () => {
+          if ((index + 1) === toLoadShots.length) {
+            // Hint that the video element could be clear from memory
+            videoElement = null;
+
+            resolve();
+          }
+        };
+        const promise = new Promise((resolve) => {
           const sources = shots.map((shot) => {
             const sourceElement = document.createElement("source");
             sourceElement.setAttribute("src", shot.src);
@@ -54,7 +68,6 @@ function Level() {
             return sourceElement;
           });
 
-          const videoElement = document.createElement("video");
           videoElement.setAttribute("src", "");
           videoElement.setAttribute("preload", "auto");
 
@@ -67,9 +80,20 @@ function Level() {
               // Only do it once for each video element
               return;
             }
+
+            done = true;
+
+            // Clear event listeners
+            videoElement.removeEventListener("canplay", finishedLoading);
+            videoElement.removeEventListener("canplaythrough", finishedLoading);
+            videoElement.removeEventListener("abort", finishedLoading);
+            videoElement.removeEventListener("stalled", finishedLoading);
+            videoElement.removeEventListener("suspend", finishedLoading);
+            videoElement.removeEventListener("error", finishedLoading);
+
+            // Update progress
             progress += (1 / toLoadShots.length) * 100;
             setLoadingProgress(progress);
-            done = true;
             resolve();
           };
 
@@ -85,11 +109,23 @@ function Level() {
           videoElement.removeAttribute("src");
           videoElement.load();
         });
+        result.then().catch(() => {
+          // Ignore for now
+          if ((index + 1) === toLoadShots.length) {
+            // Hint that the video element could be clear from memory
+            videoElement = null;
+
+            resolve();
+          }
+        });
       });
 
-      await Promise.all(loadPromises);
-
-      resolve();
+      //await Promise.all(loadPromises);
+//
+      //// Hint that the video element could be clear from memory
+      //videoElement = null;
+//
+      //resolve();
     })
       .then(() => {
         setLoading(false);

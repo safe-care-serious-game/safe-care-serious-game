@@ -1,0 +1,25 @@
+.loadingScreen {
+  background-color: #c5d5d2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.loadingScreenLogoWrapper {
+  margin-top: 6.667vh;
+  margin-left: 6.25vw;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.loadingScreenText {
+  font-size: 1.875vw;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  margin-left: 6.25vw;
+  margin-bottom: 18vh;
+  color: #000000;
+  cursor: pointer;
+}

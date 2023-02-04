@@ -1,12 +1,11 @@
 import css from "./LevelOptions.module.css";
 
 function LevelOptions(props) {
-  const shouldRenderAdditionalHeader = () =>
-    props.dialogue && props.levelSubject;
+  const shouldRenderAdditionalHeader = props.dialogue && props.levelSubject;
 
   return (
     <div className={css.levelOptions}>
-      {shouldRenderAdditionalHeader() && (
+      {shouldRenderAdditionalHeader && (
         <h1 className={css.levelOptionsHeader}>
           A conduta "{props.dialogue}" é adequada para {props.levelSubject}?
         </h1>

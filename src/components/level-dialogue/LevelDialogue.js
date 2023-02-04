@@ -2,15 +2,15 @@ import Button from "../button/Button";
 import css from "./LevelDialogue.module.css";
 
 function LevelDialogue(props) {
-  const shouldRenderCharacterName = () => props.characterName;
+  const shouldRenderCharacterName = props.characterName;
 
-  const shouldRenderDialogue = () => props.dialogue;
+  const shouldRenderDialogue = props.dialogue;
 
-  const shouldRenderPreviousButton = () => props.hasPrevious;
+  const shouldRenderPreviousButton = props.hasPrevious;
 
-  const shouldRenderNextButton = () => props.hasNext;
+  const shouldRenderNextButton = props.hasNext;
 
-  const shouldRenderEndButton = () => !props.hasNext;
+  const shouldRenderEndButton = !props.hasNext;
 
   function previous() {
     if (props.onPrevious) {
@@ -33,13 +33,13 @@ function LevelDialogue(props) {
   return (
     <div className={css.levelDialogue}>
       <div className={css.levelDialogueCharacterName}>
-        {shouldRenderCharacterName() && <span>{props.characterName}</span>}
+        {shouldRenderCharacterName && <span>{props.characterName}</span>}
       </div>
       <div className={css.levelDialogueText}>
-        {shouldRenderDialogue() && <p>{props.dialogue}</p>}
+        {shouldRenderDialogue && <p>{props.dialogue}</p>}
 
         <div className={css.levelDialogueTextToolbar}>
-          {shouldRenderPreviousButton() ? (
+          {shouldRenderPreviousButton ? (
             <Button
               className={css.levelDialogueTextToolbarButton}
               onClick={() => previous()}
@@ -50,7 +50,7 @@ function LevelDialogue(props) {
             <Button style={{ visibility: "hidden" }} />
           )}
 
-          {shouldRenderNextButton() && (
+          {shouldRenderNextButton && (
             <Button
               className={css.levelDialogueTextToolbarButton}
               onClick={() => next()}
@@ -59,7 +59,7 @@ function LevelDialogue(props) {
             </Button>
           )}
 
-          {shouldRenderEndButton() && (
+          {shouldRenderEndButton && (
             <Button
               className={css.levelDialogueTextToolbarButton}
               onClick={() => end()}

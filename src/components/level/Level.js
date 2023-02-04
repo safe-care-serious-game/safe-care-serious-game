@@ -30,16 +30,15 @@ function Level() {
   const [levelSubject, setLevelSubject] = useState("");
   const videoRef = useRef();
 
-  const shouldRenderTransitionText = () => transitionText && !hasEnded;
+  const shouldRenderTransitionText = transitionText && !hasEnded;
 
-  const shouldRenderOptions = () => options.length !== 0 && !hasEnded;
+  const shouldRenderOptions = options.length !== 0 && !hasEnded;
 
-  const shouldRenderMultipleOptions = () =>
-    multipleOptions.length !== 0 && !hasEnded;
+  const shouldRenderMultipleOptions = multipleOptions.length !== 0 && !hasEnded;
 
-  const shouldRenderLevelEnd = () => hasEnded;
+  const shouldRenderLevelEnd = hasEnded;
 
-  const shouldRenderDialog = () => options.length === 0 && !hasEnded;
+  const shouldRenderDialog = options.length === 0 && !hasEnded;
 
   const addCheckedTo = (array) =>
     array.map((item) => ({ ...item, checked: false }));
@@ -239,7 +238,7 @@ function Level() {
           </Button>
         </LevelToolbar>
 
-        {shouldRenderTransitionText() && (
+        {shouldRenderTransitionText && (
           <p className={css.levelUITransitionText}>{transitionText}</p>
         )}
 
@@ -247,7 +246,7 @@ function Level() {
           <p className={css.levelUIHelperText}>{helperText}</p>
         )}
 
-        {shouldRenderOptions() && (
+        {shouldRenderOptions && (
           <LevelOptions
             options={options}
             dialogue={dialogue}
@@ -257,13 +256,13 @@ function Level() {
           </LevelOptions>
         )}
 
-        {shouldRenderMultipleOptions() && (
+        {shouldRenderMultipleOptions && (
           <LevelOptions multiple>{listMultipleOptions}</LevelOptions>
         )}
 
-        {shouldRenderLevelEnd() && <LevelEnd levelId={levelId} score={score} />}
+        {shouldRenderLevelEnd && <LevelEnd levelId={levelId} score={score} />}
 
-        {shouldRenderDialog() && (
+        {shouldRenderDialog && (
           <LevelDialogue
             characterName={characterName}
             dialogue={dialogue}

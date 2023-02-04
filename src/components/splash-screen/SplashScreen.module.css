@@ -27,12 +27,3 @@
   text-shadow: 0px 0px 8px #000000;
   cursor: pointer;
 }
-
-@keyframes scaling {
-  from {
-    transform: scale(1, 1);
-  }
-  to {
-    transform: scale(1.1, 1.1);
-  }
-}

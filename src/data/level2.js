@@ -320,7 +320,7 @@ const data = [
   {
     characterName: "Atena",
     dialogue:
-      "Muito bom, seu Galeno. O senhor possui alguma prótese que tenha vindo ao centro cirúrgico com ela?",
+      "Muito bom, seu Galeno. O senhor possui alguma prótese que tenha vindo ao centro cirúrgico com ela? E piercing?",
     shots: [
       {
         id: 1,
@@ -915,20 +915,42 @@ const data = [
     ],
   },
   {
+    characterName: "Wanda",
+    dialogue:
+      "Doutor, vamos dar início a verificação dos procedimentos cirúrgicos?",
     shots: [
       {
         id: 1,
-        src: LevelSequence2Shot18Mp4,
+        src: LevelSequence2Shot19Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: LevelSequence2Shot18WebM,
+        src: LevelSequence2Shot19WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: LevelSequence2Shot18Ogv,
+        src: LevelSequence2Shot19Ogv,
+        type: "video/ogg",
+      },
+    ],
+  },
+  {
+    shots: [
+      {
+        id: 1,
+        src: LevelSequence2Shot19Mp4,
+        type: "video/mp4",
+      },
+      {
+        id: 2,
+        src: LevelSequence2Shot19WebM,
+        type: "video/webm",
+      },
+      {
+        id: 3,
+        src: LevelSequence2Shot19Ogv,
         type: "video/ogg",
       },
     ],
@@ -967,28 +989,6 @@ const data = [
         text: "Estado de recuperação pós anestésica do paciente",
         score: 10,
         correct: true,
-      },
-    ],
-  },
-  {
-    characterName: "Wanda",
-    dialogue:
-      "Doutor, vamos dar início a verificação dos procedimentos cirúrgicos?",
-    shots: [
-      {
-        id: 1,
-        src: LevelSequence2Shot19Mp4,
-        type: "video/mp4",
-      },
-      {
-        id: 2,
-        src: LevelSequence2Shot19WebM,
-        type: "video/webm",
-      },
-      {
-        id: 3,
-        src: LevelSequence2Shot19Ogv,
-        type: "video/ogg",
       },
     ],
   },

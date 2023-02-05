@@ -675,7 +675,7 @@ const data = [
   {
     characterName: "Florence",
     dialogue:
-      "Senhor Oswaldo, além dessa pulseira para identificarmos o senhor, colocamos essa placa que é outra forma de verificar sua identidade enquanto estiver hospitalizado. Também não deve ser tirada daqui, nem trocada.",
+      "Senhor Oswaldo, além dessa pulseira para identificarmos o senhor, colocamos essa placa que é outra forma de verificar sua identidade enquanto estiver hospitalizado. Também não deve ser retirada daqui, nem trocada.",
     shots: [
       {
         id: 1,

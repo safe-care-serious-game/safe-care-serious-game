@@ -125,6 +125,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Você deveria considerar os aspectos da cultura de segurança do paciente e da cultura justa e investigar as causas do incidente para prevernir-se futuramente.",
   },
   {
     characterName: "Ignaz Semmelweis (Responsável pelo NSP)",
@@ -366,6 +368,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Você precisa considerar os nove certos preconizados pelo Ministério da Saúde para prevenir incidentes.",
   },
   {
     shots: [
@@ -589,6 +593,8 @@ const data = [
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Qualquer incidente de segurança do paciente deverá ser informado e notificado.",
   },
   {
     shots: [
@@ -701,11 +707,13 @@ const data = [
       },
       {
         dialogue:
-          "Conversar com a enfermeira e orientar que essa situação pode ocorrer, mas que ela deve averiguar sua prática, utilizar estratégias para evitar possíveis erros e evitar comentar o ocorrido com os demais profissionais para não prejudicá-la.",
+          "Conversar com a enfermeira e orientar que essa situação pode ocorrer, mas que ela deve averiguar sua prática, utilizar estratégias para evitar possíveis erros e evitar comentar ou notificar o ocorrido com os demais profissionais para não prejudicá-la.",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Todo incidente de segurança precisa ser notificado para que mudanças que venham a prevení-lo sejam estruturadas.",
   },
   {
     characterName: "Florence",
@@ -731,7 +739,7 @@ const data = [
   },
   {
     transitionText:
-      "Aprenstar informações (link, objetivos gerais e uso) do sistema NOTIVISA.",
+      "O NOTIVISA é um sistema informatizado nacional para o registro de problemas, queixas, incidentes e eventos adversos. As notificações podem ser feitas por profissionais de saúde, profissionais técnicos da Anvisa, vigilâncias (estaduais e municipais), secretarias (estaduais e municipais), profissionais de universidades, laboratórios de pesquisa, cidadãos, entre outros. https://www8.anvisa.gov.br/notivisa.",
     shots: [
       {
         id: 1,
@@ -1037,11 +1045,13 @@ const data = [
       },
       {
         dialogue:
-          "A enfermeira, o farmacêutico, e o responsável pelo NSP devem solicitar a compra de soluções que possuam rotulações diferenciadas.",
+          "A enfermeira, o farmacêutico, e o responsável pelo NSP devem orientar a equipe a ficarem mais atentos devido às semelhanças nos rótulos das soluções.",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Serão necessárias ações de melhoria para promoção da segurança do paciente.",
   },
   {
     shots: [

@@ -131,7 +131,7 @@ const data = [
   {
     characterName: "Ignaz Semmelweis (Responsável pelo NSP)",
     dialogue:
-      "Bom dia Florence, fui notificado de um incidente envolvendo medição em seu setor. Você possui maiores informações a respeito?",
+      "Bom dia Florence, fui notificado de um incidente envolvendo medicação em seu setor. Você pode relatar o que aconteceu, por favor?",
     shots: [
       {
         id: 1,
@@ -317,7 +317,8 @@ const data = [
     ],
   },
   {
-    transitionText: "Adicionar prescrição do paciente aqui",
+    transitionText:
+      "1. Cloreto de Sódio 0,9 % 500 mL; Administrar 500 mL, IV, de 24/24h, a 21 mL/h; 2. Enoxaparina Sódica (Atenção! Dupla Cechagem) 40 mg; Administrar 1 SER, SC, 1x dia 2; 3. Omeprazol 20 mg; 1 CAP VO, manhã em jejum; 4. Dipirona Sódica Injetável 2 mL 500 mg/mL; Administrar 1000 mg, EV, de 6/6h. Diluir em 8 ml de ADB, se febre > 37.5 ºC; Ondasetrona Injetável 2 mL 2 mg/mL; Administrar 8 mg, IV, 8/8h, diluir em 100 mL de Cloreto de Sódio 0,9 %. Se náuse ou vômito.",
     shots: [
       {
         id: 1,
@@ -618,7 +619,7 @@ const data = [
   {
     characterName: "Orem",
     dialogue:
-      "Florence, gostaria de conversar com a senhora sobre um incidente que ocorreu quando fui realizar medicação do paciente do leito 102A.",
+      "Florence, gostaria de conversar com você sobre um incidente que ocorreu quando fui realizar medicação do paciente do leito 102A.",
     shots: [
       {
         id: 1,
@@ -661,7 +662,7 @@ const data = [
   {
     characterName: "Orem",
     dialogue:
-      "Quando fui administrar 500 ml de soro fisiológico 0,9% no paciente, percebi que tinha levado soro glicosado à 5%, moentei a solução no equipo mas não cheguei a administrar! Quando ia iniciar a infusão do soro achei estranho o rótulo, fui ler e vi que não era o soro fisiológico. Estou muito nervosa com isso Florence, eu poderia ter feito mal ao paciente.",
+      "Quando fui administrar 500 ml de soro fisiológico 0,9% no paciente, percebi que tinha levado soro glicosado à 5%, montei a solução no equipo mas não cheguei a administrar! Quando ia iniciar a infusão do soro achei estranho o rótulo, fui ler e vi que não era o soro fisiológico. Estou muito nervosa com isso Florence, eu poderia ter feito mal ao paciente.",
     shots: [
       {
         id: 1,
@@ -718,7 +719,7 @@ const data = [
   {
     characterName: "Florence",
     dialogue:
-      "Orem, o evento ocorrido é chamado de Near Miss, foi um incidente que chegou perto de acontecer mas não atingiu o paciente. Devemos buscar estratégias para evitar que esse incidente se repita, entre elas podemos utilizar a notificação.",
+      "Orem, o evento ocorrido é chamado de Near Miss, foi um incidente que chegou perto de acontecer mas não atingiu o paciente. Devemos buscar estratégias para evitar que esse incidente se repita, entre elas podemos utilizar a notificação no sistema NOTIVISA.",
     shots: [
       {
         id: 1,
@@ -1073,49 +1074,34 @@ const data = [
     ],
     multipleOptions: [
       {
-        text: "ALTERAR ISSO AQUI",
+        text: "Solicitar a compra de soluções que possuam rótulos que diferenciem, se possível",
         score: 10,
         correct: true,
       },
       {
-        text: "Data de nascimento",
+        text: "Providenciar etiquetas de cores para diferenciar os fármacos",
         score: 10,
         correct: true,
       },
       {
-        text: "Idade",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Raça",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Número de registro",
+        text: "Colocar as soluções em armários/ambientes diferentes",
         score: 10,
         correct: true,
       },
       {
-        text: "Nome social",
+        text: "Utilizar de etiquetas para identificar prateleiras/locais onde estão armazenados os frascos",
         score: 10,
         correct: true,
       },
       {
-        text: "Endereço",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Nome da mãe",
+        text: "Realizar capacitações sobre a prática segura para administração dos fármacos",
         score: 10,
         correct: true,
       },
       {
-        text: "Exames",
+        text: "Utilizar de cartazes e outros recursos visuais para orientar os profissionais em sua prática",
         score: 10,
-        correct: false,
+        correct: true,
       },
     ],
   },

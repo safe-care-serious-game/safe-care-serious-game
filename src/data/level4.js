@@ -470,6 +470,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      'Que pena! É importante lembrar os cinco momentos para higienizar as mãos, com o "antes de tocar no paciente". Além disso, você precisa lembrar a importância da equipe de multiprofissionais em saúde.',
   },
   {
     transitionText:

@@ -229,6 +229,8 @@ const data = [
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Você deveria confirmar a identificação do paciente ao recebê-lo no centro cirúrgico com no mínimo dois identificadores e esclarecer dúvidas do paciente sobre o procedimento, de acordo com o protocolo de cirurgia segura do Ministério da Saúde.",
   },
   {
     characterName: "Cláudio",
@@ -596,6 +598,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Essas informações compõem a etapa anterior, agora você deverá apresentar-se ao paciente, confirmar a identificação do pacientem explicar o procedimento e avaliar o paciente, de acordo com o protocolo de cirurgia segura do Ministério da Saúde.",
   },
   {
     characterName: "Médico Long",
@@ -1088,6 +1092,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      'Que pena! Você deveria proceder com a última etapa do checklist de cirurgia segura do Ministério da Saúde, no momento "Antes do paciente sair da sala cirúrgica".',
   },
   {
     characterName: "Hipocrátes",

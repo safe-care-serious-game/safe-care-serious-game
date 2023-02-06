@@ -44,7 +44,9 @@ function Levels() {
         {level(Level4, "Prevenção de Lesão por pressão", () =>
           history.push(`/${gameMode}/levels/4`)
         )}
-        {level(Level5, "Prevenção de Quedas")}
+        {level(Level5, "Prevenção de Quedas", () =>
+          history.push(`/${gameMode}/levels/5`)
+        )}
         {level(Level6, "Higienização das mãos")}
       </div>
 

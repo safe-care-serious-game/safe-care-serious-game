@@ -1,51 +1,51 @@
-import Level4Shot1Mp4 from "../videos/level4/Level4Shot1.mp4";
-import Level4Shot1WebM from "../videos/level4/Level4Shot1.webm";
-import Level4Shot1Ogv from "../videos/level4/Level4Shot1.ogv";
-import Level4Shot2Mp4 from "../videos/level4/Level4Shot2.mp4";
-import Level4Shot2WebM from "../videos/level4/Level4Shot2.webm";
-import Level4Shot2Ogv from "../videos/level4/Level4Shot2.ogv";
-import Level4Shot3Mp4 from "../videos/level4/Level4Shot3.mp4";
-import Level4Shot3WebM from "../videos/level4/Level4Shot3.webm";
-import Level4Shot3Ogv from "../videos/level4/Level4Shot3.ogv";
-import Level4Shot4Mp4 from "../videos/level4/Level4Shot4.mp4";
-import Level4Shot4WebM from "../videos/level4/Level4Shot4.webm";
-import Level4Shot4Ogv from "../videos/level4/Level4Shot4.ogv";
-import Level4Shot5Mp4 from "../videos/level4/Level4Shot5.mp4";
-import Level4Shot5WebM from "../videos/level4/Level4Shot5.webm";
-import Level4Shot5Ogv from "../videos/level4/Level4Shot5.ogv";
-import Level4Shot6Mp4 from "../videos/level4/Level4Shot6.mp4";
-import Level4Shot6WebM from "../videos/level4/Level4Shot6.webm";
-import Level4Shot6Ogv from "../videos/level4/Level4Shot6.ogv";
-import Level4Shot7Mp4 from "../videos/level4/Level4Shot7.mp4";
-import Level4Shot7WebM from "../videos/level4/Level4Shot7.webm";
-import Level4Shot7Ogv from "../videos/level4/Level4Shot7.ogv";
-import Level4Shot8Mp4 from "../videos/level4/Level4Shot8.mp4";
-import Level4Shot8WebM from "../videos/level4/Level4Shot8.webm";
-import Level4Shot8Ogv from "../videos/level4/Level4Shot8.ogv";
-import Level4Shot9Mp4 from "../videos/level4/Level4Shot9.mp4";
-import Level4Shot9WebM from "../videos/level4/Level4Shot9.webm";
-import Level4Shot9Ogv from "../videos/level4/Level4Shot9.ogv";
-import Level4Shot10Mp4 from "../videos/level4/Level4Shot10.mp4";
-import Level4Shot10WebM from "../videos/level4/Level4Shot10.webm";
-import Level4Shot10Ogv from "../videos/level4/Level4Shot10.ogv";
-import Level4Shot11Mp4 from "../videos/level4/Level4Shot11.mp4";
-import Level4Shot11WebM from "../videos/level4/Level4Shot11.webm";
-import Level4Shot11Ogv from "../videos/level4/Level4Shot11.ogv";
-import Level4Shot12Mp4 from "../videos/level4/Level4Shot12.mp4";
-import Level4Shot12WebM from "../videos/level4/Level4Shot12.webm";
-import Level4Shot12Ogv from "../videos/level4/Level4Shot12.ogv";
-import Level4Shot13Mp4 from "../videos/level4/Level4Shot13.mp4";
-import Level4Shot13WebM from "../videos/level4/Level4Shot13.webm";
-import Level4Shot13Ogv from "../videos/level4/Level4Shot13.ogv";
-import Level4Shot14Mp4 from "../videos/level4/Level4Shot14.mp4";
-import Level4Shot14WebM from "../videos/level4/Level4Shot14.webm";
-import Level4Shot14Ogv from "../videos/level4/Level4Shot14.ogv";
-import Level4Shot15Mp4 from "../videos/level4/Level4Shot15.mp4";
-import Level4Shot15WebM from "../videos/level4/Level4Shot15.webm";
-import Level4Shot15Ogv from "../videos/level4/Level4Shot15.ogv";
-import Level4Shot16Mp4 from "../videos/level4/Level4Shot16.mp4";
-import Level4Shot16WebM from "../videos/level4/Level4Shot16.webm";
-import Level4Shot16Ogv from "../videos/level4/Level4Shot16.ogv";
+import LevelSequence4Shot1Mp4 from "../videos/level4/LevelSequence4Shot1.mp4";
+import LevelSequence4Shot1WebM from "../videos/level4/LevelSequence4Shot1.webm";
+import LevelSequence4Shot1Ogv from "../videos/level4/LevelSequence4Shot1.ogv";
+import LevelSequence4Shot2Mp4 from "../videos/level4/LevelSequence4Shot2.mp4";
+import LevelSequence4Shot2WebM from "../videos/level4/LevelSequence4Shot2.webm";
+import LevelSequence4Shot2Ogv from "../videos/level4/LevelSequence4Shot2.ogv";
+import LevelSequence4Shot3Mp4 from "../videos/level4/LevelSequence4Shot3.mp4";
+import LevelSequence4Shot3WebM from "../videos/level4/LevelSequence4Shot3.webm";
+import LevelSequence4Shot3Ogv from "../videos/level4/LevelSequence4Shot3.ogv";
+import LevelSequence4Shot4Mp4 from "../videos/level4/LevelSequence4Shot4.mp4";
+import LevelSequence4Shot4WebM from "../videos/level4/LevelSequence4Shot4.webm";
+import LevelSequence4Shot4Ogv from "../videos/level4/LevelSequence4Shot4.ogv";
+import LevelSequence4Shot5Mp4 from "../videos/level4/LevelSequence4Shot5.mp4";
+import LevelSequence4Shot5WebM from "../videos/level4/LevelSequence4Shot5.webm";
+import LevelSequence4Shot5Ogv from "../videos/level4/LevelSequence4Shot5.ogv";
+import LevelSequence4Shot6Mp4 from "../videos/level4/LevelSequence4Shot6.mp4";
+import LevelSequence4Shot6WebM from "../videos/level4/LevelSequence4Shot6.webm";
+import LevelSequence4Shot6Ogv from "../videos/level4/LevelSequence4Shot6.ogv";
+import LevelSequence4Shot7Mp4 from "../videos/level4/LevelSequence4Shot7.mp4";
+import LevelSequence4Shot7WebM from "../videos/level4/LevelSequence4Shot7.webm";
+import LevelSequence4Shot7Ogv from "../videos/level4/LevelSequence4Shot7.ogv";
+import LevelSequence4Shot8Mp4 from "../videos/level4/LevelSequence4Shot8.mp4";
+import LevelSequence4Shot8WebM from "../videos/level4/LevelSequence4Shot8.webm";
+import LevelSequence4Shot8Ogv from "../videos/level4/LevelSequence4Shot8.ogv";
+import LevelSequence4Shot9Mp4 from "../videos/level4/LevelSequence4Shot9.mp4";
+import LevelSequence4Shot9WebM from "../videos/level4/LevelSequence4Shot9.webm";
+import LevelSequence4Shot9Ogv from "../videos/level4/LevelSequence4Shot9.ogv";
+import LevelSequence4Shot10Mp4 from "../videos/level4/LevelSequence4Shot10.mp4";
+import LevelSequence4Shot10WebM from "../videos/level4/LevelSequence4Shot10.webm";
+import LevelSequence4Shot10Ogv from "../videos/level4/LevelSequence4Shot10.ogv";
+import LevelSequence4Shot11Mp4 from "../videos/level4/LevelSequence4Shot11.mp4";
+import LevelSequence4Shot11WebM from "../videos/level4/LevelSequence4Shot11.webm";
+import LevelSequence4Shot11Ogv from "../videos/level4/LevelSequence4Shot11.ogv";
+import LevelSequence4Shot12Mp4 from "../videos/level4/LevelSequence4Shot12.mp4";
+import LevelSequence4Shot12WebM from "../videos/level4/LevelSequence4Shot12.webm";
+import LevelSequence4Shot12Ogv from "../videos/level4/LevelSequence4Shot12.ogv";
+import LevelSequence4Shot13Mp4 from "../videos/level4/LevelSequence4Shot13.mp4";
+import LevelSequence4Shot13WebM from "../videos/level4/LevelSequence4Shot13.webm";
+import LevelSequence4Shot13Ogv from "../videos/level4/LevelSequence4Shot13.ogv";
+import LevelSequence4Shot14Mp4 from "../videos/level4/LevelSequence4Shot14.mp4";
+import LevelSequence4Shot14WebM from "../videos/level4/LevelSequence4Shot14.webm";
+import LevelSequence4Shot14Ogv from "../videos/level4/LevelSequence4Shot14.ogv";
+import LevelSequence4Shot15Mp4 from "../videos/level4/LevelSequence4Shot15.mp4";
+import LevelSequence4Shot15WebM from "../videos/level4/LevelSequence4Shot15.webm";
+import LevelSequence4Shot15Ogv from "../videos/level4/LevelSequence4Shot15.ogv";
+import LevelSequence4Shot16Mp4 from "../videos/level4/LevelSequence4Shot16.mp4";
+import LevelSequence4Shot16WebM from "../videos/level4/LevelSequence4Shot16.webm";
+import LevelSequence4Shot16Ogv from "../videos/level4/LevelSequence4Shot16.ogv";
 
 const data = [
   {
@@ -55,17 +55,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot1Mp4,
+        src: LevelSequence4Shot1Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot1WebM,
+        src: LevelSequence4Shot1WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot1Ogv,
+        src: LevelSequence4Shot1Ogv,
         type: "video/ogg",
       },
     ],
@@ -77,17 +77,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -99,17 +99,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -120,17 +120,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot4Mp4,
+        src: LevelSequence4Shot4Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot4WebM,
+        src: LevelSequence4Shot4WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot4Ogv,
+        src: LevelSequence4Shot4Ogv,
         type: "video/ogg",
       },
     ],
@@ -139,17 +139,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot4Mp4,
+        src: LevelSequence4Shot4Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot4WebM,
+        src: LevelSequence4Shot4WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot4Ogv,
+        src: LevelSequence4Shot4Ogv,
         type: "video/ogg",
       },
     ],
@@ -174,17 +174,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot5Mp4,
+        src: LevelSequence4Shot5Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot5WebM,
+        src: LevelSequence4Shot5WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot5Ogv,
+        src: LevelSequence4Shot5Ogv,
         type: "video/ogg",
       },
     ],
@@ -196,17 +196,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot6Mp4,
+        src: LevelSequence4Shot6Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot6WebM,
+        src: LevelSequence4Shot6WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot6Ogv,
+        src: LevelSequence4Shot6Ogv,
         type: "video/ogg",
       },
     ],
@@ -217,17 +217,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot7Mp4,
+        src: LevelSequence4Shot7Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot7WebM,
+        src: LevelSequence4Shot7WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot7Ogv,
+        src: LevelSequence4Shot7Ogv,
         type: "video/ogg",
       },
     ],
@@ -236,17 +236,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot7Mp4,
+        src: LevelSequence4Shot7Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot7WebM,
+        src: LevelSequence4Shot7WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot7Ogv,
+        src: LevelSequence4Shot7Ogv,
         type: "video/ogg",
       },
     ],
@@ -272,17 +272,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot8Mp4,
+        src: LevelSequence4Shot8Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot8WebM,
+        src: LevelSequence4Shot8WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot8Ogv,
+        src: LevelSequence4Shot8Ogv,
         type: "video/ogg",
       },
     ],
@@ -293,17 +293,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot9Mp4,
+        src: LevelSequence4Shot9Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot9WebM,
+        src: LevelSequence4Shot9WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot9Ogv,
+        src: LevelSequence4Shot9Ogv,
         type: "video/ogg",
       },
     ],
@@ -314,17 +314,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot10Mp4,
+        src: LevelSequence4Shot10Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot10WebM,
+        src: LevelSequence4Shot10WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot10Ogv,
+        src: LevelSequence4Shot10Ogv,
         type: "video/ogg",
       },
     ],
@@ -336,17 +336,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot11Mp4,
+        src: LevelSequence4Shot11Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot11WebM,
+        src: LevelSequence4Shot11WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot11Ogv,
+        src: LevelSequence4Shot11Ogv,
         type: "video/ogg",
       },
     ],
@@ -357,17 +357,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot12Mp4,
+        src: LevelSequence4Shot12Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot12WebM,
+        src: LevelSequence4Shot12WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot12Ogv,
+        src: LevelSequence4Shot12Ogv,
         type: "video/ogg",
       },
     ],
@@ -379,17 +379,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot13Mp4,
+        src: LevelSequence4Shot13Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot13WebM,
+        src: LevelSequence4Shot13WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot13Ogv,
+        src: LevelSequence4Shot13Ogv,
         type: "video/ogg",
       },
     ],
@@ -401,17 +401,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot14Mp4,
+        src: LevelSequence4Shot14Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot14WebM,
+        src: LevelSequence4Shot14WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot14Ogv,
+        src: LevelSequence4Shot14Ogv,
         type: "video/ogg",
       },
     ],
@@ -423,17 +423,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot15Mp4,
+        src: LevelSequence4Shot15Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot15WebM,
+        src: LevelSequence4Shot15WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot15Ogv,
+        src: LevelSequence4Shot15Ogv,
         type: "video/ogg",
       },
     ],
@@ -442,17 +442,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot15Mp4,
+        src: LevelSequence4Shot15Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot15WebM,
+        src: LevelSequence4Shot15WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot15Ogv,
+        src: LevelSequence4Shot15Ogv,
         type: "video/ogg",
       },
     ],
@@ -484,17 +484,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot5Mp4,
+        src: LevelSequence4Shot5Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot5WebM,
+        src: LevelSequence4Shot5WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot5Ogv,
+        src: LevelSequence4Shot5Ogv,
         type: "video/ogg",
       },
     ],
@@ -503,17 +503,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot5Mp4,
+        src: LevelSequence4Shot5Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot5WebM,
+        src: LevelSequence4Shot5WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot5Ogv,
+        src: LevelSequence4Shot5Ogv,
         type: "video/ogg",
       },
     ],
@@ -540,17 +540,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -559,17 +559,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -596,17 +596,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot6Mp4,
+        src: LevelSequence4Shot6Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot6WebM,
+        src: LevelSequence4Shot6WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot6Ogv,
+        src: LevelSequence4Shot6Ogv,
         type: "video/ogg",
       },
     ],
@@ -615,17 +615,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot6Mp4,
+        src: LevelSequence4Shot6Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot6WebM,
+        src: LevelSequence4Shot6WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot6Ogv,
+        src: LevelSequence4Shot6Ogv,
         type: "video/ogg",
       },
     ],
@@ -652,17 +652,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -671,17 +671,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -708,17 +708,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -727,17 +727,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -764,17 +764,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -783,17 +783,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -820,17 +820,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -839,17 +839,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot3Mp4,
+        src: LevelSequence4Shot3Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot3WebM,
+        src: LevelSequence4Shot3WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot3Ogv,
+        src: LevelSequence4Shot3Ogv,
         type: "video/ogg",
       },
     ],
@@ -876,17 +876,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -895,17 +895,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot2Mp4,
+        src: LevelSequence4Shot2Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot2WebM,
+        src: LevelSequence4Shot2WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot2Ogv,
+        src: LevelSequence4Shot2Ogv,
         type: "video/ogg",
       },
     ],
@@ -932,17 +932,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot8Mp4,
+        src: LevelSequence4Shot8Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot8WebM,
+        src: LevelSequence4Shot8WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot8Ogv,
+        src: LevelSequence4Shot8Ogv,
         type: "video/ogg",
       },
     ],
@@ -953,17 +953,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: Level4Shot16Mp4,
+        src: LevelSequence4Shot16Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: Level4Shot16WebM,
+        src: LevelSequence4Shot16WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: Level4Shot16Ogv,
+        src: LevelSequence4Shot16Ogv,
         type: "video/ogg",
       },
     ],

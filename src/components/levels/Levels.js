@@ -47,7 +47,9 @@ function Levels() {
         {level(Level5, "Prevenção de Quedas", () =>
           history.push(`/${gameMode}/levels/5`)
         )}
-        {level(Level6, "Higienização das mãos")}
+        {level(Level6, "Higienização das mãos", () =>
+          history.push(`/${gameMode}/levels/6`)
+        )}
       </div>
 
       <FooterToolbar>

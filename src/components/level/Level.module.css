@@ -75,6 +75,10 @@
   text-align: center;
 }
 
+.levelUITransitionText p {
+  margin: 0.75vh 0;
+}
+
 .levelUIHelperText {
   width: 91.68vw;
   height: 100vh;
@@ -110,6 +114,12 @@
 }
 
 .levelUIMultipleOptionsItem {
+  height: initial;
+  padding: 0;
+  background-color: transparent;
+}
+
+.levelUIMultipleOptionsItem label {
   display: inline-block;
   color: #ffffff;
   font-size: 1.25vw;
@@ -122,6 +132,10 @@
   background-color: transparent;
   border-color: transparent;
   line-height: 5.92vh;
+}
+
+.levelUIMultipleOptionsItem:active {
+  background-color: transparent;
 }
 
 input:unchecked + .levelUIMultipleOptionsItem {

@@ -28,6 +28,7 @@ function Level() {
   const [options, setOptions] = useState([]);
   const [multipleOptions, setMultipleOptions] = useState([]);
   const [levelSubject, setLevelSubject] = useState("");
+  const [additionalHeader, setAdditionalHeader] = useState("");
   const [isVideoPlaying, setVideoPlaying] = useState(false);
   const videoRef = useRef();
 
@@ -115,6 +116,11 @@ function Level() {
         ? levelData[levelDataIndex].levelSubject
         : ""
     );
+    setAdditionalHeader(
+      levelData[levelDataIndex].additionalHeader
+        ? levelData[levelDataIndex].additionalHeader
+        : ""
+    );
   }, [levelData, levelDataIndex, shots]);
 
   useEffect(() => {
@@ -127,6 +133,8 @@ function Level() {
     videoRef.current.load();
 
     // Start new playback
+    videoRef.current.defaultMuted = true;
+    videoRef.current.muted = true;
     videoRef.current.removeAttribute("src");
     videoRef.current.load();
     let playbackPromise = videoRef.current.play();
@@ -149,6 +157,10 @@ function Level() {
       return;
     }
     if (multipleOptions.length !== 0) {
+      const maxScoreFromMultipleOptions = multipleOptions.reduce(
+        (accumulator, item) => accumulator + item.score,
+        0
+      );
       const scoreFromMultipleOptions = multipleOptions.reduce(
         (accumulator, item) => {
           if (
@@ -164,6 +176,26 @@ function Level() {
       );
 
       setScore(score + scoreFromMultipleOptions);
+
+      // In case the player fails to check all correct options, we report the correct options
+      if (scoreFromMultipleOptions < maxScoreFromMultipleOptions) {
+        let correctOptions = multipleOptions.reduce(
+          (accumulator, item) =>
+            (accumulator += item.correct ? `"${item.text}", ` : ""),
+          ""
+        );
+        correctOptions = correctOptions.substring(0, correctOptions.length - 2); // Removes the trailing ", "
+        // Reset multiple options and report results
+        setMultipleOptions([...[]]);
+        setTransitionText([
+          "Que pena! Você não marcou todas as opções corretas.",
+          "",
+          `As opções corretas eram: ${correctOptions}.`,
+        ]);
+        setHasPrevious(false);
+
+        return;
+      }
     }
     setLevelDataIndex(levelDataIndex + 1);
   }
@@ -215,12 +247,9 @@ function Level() {
             className={css.levelUIMultipleOptionsItemInput}
             onChange={(event) => toggleOption(event.target.checked, index)}
           />
-          <label
-            htmlFor={`option-${index + 1}`}
-            className={css.levelUIMultipleOptionsItem}
-          >
-            {option.text}
-          </label>
+          <Button className={css.levelUIMultipleOptionsItem}>
+            <label htmlFor={`option-${index + 1}`}>{option.text}</label>
+          </Button>
         </div>
       ))}
     </div>
@@ -234,6 +263,9 @@ function Level() {
       <video
         className={css.levelVideo}
         ref={videoRef}
+        preload="auto"
+        autoPlay
+        playsInline
         onLoadStart={() => setVideoPlaying(false)}
         onPlaying={() => setVideoPlaying(true)}
       >
@@ -253,7 +285,17 @@ function Level() {
         </LevelToolbar>
 
         {shouldRenderTransitionText && (
-          <p className={css.levelUITransitionText}>{transitionText}</p>
+          <>
+            {Array.isArray(transitionText) ? (
+              <div className={css.levelUITransitionText}>
+                {transitionText.map((text, index) => (
+                  <p key={index}>{text}</p>
+                ))}
+              </div>
+            ) : (
+              <p className={css.levelUITransitionText}>{transitionText}</p>
+            )}
+          </>
         )}
 
         {shouldRenderHelperText && (
@@ -265,6 +307,7 @@ function Level() {
             options={options}
             dialogue={dialogue}
             levelSubject={levelSubject}
+            additionalHeader={additionalHeader}
           >
             {listOptions}
           </LevelOptions>

@@ -1,13 +1,18 @@
 import css from "./LevelOptions.module.css";
 
 function LevelOptions(props) {
-  const shouldRenderAdditionalHeader = props.dialogue && props.levelSubject;
+  const shouldRenderAdditionalHeader =
+    (props.dialogue && props.levelSubject) || props.additionalHeader;
 
   return (
     <div className={css.levelOptions}>
       {shouldRenderAdditionalHeader && (
         <h1 className={css.levelOptionsHeader}>
-          A conduta "{props.dialogue}" é adequada para {props.levelSubject}?
+          {props.dialogue && props.levelSubject ? (
+            <>{`A conduta "${props.dialogue}" é adequada para ${props.levelSubject}?`}</>
+          ) : (
+            <>{props.additionalHeader}</>
+          )}
         </h1>
       )}
       <h1 className={css.levelOptionsHeader}>

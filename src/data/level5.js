@@ -194,9 +194,6 @@ const data = [
       "Que pena! O paciente vítima de queda pode ter sofrido fraturas, logo, você não deve levantá-lo, deve avaliá-lo antes de o movimentar.",
   },
   {
-    transitionText: "ARRUMAR: Após avaliação o paciente é levado ao seu leito.",
-  },
-  {
     characterName: "Florence",
     dialogue: "Seu Oswaldo, o senhor está sentindo alguma dor?",
     shots: [
@@ -261,7 +258,7 @@ const data = [
     ],
   },
   {
-    transitionText: "ARRUMAR: enf. avaliar o paciente.",
+    transitionText: "Enfermeira avalia o paciente.",
   },
   {
     characterName: "Florence",
@@ -885,42 +882,6 @@ const data = [
       },
       {
         text: "Orientar o paciente a levantar-se progressivamente",
-        score: 10,
-        correct: true,
-      },
-    ],
-  },
-  {
-    shots: [
-      {
-        id: 1,
-        src: LevelSequence5Shot19Mp4,
-        type: "video/mp4",
-      },
-      {
-        id: 2,
-        src: LevelSequence5Shot19WebM,
-        type: "video/webm",
-      },
-      {
-        id: 3,
-        src: LevelSequence5Shot19Ogv,
-        type: "video/ogg",
-      },
-    ],
-    options: [
-      {
-        dialogue: "Escala de Morse menor que 41 - Risco Médio",
-        score: 0,
-        correct: false,
-      },
-      {
-        dialogue: "Escala de Morse entre 41 e 51 - Risco Elevado",
-        score: 0,
-        correct: false,
-      },
-      {
-        dialogue: "Escala de Morse maior que 51 - Risco Muito Elevado",
         score: 10,
         correct: true,
       },

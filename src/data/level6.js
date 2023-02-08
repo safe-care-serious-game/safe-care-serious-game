@@ -16,9 +16,9 @@ import LevelSequence6Shot5Ogv from "../videos/level6/LevelSequence6Shot5.ogv";
 import LevelSequence6Shot6Mp4 from "../videos/level6/LevelSequence6Shot6.mp4";
 import LevelSequence6Shot6WebM from "../videos/level6/LevelSequence6Shot6.webm";
 import LevelSequence6Shot6Ogv from "../videos/level6/LevelSequence6Shot6.ogv";
-//import LevelSequence6Shot7Mp4 from "../videos/level6/LevelSequence6Shot7.mp4";
-//import LevelSequence6Shot7WebM from "../videos/level6/LevelSequence6Shot7.webm";
-//import LevelSequence6Shot7Ogv from "../videos/level6/LevelSequence6Shot7.ogv";
+import LevelSequence6Shot7Mp4 from "../videos/level6/LevelSequence6Shot7.mp4";
+import LevelSequence6Shot7WebM from "../videos/level6/LevelSequence6Shot7.webm";
+import LevelSequence6Shot7Ogv from "../videos/level6/LevelSequence6Shot7.ogv";
 import LevelSequence6Shot8Mp4 from "../videos/level6/LevelSequence6Shot8.mp4";
 import LevelSequence6Shot8WebM from "../videos/level6/LevelSequence6Shot8.webm";
 import LevelSequence6Shot8Ogv from "../videos/level6/LevelSequence6Shot8.ogv";
@@ -158,7 +158,7 @@ const data = [
     ],
   },
   {
-    transitionText: "Arrumar: enfermeira avalia o paciente.",
+    transitionText: "Enfermeira avalia o paciente.",
   },
   {
     characterName: "Florence",
@@ -267,17 +267,17 @@ const data = [
     shots: [
       {
         id: 1,
-        src: LevelSequence6Shot8Mp4,
+        src: LevelSequence6Shot7Mp4,
         type: "video/mp4",
       },
       {
         id: 2,
-        src: LevelSequence6Shot8WebM,
+        src: LevelSequence6Shot7WebM,
         type: "video/webm",
       },
       {
         id: 3,
-        src: LevelSequence6Shot8Ogv,
+        src: LevelSequence6Shot7Ogv,
         type: "video/ogg",
       },
     ],

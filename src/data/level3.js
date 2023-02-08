@@ -74,7 +74,7 @@ import LevelSequence3Shot24Ogv from "../videos/level3/LevelSequence3Shot24.ogv";
 const data = [
   {
     transitionText:
-      "Você é o responsável pelo Núcleo de Segurança do Paciente (NSP) da instituição e recebeu uma notificação de um incidente relacionado a medicação na enfermeria.",
+      "Você é o responsável pelo Núcleo de Segurança do Paciente (NSP) da instituição e recebeu uma notificação de um incidente relacionado a medicação na enfermaria.",
     shots: [
       {
         id: 1,
@@ -317,8 +317,13 @@ const data = [
     ],
   },
   {
-    transitionText:
-      "1. Cloreto de Sódio 0,9 % 500 mL; Administrar 500 mL, IV, de 24/24h, a 21 mL/h; 2. Enoxaparina Sódica (Atenção! Dupla Cechagem) 40 mg; Administrar 1 SER, SC, 1x dia 2; 3. Omeprazol 20 mg; 1 CAP VO, manhã em jejum; 4. Dipirona Sódica Injetável 2 mL 500 mg/mL; Administrar 1000 mg, EV, de 6/6h. Diluir em 8 ml de ADB, se febre > 37.5 ºC; Ondasetrona Injetável 2 mL 2 mg/mL; Administrar 8 mg, IV, 8/8h, diluir em 100 mL de Cloreto de Sódio 0,9 %. Se náuse ou vômito.",
+    transitionText: [
+      "1. Cloreto de Sódio 0,9 % 500 mL; Administrar 500 mL, IV, de 24/24h, a 21 mL/h",
+      "2. Enoxaparina Sódica (Atenção! Dupla Cechagem) 40 mg; Administrar 1 SER, SC, 1x dia 2",
+      "3. Omeprazol 20 mg; 1 CAP VO, manhã em jejum",
+      "4. Dipirona Sódica Injetável 2 mL 500 mg/mL; Administrar 1000 mg, EV, de 6/6h. Diluir em 8 ml de ADB, se febre > 37.5 ºC",
+      "5. Ondasetrona Injetável 2 mL 2 mg/mL; Administrar 8 mg, IV, 8/8h, diluir em 100 mL de Cloreto de Sódio 0,9 %. Se náuse ou vômito.",
+    ],
     shots: [
       {
         id: 1,
@@ -717,6 +722,56 @@ const data = [
       "Que pena! Todo incidente de segurança precisa ser notificado para que mudanças que venham a prevení-lo sejam estruturadas.",
   },
   {
+    shots: [
+      {
+        id: 1,
+        src: LevelSequence3Shot17Mp4,
+        type: "video/mp4",
+      },
+      {
+        id: 2,
+        src: LevelSequence3Shot17WebM,
+        type: "video/webm",
+      },
+      {
+        id: 3,
+        src: LevelSequence3Shot17Ogv,
+        type: "video/ogg",
+      },
+    ],
+    additionalHeader:
+      "Qual é o tipo de incidente relatado pela enfermeira Orem?",
+    options: [
+      {
+        dialogue: "Incidente com dano",
+        score: 0,
+        correct: false,
+      },
+      {
+        dialogue: "Evento adverso",
+        score: 0,
+        correct: false,
+      },
+      {
+        dialogue: "Near miss",
+        score: 10,
+        correct: true,
+      },
+      {
+        dialogue: "Incidente sem dano",
+        score: 0,
+        correct: false,
+      },
+      {
+        dialogue: "Evento sentinela",
+        score: 0,
+        correct: false,
+      },
+    ],
+    helperText:
+      'Que pena! O tipo de incidente relatado pela enfermeira Orem é um "Near Miss".',
+  },
+  {
     characterName: "Florence",
     dialogue:
       "Orem, o evento ocorrido é chamado de Near Miss, foi um incidente que chegou perto de acontecer mas não atingiu o paciente. Devemos buscar estratégias para evitar que esse incidente se repita, entre elas podemos utilizar a notificação no sistema NOTIVISA.",
@@ -739,8 +794,11 @@ const data = [
     ],
   },
   {
-    transitionText:
-      "O NOTIVISA é um sistema informatizado nacional para o registro de problemas, queixas, incidentes e eventos adversos. As notificações podem ser feitas por profissionais de saúde, profissionais técnicos da Anvisa, vigilâncias (estaduais e municipais), secretarias (estaduais e municipais), profissionais de universidades, laboratórios de pesquisa, cidadãos, entre outros. https://www8.anvisa.gov.br/notivisa.",
+    transitionText: [
+      "O NOTIVISA é um sistema informatizado nacional para o registro de problemas, queixas, incidentes e eventos adversos.",
+      "As notificações podem ser feitas por profissionais de saúde, profissionais técnicos da Anvisa, vigilâncias (estaduais e municipais), secretarias (estaduais e municipais), profissionais de universidades, laboratórios de pesquisa, cidadãos, entre outros.",
+      "Saiba mais em: https://www8.anvisa.gov.br/notivisa.",
+    ],
     shots: [
       {
         id: 1,
@@ -865,72 +923,6 @@ const data = [
         id: 3,
         src: LevelSequence3Shot21Ogv,
         type: "video/ogg",
-      },
-    ],
-  },
-  {
-    shots: [
-      {
-        id: 1,
-        src: LevelSequence3Shot21Mp4,
-        type: "video/mp4",
-      },
-      {
-        id: 2,
-        src: LevelSequence3Shot21WebM,
-        type: "video/webm",
-      },
-      {
-        id: 3,
-        src: LevelSequence3Shot21Ogv,
-        type: "video/ogg",
-      },
-    ],
-    multipleOptions: [
-      {
-        text: "ALTERAR ISSO AQUI",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Data de nascimento",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Idade",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Raça",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Número de registro",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Nome social",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Endereço",
-        score: 10,
-        correct: false,
-      },
-      {
-        text: "Nome da mãe",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Exames",
-        score: 10,
-        correct: false,
       },
     ],
   },

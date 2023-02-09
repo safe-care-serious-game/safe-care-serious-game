@@ -1,3 +1,4 @@
+import GameGoal from "./components/game-goal/GameGoal";
 import GameMode from "./components/game-mode/GameMode";
 import KnowMore from "./components/know-more/KnowMore";
 import Level from "./components/level/Level";
@@ -19,6 +20,9 @@ function App() {
         </Route>
         <Route path="/know-more">
           <KnowMore />
+        </Route>
+        <Route path="/game-goal">
+          <GameGoal />
         </Route>
         <Route path="/supporting-materials">
           <SupportingMaterials />

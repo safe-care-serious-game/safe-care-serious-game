@@ -25,6 +25,7 @@ function KnowMore() {
       <h1 className={css.knowMoreTitle}>Saiba mais</h1>
 
       <div className={css.knowMoreList}>
+        {option(null, "Finalidade do jogo", () => history.push(`/game-goal`))}
         {option(null, "Materiais de suporte", () =>
           history.push(`/supporting-materials`)
         )}

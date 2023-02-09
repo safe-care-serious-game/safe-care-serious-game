@@ -1,0 +1,44 @@
+.gameGoal {
+  background-color: #c5d5d2;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gameGoalLogoWrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.gameGoalLogoWrapper {
+  margin-top: 4vh;
+}
+
+.gameGoalTitle {
+  font-size: 3.33vw;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  margin: 3vh 6.25vw 0 6.25vw;
+}
+
+.gameGoalContent {
+  font-family: "Orbitron", sans-serif;
+  margin: 0 6.25vw 0 6.25vw;
+}
+
+.gameGoalList ul li {
+  flex-shrink: 0;
+  margin: 1.5vh 0;
+}
+
+.gameGoalList .gameGoalListCard:first-child {
+  margin-left: 6.25vw;
+}
+
+.gameGoalList .gameGoalListCard:last-child {
+  margin-right: 3.33vw;
+}

@@ -99,7 +99,7 @@
   height: initial;
   text-align: left;
   color: #ffffff;
-  font-size: 1.25vw;
+  font-size: 1.875vw;
   font-weight: 900;
   letter-spacing: 0.1em;
   margin: 0 0 1.85vh 0;
@@ -122,13 +122,13 @@
 .levelUIMultipleOptionsItem label {
   display: inline-block;
   color: #ffffff;
-  font-size: 1.25vw;
+  font-size: 1.875vw;
   font-family: "Orbitron", sans-serif;
   font-weight: 900;
   letter-spacing: 0.1em;
   height: 5.92vh;
   border-radius: 0;
-  padding: 0 1.04vw;
+  padding: 0 1.25vw;
   background-color: transparent;
   border-color: transparent;
   line-height: 5.92vh;

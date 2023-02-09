@@ -166,6 +166,8 @@ const data = [
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Cefaleia, náuseas, hematomas e prurido não estão diretamente relacionados com as lesões por pressão.",
   },
   {
     characterName: "Florence",
@@ -264,6 +266,8 @@ const data = [
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! De acordo com o protocolo de prevenção de úlceras por pressão, esses cuidados não estão citados.",
   },
   {
     characterName: "Waldo",
@@ -522,16 +526,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! A avaliação da pele do paciente deve ser realizada diariamente.",
   },
   {
     characterName: "Florence",
@@ -578,16 +584,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 0,
         correct: false,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 10,
         correct: true,
       },
     ],
+    helperText:
+      "Que pena! Não é recomendado o excesso de hidratação da pele, pois pode gerar maceração da pele, tornando a frágil.",
   },
   {
     characterName: "Waldo",
@@ -634,16 +642,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! A mobilização do paciente é uma importante estratégia para prevenção de lesões por pressão.",
   },
   {
     characterName: "Florence",
@@ -690,16 +700,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! A mudança de decúbito é essencial para prevenção de lesão por pressão.",
   },
   {
     characterName: "Florence",
@@ -746,16 +758,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! O suporte nutricional adequado é essencial para a manutenção da integridade da pele.",
   },
   {
     characterName: "Florence",
@@ -802,16 +816,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! A utilização de curativos protetivos configura-se como uma importante estratégia para prevenção de lesões por pressão.",
   },
   {
     characterName: "Florence",
@@ -858,16 +874,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! Os coxins são essenciais para reduzir a pressão em proeminências ósseas e consequentemente a prevenção de lesões por pressão.",
   },
   {
     characterName: "Florence",
@@ -914,16 +932,18 @@ const data = [
     levelSubject: "prevenção de LPP",
     options: [
       {
-        dialogue: "Verdadeira.",
+        dialogue: "Verdadeira",
         score: 10,
         correct: true,
       },
       {
-        dialogue: "Falsa.",
+        dialogue: "Falsa",
         score: 0,
         correct: false,
       },
     ],
+    helperText:
+      "Que pena! De acordo com o protocolo de prevenção de úlcera por pressão, posições acima de 30º aumentam a pressão sob as proeminências ósseas, favorecendo o surgimento de lesões por pressão.",
   },
   {
     characterName: "Waldo",

@@ -15,10 +15,11 @@ test("renders game mode", () => {
   expect(
     container.firstChild.firstChild.firstChild.lastChild
   ).toHaveTextContent("SERIOUS GAME");
-  expect(container.firstChild.lastChild.firstChild).toHaveTextContent(
+  expect(container.firstChild.childNodes[1].firstChild).toHaveTextContent(
     "Single Player"
   );
-  expect(container.firstChild.lastChild.lastChild).toHaveTextContent(
+  expect(container.firstChild.childNodes[1].lastChild).toHaveTextContent(
     "Multi Player"
   );
+  expect(container.firstChild.lastChild.firstChild).toHaveTextContent("Voltar");
 });

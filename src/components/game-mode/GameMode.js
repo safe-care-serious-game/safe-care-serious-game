@@ -1,5 +1,7 @@
 import Logo from "../logo/Logo";
 import Card from "../card/Card";
+import Button from "../button/Button";
+import FooterToolbar from "../footer-toolbar/FooterToolbar";
 import css from "./GameMode.module.css";
 import SinglePlayer from "../../images/SinglePlayer.jpg";
 import MultiPlayer from "../../images/MultiPlayer.jpg";
@@ -25,6 +27,10 @@ function GameMode() {
           onClick={() => history.push("/multi-player/levels")}
         />
       </div>
+
+      <FooterToolbar>
+        <Button onClick={() => history.push("/menu")}>Voltar</Button>
+      </FooterToolbar>
     </div>
   );
 }

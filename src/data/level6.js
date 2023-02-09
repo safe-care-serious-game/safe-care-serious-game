@@ -349,6 +349,63 @@ const data = [
     ],
   },
   {
+    shots: [
+      {
+        id: 1,
+        src: LevelSequence6Shot8_1Mp4,
+        type: "video/mp4",
+      },
+      {
+        id: 2,
+        src: LevelSequence6Shot8_1WebM,
+        type: "video/webm",
+      },
+      {
+        id: 3,
+        src: LevelSequence6Shot8_1Ogv,
+        type: "video/ogg",
+      },
+    ],
+    additionalHeader: "Indique quais os momentos para a higienização das mãos.",
+    multipleOptions: [
+      {
+        text: "Antes do contato com o paciente",
+        score: 10,
+        correct: true,
+      },
+      {
+        text: "Ao sair do hospital",
+        score: 10,
+        correct: false,
+      },
+      {
+        text: "Antes da realização de um procedimento aséptico",
+        score: 10,
+        correct: true,
+      },
+      {
+        text: "Após o contato com o paciente",
+        score: 10,
+        correct: true,
+      },
+      {
+        text: "Após a alta do paciente",
+        score: 10,
+        correct: false,
+      },
+      {
+        text: "Após o contato com o ambiente próximo ao paciente",
+        score: 10,
+        correct: true,
+      },
+      {
+        text: "Após exposição a fluídos corporais",
+        score: 10,
+        correct: true,
+      },
+    ],
+  },
+  {
     characterName: "José",
     dialogue:
       "Enfermeira, uma vez vieram aqui entregar esses álcool em gel e disseram que é só passar ele que já servia, não precisava me levantar e lavar as mãos na pia com água e sabão. A gente não acredita que esse álcool seja tão como água e sabão. A senhora acredita que é verdade isso que só o álcool já dá certo?",

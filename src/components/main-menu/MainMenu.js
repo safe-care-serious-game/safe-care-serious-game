@@ -28,7 +28,11 @@ function MainMenu() {
           title="Jogar"
           onClick={() => history.push("/game-mode")}
         />
-        <Card image={KnowMore} title="Saiba Mais" />
+        <Card
+          image={KnowMore}
+          title="Saiba Mais"
+          onClick={() => history.push("/know-more")}
+        />
       </div>
     </div>
   );

@@ -26,8 +26,14 @@
 }
 
 .gameGoalContent {
-  font-family: "Orbitron", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2.5vw;
   margin: 0 6.25vw 0 6.25vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: scroll;
 }
 
 .gameGoalList ul li {

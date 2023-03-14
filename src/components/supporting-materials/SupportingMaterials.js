@@ -19,7 +19,7 @@ function SupportingMaterials() {
       <div className={css.supportingMaterialsList}>
         <ul>
           {supportingMaterials.map((material) => (
-            <li>
+            <li key={material.id}>
               {material.institution}
               <b>{material.title}</b>
               {material.content}

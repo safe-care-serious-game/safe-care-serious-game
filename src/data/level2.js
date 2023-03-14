@@ -342,7 +342,7 @@ const data = [
   {
     characterName: "Cláudio",
     dialogue:
-      "Tenho prótese dentária, mas a enfermeira do setor que eu estou internado guardou e deu a minha esposa antes de eu vir para cá. Não tenho piercing nenhum.",
+      "Tenho prótese dentária, mas a enfermeira do setor que eu estou internado guardou e deu para minha esposa antes de eu vir para cá. Não tenho piercing nenhum.",
     shots: [
       {
         id: 1,
@@ -525,7 +525,7 @@ const data = [
   {
     characterName: "Atena",
     dialogue:
-      "Bom dia dr. Long. Esse é o paciente dessa cirurgia o senhor Cláudio Galeno. Ele é o paciente do dr. Hipócrates e vai realizar uma artrodese de punho esquerdo.",
+      "Bom dia dr. Long. Esse é o paciente dessa cirurgia, o senhor Cláudio Galeno. Ele é o paciente do dr. Hipócrates e vai realizar uma artrodese de punho esquerdo.",
     shots: [
       {
         id: 1,
@@ -833,7 +833,7 @@ const data = [
   {
     characterName: "Wanda",
     dialogue:
-      "Doutor Long o equipamento anestésico foi testado e funciona adequadamente, paciente com oxímetro posicionado e saturando 98% de SpO2. Paciente nega alergias. O paciente pissui via área difícil ou risco de broncoaspiração? Há risco de perda sanguínea superior a 500 ml para essa cirurgia?",
+      "Doutor Long o equipamento anestésico foi testado e funciona adequadamente, paciente com oxímetro posicionado e saturando 98% de SpO2. Paciente nega alergias. O paciente possui via área difícil ou risco de broncoaspiração? Há risco de perda sanguínea superior a 500 ml para essa cirurgia?",
     shots: [
       {
         id: 1,
@@ -1016,7 +1016,7 @@ const data = [
   },
   {
     characterName: "Hipocrátes",
-    dialogue: "Realizando incisão em região demarcadam, punho esquerdo.",
+    dialogue: "Realizando incisão em região demarcada, punho esquerdo.",
     shots: [
       {
         id: 1,
@@ -1041,7 +1041,7 @@ const data = [
   },
   {
     characterName: "Hipocrátes",
-    dialogue: "Procedimento realizado: artrodese punho esquerdo.",
+    dialogue: "Procedimento realizado: artrodese de punho esquerdo.",
     shots: [
       {
         id: 1,
@@ -1208,7 +1208,7 @@ const data = [
   {
     characterName: "Atena",
     dialogue:
-      "Olá senhor Galeno, como está se sentindo? Sente alguma dor? Vamos encaminhá-lo para sala de recuperação cirúrgica. Wanda, os registros pertinentes à cirurgia e o checklist foi anexado ao prontuário?",
+      "Olá senhor Galeno, como está se sentindo? Sente alguma dor? Vamos encaminhá-lo para sala de recuperação cirúrgica. Wanda, os registros pertinentes à cirurgia e o checklist foram anexados ao prontuário?",
     shots: [
       {
         id: 1,

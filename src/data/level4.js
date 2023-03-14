@@ -401,7 +401,7 @@ const data = [
   {
     characterName: "Waldo",
     dialogue:
-      "Entendo sua situação. O senhor sabe que é importante que caminhe e se movimente para ajudar na sua recuperação e assim poder ter alta mais rápido.",
+      "Entendo sua situação. O senhor sabe que é importante caminhar e se movimentar para ajudar na sua recuperação e, assim, receber alta hospitalar mais rápido.",
     shots: [
       {
         id: 1,
@@ -423,7 +423,7 @@ const data = [
   {
     characterName: "Waldo",
     dialogue:
-      "Vamos examinar o senhor, para que possamos ver como melhorar sua condição respiratória e assim sair desse leito.",
+      "Vamos examinar o senhor, para que possamos ver como melhorar sua condição respiratória e, assim, sair desse leito.",
     shots: [
       {
         id: 1,
@@ -600,7 +600,7 @@ const data = [
   {
     characterName: "Waldo",
     dialogue:
-      "Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito.",
+      "Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito, auxiliar na modificação do seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respiratório do paciente para conseguirmos retirá-lo do leito.",
     shots: [
       {
         id: 1,
@@ -639,7 +639,7 @@ const data = [
     ],
     levelSubject: "prevenção de LPP",
     additionalHeader:
-      'A conduta "Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respeitório do paciente para conseguirmos retirá-lo do leito" é adequada para prevenção de LPP?',
+      'A conduta "Vou prescrever uma rotina de fisioterapia motora para mobilizar o paciente no leito modificação seu decúbito, bem como o trabalho de fisioterapia respiratória para melhorar o padrão respiratório do paciente para conseguirmos retirá-lo do leito" é adequada para prevenção de LPP?',
     options: [
       {
         dialogue: "Verdadeira",
@@ -658,7 +658,7 @@ const data = [
   {
     characterName: "Florence",
     dialogue:
-      "Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e seus cuidados sobre a importância dessas mudanças.",
+      "Será prescrito mudança de decúbito a cada duas horas. E orientações ao paciente e aos seus cuidadores sobre a importância dessas mudanças.",
     shots: [
       {
         id: 1,

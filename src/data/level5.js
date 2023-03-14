@@ -743,7 +743,7 @@ const data = [
   {
     characterName: "Hipocrátes",
     dialogue:
-      "Entendo sim. Estava já pensando em conversar com vocês sobre isso, temos quedas no setor de maneira frequente, realmente precisamos agir. Pensei em solicitar no  sistema de prescrição medicamentosa seja acrescido um alerta para medicamentos que oferecem riscos de quedas ao paciente e que sejam tomados cuidados específicos ao paciente com a finalidade de evitar esse tipo de incidente.",
+      "Entendo sim. Estava já pensando em conversar com vocês sobre isso, temos quedas no setor de maneira frequente, realmente precisamos agir. Pensei em solicitar no sistema de prescrição medicamentosa que seja acrescido um alerta para medicamentos que oferecem riscos de quedas ao paciente e que sejam tomados cuidados específicos ao paciente com a finalidade de evitar esse tipo de incidente.",
     shots: [
       {
         id: 1,

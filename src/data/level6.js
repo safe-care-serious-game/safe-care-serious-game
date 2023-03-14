@@ -408,7 +408,7 @@ const data = [
   {
     characterName: "José",
     dialogue:
-      "Enfermeira, uma vez vieram aqui entregar esses álcool em gel e disseram que é só passar ele que já servia, não precisava me levantar e lavar as mãos na pia com água e sabão. A gente não acredita que esse álcool seja tão como água e sabão. A senhora acredita que é verdade isso que só o álcool já dá certo?",
+      "Enfermeira, uma vez vieram aqui entregar esses álcool em gel e disseram que é só passar ele que já servia, não precisava me levantar e lavar as mãos na pia com água e sabão. A gente não acredita que esse álcool seja tão bom como água e sabão. A senhora acredita que é verdade isso que só o álcool já dá certo?",
     shots: [
       {
         id: 1,

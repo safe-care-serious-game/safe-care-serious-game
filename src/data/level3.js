@@ -319,7 +319,7 @@ const data = [
   {
     transitionText: [
       "1. Cloreto de Sódio 0,9 % 500 mL; Administrar 500 mL, IV, de 24/24h, a 21 mL/h",
-      "2. Enoxaparina Sódica (Atenção! Dupla Cechagem) 40 mg; Administrar 1 SER, SC, 1x dia 2",
+      "2. Enoxaparina Sódica (Atenção! Dupla Cechagem) 40 mg; Administrar 1 SER, SC, 1x/dia",
       "3. Omeprazol 20 mg; 1 CAP VO, manhã em jejum",
       "4. Dipirona Sódica Injetável 2 mL 500 mg/mL; Administrar 1000 mg, EV, de 6/6h. Diluir em 8 ml de ADB, se febre > 37.5 ºC",
       "5. Ondasetrona Injetável 2 mL 2 mg/mL; Administrar 8 mg, IV, 8/8h, diluir em 100 mL de Cloreto de Sódio 0,9 %. Se náuse ou vômito.",
@@ -369,7 +369,7 @@ const data = [
       },
       {
         dialogue:
-          "Selecionar um frasco de medicação e material para sua administração no posto de enfermagem, checar os novos certos para medicação, higienizar as mãos e seguir para o leito do paciente.",
+          "Selecionar um frasco de medicação e material para sua administração no posto de enfermagem, checar os nove certos para medicação, higienizar as mãos e seguir para o leito do paciente.",
         score: 10,
         correct: true,
       },
@@ -548,7 +548,7 @@ const data = [
   {
     characterName: "Orem",
     dialogue:
-      "Só um minuto senhor Célio, vou buscar a medicação correto do senhor e volto em um minuto.",
+      "Só um minuto senhor Célio, vou buscar a medicamento correto do senhor e volto em um minuto.",
     shots: [
       {
         id: 1,
@@ -588,13 +588,13 @@ const data = [
     options: [
       {
         dialogue:
-          "Retornar ao posto de enfermagem selecionar a medicação corretam administrar no paciente e conversar com a enfermeira responsável pelo setor sobre o evento ocorrido.",
+          "Retornar ao posto de enfermagem, selecionar o medicamento correto administrar no paciente e conversar com a enfermeira responsável pelo setor sobre o evento ocorrido.",
         score: 10,
         correct: true,
       },
       {
         dialogue:
-          "Retornar ao posto de enfermagem selecionar a medicação corretam administrar no paciente.",
+          "Retornar ao posto de enfermagem, selecionar o medicamento correto e administrar no paciente.",
         score: 0,
         correct: false,
       },
@@ -820,7 +820,7 @@ const data = [
   {
     characterName: "Orem",
     dialogue:
-      "Entendi Florence, vou buscar ter ser mais cuidadosa durante a execução dos procedimentos e realizar as notificações caso ocorra algum incidente. Também irei buscar mais informações sobre os cuidados que podemos ter com a medicação e as notificações.",
+      "Entendi Florence, vou buscar ser mais cuidadosa durante a execução dos procedimentos e realizar as notificações caso ocorra algum incidente. Também irei buscar mais informações sobre os cuidados que podemos ter com a medicação e as notificações.",
     shots: [
       {
         id: 1,
@@ -864,7 +864,7 @@ const data = [
   {
     characterName: "Florence",
     dialogue:
-      "Boa tarde, gostaríamos de conversar com o farmacêutico Alexander Flamming.",
+      "Boa tarde, gostaríamos de conversar com o farmacêutico Alexander Fleming.",
     shots: [
       {
         id: 1,
@@ -884,7 +884,7 @@ const data = [
     ],
   },
   {
-    characterName: "Alexander Flamming",
+    characterName: "Alexander Fleming",
     dialogue: "Oi, o que desejam.",
     shots: [
       {
@@ -907,7 +907,7 @@ const data = [
   {
     characterName: "Ignaz",
     dialogue:
-      "Recebi uma notificação da ocorrência de um Near Miss relacionado à medicação na enfermaria 1, que envolveu a enfermeira Orem e qu ela relatou a enfermeira Florence. Acredito que possamos avaliar o por quê isso ocorreu e buscar estratégias para evitar situações futuras.",
+      "Recebi uma notificação da ocorrência de um Near Miss relacionado à medicação na enfermaria 1, que envolveu a enfermeira Orem e que ela relatou a enfermeira Florence. Acredito que possamos avaliar o por quê isso ocorreu e buscar estratégias para evitar situações futuras.",
     shots: [
       {
         id: 1,
@@ -929,7 +929,7 @@ const data = [
   {
     characterName: "Alexander",
     dialogue:
-      "Entendo, li o relatório do incidente. Como estão armazenados os medicamentos no seu setor Florence?",
+      "Entendo, li o relatório do incidente. Como estão armazenados os medicamentos no seu setor, Florence?",
     shots: [
       {
         id: 1,
@@ -951,7 +951,7 @@ const data = [
   {
     characterName: "Florence",
     dialogue:
-      "Alexander, constatei que na enfermaria os frascos das soluções de soro fisiológico, glicosado, ringer, ringer lactato estão armazenados no mesmo armário. Possuem o mesmo recipiente transparente de uso e os rótulos são muito semelhantes, possuem a mesma cor e estão lado a lado sem identificação nenhuma ou divisórias.",
+      "Alexander, constatei que na enfermaria os frascos das soluções de soro fisiológico, glicosado, ringer, ringer lactato estão armazenados no mesmo armário. Possuem o mesmo recipiente transparente de uso e os rótulos são muito semelhantes e estão lado a lado sem identificação nenhuma ou divisórias.",
     shots: [
       {
         id: 1,
@@ -1100,7 +1100,7 @@ const data = [
   {
     characterName: "Ignaz",
     dialogue:
-      "Vamos buscar implementar essas ações em todos os setores para que a gente posso promover a cultura de segurança no hospital.",
+      "Vamos buscar implementar essas ações em todos os setores para que a gente possa promover a cultura de segurança no hospital.",
     shots: [
       {
         id: 1,

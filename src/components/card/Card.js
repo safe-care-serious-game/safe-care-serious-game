@@ -1,8 +1,13 @@
+import { useContext } from "react";
+import AudioContext from "../audio-context/AudioContext";
 import css from "./Card.module.css";
 
 function Card(props) {
+  const { clickAudio } = useContext(AudioContext);
+
   let onClick = () => {
     if (props.onClick) {
+      clickAudio.play();
       props.onClick();
     }
   };

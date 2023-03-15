@@ -1,8 +1,11 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
+import { useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import css from "./LevelEnd.module.css";
 
 function LevelEnd(props) {
+  const { clickAudio } = useContext(AudioContext);
   const history = useHistory();
   const { gameMode } = useParams();
 
@@ -18,12 +21,21 @@ function LevelEnd(props) {
         <p>Parabéns! Fase concluída!</p>
         <p>Pontuação: {props.score}</p>
         <div className={css.levelEndButtons}>
-          <Button className={css.levelEndButton} onClick={() => playAgain()}>
+          <Button
+            className={css.levelEndButton}
+            onClick={() => {
+              clickAudio.play();
+              playAgain();
+            }}
+          >
             Jogar novamente
           </Button>
           <Button
             className={css.levelEndButton}
-            onClick={() => history.push(`/${gameMode}/levels`)}
+            onClick={() => {
+              clickAudio.play();
+              history.push(`/${gameMode}/levels`);
+            }}
           >
             Sair
           </Button>

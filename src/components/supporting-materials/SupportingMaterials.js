@@ -1,11 +1,14 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
 import FooterToolbar from "../footer-toolbar/FooterToolbar";
 import css from "./SupportingMaterials.module.css";
 import supportingMaterials from "../../data/supportingMaterials";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 function SupportingMaterials() {
+  const { clickAudio } = useContext(AudioContext);
   const history = useHistory();
 
   return (
@@ -36,7 +39,14 @@ function SupportingMaterials() {
       </div>
 
       <FooterToolbar>
-        <Button onClick={() => history.push("/know-more")}>Voltar</Button>
+        <Button
+          onClick={() => {
+            clickAudio.play();
+            history.push("/know-more");
+          }}
+        >
+          Voltar
+        </Button>
       </FooterToolbar>
     </div>
   );

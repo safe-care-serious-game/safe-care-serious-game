@@ -1,10 +1,13 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
 import FooterToolbar from "../footer-toolbar/FooterToolbar";
 import css from "./GameGoal.module.css";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 function GameGoal() {
+  const { clickAudio } = useContext(AudioContext);
   const history = useHistory();
 
   return (
@@ -28,7 +31,14 @@ function GameGoal() {
       </div>
 
       <FooterToolbar>
-        <Button onClick={() => history.push("/know-more")}>Voltar</Button>
+        <Button
+          onClick={() => {
+            clickAudio.play();
+            history.push("/know-more");
+          }}
+        >
+          Voltar
+        </Button>
       </FooterToolbar>
     </div>
   );

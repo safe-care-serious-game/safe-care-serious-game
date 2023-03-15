@@ -1,7 +1,11 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import css from "./LevelDialogue.module.css";
+import { useContext } from "react";
 
 function LevelDialogue(props) {
+  const { clickAudio } = useContext(AudioContext);
+
   const shouldRenderCharacterName = props.characterName;
 
   const shouldRenderDialogue = props.dialogue;
@@ -14,18 +18,21 @@ function LevelDialogue(props) {
 
   function previous() {
     if (props.onPrevious) {
+      clickAudio.play();
       props.onPrevious();
     }
   }
 
   function next() {
     if (props.onNext) {
+      clickAudio.play();
       props.onNext();
     }
   }
 
   function end() {
     if (props.onEnd) {
+      clickAudio.play();
       props.onEnd();
     }
   }

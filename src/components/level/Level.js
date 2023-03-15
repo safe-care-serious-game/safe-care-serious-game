@@ -1,3 +1,4 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import LevelDialogue from "../level-dialogue/LevelDialogue";
 import LevelEnd from "../level-end/LevelEnd";
@@ -6,10 +7,12 @@ import LevelToolbar from "../level-toolbar/LevelToolbar";
 import data from "../../data";
 import css from "./Level.module.css";
 import { useHistory, useParams } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import isEqual from "lodash.isequal";
 
 function Level() {
+  const { clickAudio, confirmationAudio, errorAudio, finishAudio } =
+    useContext(AudioContext);
   const history = useHistory();
   const { gameMode, levelId } = useParams();
 
@@ -185,6 +188,9 @@ function Level() {
           ""
         );
         correctOptions = correctOptions.substring(0, correctOptions.length - 2); // Removes the trailing ", "
+
+        errorAudio.play();
+
         // Reset multiple options and report results
         setMultipleOptions([...[]]);
         setTransitionText([
@@ -201,15 +207,20 @@ function Level() {
   }
 
   function end() {
+    finishAudio.play();
     setHasEnded(true);
   }
 
   function selectOption(option) {
     const isCorrect = option.correct;
     if (isCorrect) {
+      confirmationAudio.play();
+
       setScore(score + option.score);
     }
     if (!isCorrect && helperText) {
+      errorAudio.play();
+
       setOptions([...[]]);
       setHasPrevious(false);
       setShouldRenderHelperText(true);
@@ -224,6 +235,8 @@ function Level() {
       checked: checked,
     };
 
+    clickAudio.play();
+
     setMultipleOptions([...multipleOptions]);
   }
 
@@ -231,7 +244,10 @@ function Level() {
     <Button
       key={index}
       className={css.levelUIOptionItem}
-      onClick={() => selectOption(option)}
+      onClick={() => {
+        clickAudio.play();
+        selectOption(option);
+      }}
     >
       {option.dialogue}
     </Button>
@@ -278,7 +294,10 @@ function Level() {
           <span className={css.levelToolbarScore}>{score}</span>
           <Button
             className={css.levelToolbarButton}
-            onClick={() => history.push(`/${gameMode}/levels`)}
+            onClick={() => {
+              clickAudio.play();
+              history.push(`/${gameMode}/levels`);
+            }}
           >
             Sair
           </Button>

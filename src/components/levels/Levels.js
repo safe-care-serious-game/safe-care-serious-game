@@ -1,3 +1,4 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
 import Card from "../card/Card";
@@ -9,9 +10,11 @@ import Level3 from "../../images/Level3.jpg";
 import Level4 from "../../images/Level4.jpg";
 import Level5 from "../../images/Level5.jpg";
 import Level6 from "../../images/Level6.jpg";
+import { useContext } from "react";
 import { useHistory, useParams } from "react-router-dom";
 
 function Levels() {
+  const { clickAudio } = useContext(AudioContext);
   const history = useHistory();
   const { gameMode } = useParams();
 
@@ -53,7 +56,14 @@ function Levels() {
       </div>
 
       <FooterToolbar>
-        <Button onClick={() => history.push("/game-mode")}>Voltar</Button>
+        <Button
+          onClick={() => {
+            clickAudio.play();
+            history.push("/game-mode");
+          }}
+        >
+          Voltar
+        </Button>
         <Button>Login</Button>
       </FooterToolbar>
     </div>

@@ -1,11 +1,14 @@
+import AudioContext from "../audio-context/AudioContext";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
 import Card from "../card/Card";
 import FooterToolbar from "../footer-toolbar/FooterToolbar";
 import css from "./KnowMore.module.css";
+import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
 function KnowMore() {
+  const { clickAudio } = useContext(AudioContext);
   const history = useHistory();
 
   const option = (image, title, onClick) => {
@@ -34,7 +37,14 @@ function KnowMore() {
       </div>
 
       <FooterToolbar>
-        <Button onClick={() => history.push("/menu")}>Voltar</Button>
+        <Button
+          onClick={() => {
+            clickAudio.play();
+            history.push("/menu");
+          }}
+        >
+          Voltar
+        </Button>
       </FooterToolbar>
     </div>
   );

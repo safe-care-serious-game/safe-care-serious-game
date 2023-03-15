@@ -555,6 +555,12 @@ const data = [
     ],
   },
   {
+    transitionText: [
+      "Paciente: Oswaldo Cruz",
+      "Registro: 78349082",
+      "Sexo: M",
+      "Data de nascimento: 05/08/1959",
+    ],
     shots: [
       {
         id: 1,

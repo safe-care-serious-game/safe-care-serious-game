@@ -62,14 +62,22 @@ const supportingMaterials = [
   {
     id: 8,
     institution: "CONSELHO REGIONAL DE ENFERMAGEM DE SÃO PAULO. ",
-    title:
-      "Uso seguro de medicamentos: guia para preparo, administração e monitoramento",
+    title: "Segurança do paciente: guia para a prática",
     content:
-      ". Conselho Regional de Enfermagem de São Paulo. - São Paulo: COREN-SP, 2017. ",
-    link: "https://portal.coren-sp.gov.br/sites/default/files/uso-seguro-medicamentos.pdf",
+      ". Conselho Regional de Enfermagem de São Paulo - São Paulo: COREN-SP, 2022. ",
+    link: "https://portal.coren-sp.gov.br/wp-content/uploads/2022/05/Seguranca-do-Paciente-WEB.pdf",
   },
   {
     id: 9,
+    institution: "CONSELHO REGIONAL DE ENFERMAGEM DE SÃO PAULO. ",
+    title:
+      "Uso seguro de medicamentos: guia para preparo, administração e monitoramento",
+    content:
+      ". Conselho Regional de Enfermagem de São Paulo - São Paulo: COREN-SP, 2017. ",
+    link: "https://portal.coren-sp.gov.br/sites/default/files/uso-seguro-medicamentos.pdf",
+  },
+  {
+    id: 10,
     institution: "INSTITUTE OF MEDICINE (IOM). ",
     title: "To err is human",
     content:
@@ -77,14 +85,14 @@ const supportingMaterials = [
     link: "https://www.ncbi.nlm.nih.gov/books/NBK225182/",
   },
   {
-    id: 10,
+    id: 11,
     institution: "INSTITUTO PARA PRÁTICAS SEGURAS NO USO DE MEDICAMENTOS. ",
     title: "Medicamentos associados à ocorrência de quedas",
     content: ". v. 6, n. 1, 2017. ",
     link: "http://www.ismp-brasil.org/site/wpcontent/uploads/2017/02/IS_0001_17_Boletim_Fevereiro_ISMP_210x276mm.pdf",
   },
   {
-    id: 11,
+    id: 12,
     institution:
       "ORGANIZAÇÃO PAN-AMERICANA DE SAÚDE (OPAS), Ministério da Saúde, Agência Nacional de Vigilância Sanitária. ",
     title: "Manual Cirurgias Seguras Salvam Vidas",
@@ -92,26 +100,26 @@ const supportingMaterials = [
     link: "http://portalarquivos2.saude.gov.br/images/pdf/2014/julho/03/PROTOCOLO-CIRURGIASEGURA.pdf",
   },
   {
-    id: 12,
+    id: 13,
     institution: "WORLD HEALTH ORGANIZATION (WHO). ",
     title: "World Alliance for Patient Safety",
     content: ": forward programme. Genebra: WHO; 2005. ",
   },
   {
-    id: 13,
+    id: 14,
     institution: "WORLD HEALTH ORGANIZATION (WHO). ",
     title: "World Alliance for Patient Safety",
     content: ": Forward Programme 2008 - 2009. Geneva: WHO, 2009. ",
   },
   {
-    id: 14,
+    id: 15,
     institution: "WORLD HEALTH ORGANIZATION (WHO). ",
     title: "Patient safety curriculum guide",
     content: ": multiprofessional edition [Internet]. Geneva: WHO; 2011. ",
     link: "http://apps.who.int/iris/bitstream/10665/44641/1/9789241501958_eng.pdf",
   },
   {
-    id: 15,
+    id: 16,
     institution: "WORLD HEALTH ORGANIZATION (WHO). ",
     title: "Segundo desafio global para a segurança do paciente",
     content: ": Cirurgias seguras salvam vidas. Rio de Janeiro: WHO; 2009. ",

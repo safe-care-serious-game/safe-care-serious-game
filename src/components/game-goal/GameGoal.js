@@ -13,16 +13,16 @@ function GameGoal() {
         <Logo small />
       </div>
 
-      <h1 className={css.gameGoalTitle}>Finalidade do jogo</h1>
+      <h1 className={css.gameGoalTitle}>Finalidade e público-alvo do jogo</h1>
 
       <div className={css.gameGoalContent}>
         <p>
-          Promover o ensino da Segurança do Paciente de maneira inovadora e
-          dinâmica.
+          Contribuir com o ensino da Segurança do Paciente de maneira inovadora
+          e dinâmica.
         </p>
         <p>
-          Destina-se a docentes, estudantes e demais profissionais da enfermagem
-          que buscam construir e/ou fortalecer conhecimentos sobre Segurança do
+          Destina-se a docentes, estudantes e demais profissionais da saúde que
+          buscam construir e/ou fortalecer conhecimentos sobre Segurança do
           Paciente.
         </p>
       </div>

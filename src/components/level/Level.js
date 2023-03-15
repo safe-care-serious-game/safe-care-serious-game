@@ -10,7 +10,7 @@ import { useHistory, useParams } from "react-router-dom";
 import { useContext, useEffect, useRef, useState } from "react";
 import isEqual from "lodash.isequal";
 
-function Level() {
+function Level(props) {
   const { clickAudio, confirmationAudio, errorAudio, finishAudio } =
     useContext(AudioContext);
   const history = useHistory();
@@ -209,6 +209,9 @@ function Level() {
   function end() {
     finishAudio.play();
     setHasEnded(true);
+    if (props.saveHighScore) {
+      props.saveHighScore(levelId, score);
+    }
   }
 
   function selectOption(option) {

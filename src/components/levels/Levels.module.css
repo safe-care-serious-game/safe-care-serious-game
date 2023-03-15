@@ -46,3 +46,26 @@
 .levelsList .levelsListCard:last-child {
   margin-right: 3.33vw;
 }
+
+.levelsHighScoreOverlay {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(86, 104, 98, 0.5);
+}
+
+.levelsHighScore {
+  background-color: #566862;
+  text-align: center;
+  width: 100%;
+  padding: 1.48vh 1.25vw;
+  color: #ffffff;
+  font-size: 2vw;
+  font-weight: 900;
+}
+
+.levelsHighScoreOverlay:hover .levelsHighScore,
+.levelsHighScoreOverlay:active .levelsHighScore {
+  display: none;
+}

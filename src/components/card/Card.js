@@ -18,7 +18,9 @@ function Card(props) {
 
   return (
     <div className={css.card} onClick={onClick}>
-      <div className={css.cardImage} style={cardImageStyle}></div>
+      <div className={css.cardImage} style={cardImageStyle}>
+        {props.overlay ? props.overlay : null}
+      </div>
       <div className={css.cardTitle}>{props.title}</div>
     </div>
   );

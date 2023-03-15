@@ -2,14 +2,18 @@ import { render } from "@testing-library/react";
 import MainMenu from "./MainMenu";
 
 const requestFullscreen = document.body.requestFullscreen;
+const play = HTMLMediaElement.prototype.play;
 
 beforeAll(() => {
   // Mock `requestFullscreen` to always resolve
   document.body.requestFullscreen = () => new Promise((resolve) => resolve());
+  // Mock `HTMLMediaElement.play`
+  HTMLMediaElement.prototype.play = jest.fn();
 });
 
 afterAll(() => {
   document.body.requestFullscreen = requestFullscreen;
+  HTMLMediaElement.prototype.play = play;
 });
 
 test("renders main menu", () => {

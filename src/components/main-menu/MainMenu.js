@@ -1,13 +1,24 @@
+import AudioContext from "../audio-context/AudioContext";
 import Logo from "../logo/Logo";
 import Card from "../card/Card";
 import css from "./MainMenu.module.css";
 import Play from "../../images/Play.jpg";
 import KnowMore from "../../images/KnowMore.jpg";
+import { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { useEffect } from "react";
 
 function MainMenu() {
+  const { menuMusic } = useContext(AudioContext);
   const history = useHistory();
+
+  useEffect(() => {
+    const loopEventListener = () => {
+      menuMusic.currentTime = 0;
+      menuMusic.play();
+    };
+    menuMusic.addEventListener("ended", loopEventListener);
+    menuMusic.play();
+  }, [menuMusic]);
 
   useEffect(() => {
     if (!document.fullscreenElement) {

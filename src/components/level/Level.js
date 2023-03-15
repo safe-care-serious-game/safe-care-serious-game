@@ -11,8 +11,14 @@ import { useContext, useEffect, useRef, useState } from "react";
 import isEqual from "lodash.isequal";
 
 function Level(props) {
-  const { clickAudio, confirmationAudio, errorAudio, finishAudio } =
-    useContext(AudioContext);
+  const {
+    clickAudio,
+    confirmationAudio,
+    errorAudio,
+    finishAudio,
+    levels: levelsMusic,
+    menuMusic,
+  } = useContext(AudioContext);
   const history = useHistory();
   const { gameMode, levelId } = useParams();
 
@@ -51,6 +57,29 @@ function Level(props) {
   useEffect(() => {
     setLevelData([...data[levelId]]);
   }, [levelId]);
+
+  useEffect(() => {
+    menuMusic.pause();
+
+    // Start level music
+    const music = levelsMusic[levelId].music;
+    const loopEventListener = () => {
+      music.currentTime = 0;
+      music.play();
+    };
+    music.addEventListener("ended", loopEventListener);
+    music.play();
+
+    return () => {
+      // Stop level music
+      music.removeEventListener("ended", loopEventListener);
+      music.pause();
+      music.currentTime = 0;
+
+      // Resume menu music
+      menuMusic.play();
+    };
+  }, [levelId, levelsMusic, menuMusic]);
 
   useEffect(() => {
     if (levelData.length === 0) {

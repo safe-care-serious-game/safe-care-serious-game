@@ -4,6 +4,8 @@ import Logo from "../logo/Logo";
 import Card from "../card/Card";
 import FooterToolbar from "../footer-toolbar/FooterToolbar";
 import css from "./KnowMore.module.css";
+import GameGoal from "../../images/GameGoal.jpg";
+import SupportingMaterials from "../../images/SupportingMaterials.jpg";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
@@ -28,10 +30,10 @@ function KnowMore() {
       <h1 className={css.knowMoreTitle}>Saiba mais</h1>
 
       <div className={css.knowMoreList}>
-        {option(null, "Finalidade e público-alvo do jogo", () =>
+        {option(GameGoal, "Finalidade e público-alvo do jogo", () =>
           history.push(`/game-goal`)
         )}
-        {option(null, "Materiais de suporte", () =>
+        {option(SupportingMaterials, "Materiais de suporte", () =>
           history.push(`/supporting-materials`)
         )}
       </div>

@@ -247,6 +247,8 @@ function Level(props) {
 
         return;
       }
+
+      confirmationAudio.play();
     }
     setLevelDataIndex(levelDataIndex + 1);
   }

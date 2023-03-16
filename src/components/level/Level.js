@@ -28,6 +28,7 @@ function Level(props) {
   const [hasNext, setHasNext] = useState(false);
   const [hasEnded, setHasEnded] = useState(false);
   const [score, setScore] = useState(0);
+  const [maxScore, setMaxScore] = useState(0);
   const [shots, setShots] = useState([]);
   const [characterName, setCharacterName] = useState("");
   const [dialogue, setDialogue] = useState("");
@@ -85,6 +86,21 @@ function Level(props) {
     if (levelData.length === 0) {
       return;
     }
+
+    setMaxScore(
+      // Calculate max score
+      levelData.reduce((accumulator, item) => {
+        return (
+          accumulator +
+          (item.options || item.multipleOptions || []).reduce(
+            (score, option) => {
+              return score + option.score;
+            },
+            0
+          )
+        );
+      }, 0)
+    );
 
     setLevelDataIndex(0);
   }, [levelData]);
@@ -368,7 +384,9 @@ function Level(props) {
           <LevelOptions multiple>{listMultipleOptions}</LevelOptions>
         )}
 
-        {shouldRenderLevelEnd && <LevelEnd levelId={levelId} score={score} />}
+        {shouldRenderLevelEnd && (
+          <LevelEnd levelId={levelId} score={score} maxScore={maxScore} />
+        )}
 
         {shouldRenderDialog && (
           <LevelDialogue

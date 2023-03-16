@@ -19,7 +19,9 @@ function LevelEnd(props) {
       <div className={css.levelEndDialog}>
         <h1 className={css.levelEndHeader}>Fase {props.levelId}</h1>
         <p>Parabéns! Fase concluída!</p>
-        <p>Pontuação: {props.score}</p>
+        <p>
+          Pontuação: {props.score} / {props.maxScore}
+        </p>
         <div className={css.levelEndButtons}>
           <Button
             className={css.levelEndButton}

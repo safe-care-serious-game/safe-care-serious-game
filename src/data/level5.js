@@ -851,7 +851,7 @@ const data = [
         correct: true,
       },
       {
-        text: "Avaliar uso de medicamentos e interações medicamentosas",
+        text: "Avaliar uso de medicamentos",
         score: 10,
         correct: true,
       },
@@ -862,11 +862,6 @@ const data = [
       },
       {
         text: "Evitar piso molhado",
-        score: 10,
-        correct: true,
-      },
-      {
-        text: "Alocar pacientes com risco de quedas mais elevado próximo ao posto de enfermagem",
         score: 10,
         correct: true,
       },

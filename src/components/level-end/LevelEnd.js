@@ -26,7 +26,9 @@ function LevelEnd(props) {
           <Button
             className={css.levelEndButton}
             onClick={() => {
-              clickAudio.play();
+              clickAudio.play().catch((err) => {
+                // Ignore error
+              });
               playAgain();
             }}
           >
@@ -35,7 +37,9 @@ function LevelEnd(props) {
           <Button
             className={css.levelEndButton}
             onClick={() => {
-              clickAudio.play();
+              clickAudio.play().catch((err) => {
+                // Ignore error
+              });
               history.push(`/${gameMode}/levels`);
             }}
           >

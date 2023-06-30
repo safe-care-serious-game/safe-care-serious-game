@@ -66,10 +66,14 @@ function Level(props) {
     const music = levelsMusic[levelId].music;
     const loopEventListener = () => {
       music.currentTime = 0;
-      music.play();
+      music.play().catch((err) => {
+        // Ignore error
+      });
     };
     music.addEventListener("ended", loopEventListener);
-    music.play();
+    music.play().catch((err) => {
+      // Ignore error
+    });
 
     return () => {
       // Stop level music
@@ -78,7 +82,9 @@ function Level(props) {
       music.currentTime = 0;
 
       // Resume menu music
-      menuMusic.play();
+      menuMusic.play().catch((err) => {
+        // Ignore error
+      });
     };
   }, [levelId, levelsMusic, menuMusic]);
 
@@ -234,7 +240,9 @@ function Level(props) {
         );
         correctOptions = correctOptions.substring(0, correctOptions.length - 2); // Removes the trailing ", "
 
-        errorAudio.play();
+        errorAudio.play().catch((err) => {
+          // Ignore error
+        });
 
         // Reset multiple options and report results
         setMultipleOptions([...[]]);
@@ -248,13 +256,17 @@ function Level(props) {
         return;
       }
 
-      confirmationAudio.play();
+      confirmationAudio.play().catch((err) => {
+        // Ignore error
+      });
     }
     setLevelDataIndex(levelDataIndex + 1);
   }
 
   function end() {
-    finishAudio.play();
+    finishAudio.play().catch((err) => {
+      // Ignore error
+    });
     setHasEnded(true);
     if (props.saveHighScore) {
       props.saveHighScore(levelId, score);
@@ -264,12 +276,16 @@ function Level(props) {
   function selectOption(option) {
     const isCorrect = option.correct;
     if (isCorrect) {
-      confirmationAudio.play();
+      confirmationAudio.play().catch((err) => {
+        // Ignore error
+      });
 
       setScore(score + option.score);
     }
     if (!isCorrect && helperText) {
-      errorAudio.play();
+      errorAudio.play().catch((err) => {
+        // Ignore error
+      });
 
       setOptions([...[]]);
       setHasPrevious(false);
@@ -285,7 +301,9 @@ function Level(props) {
       checked: checked,
     };
 
-    clickAudio.play();
+    clickAudio.play().catch((err) => {
+      // Ignore error
+    });
 
     setMultipleOptions([...multipleOptions]);
   }
@@ -295,7 +313,9 @@ function Level(props) {
       key={index}
       className={css.levelUIOptionItem}
       onClick={() => {
-        clickAudio.play();
+        clickAudio.play().catch((err) => {
+          // Ignore error
+        });
         selectOption(option);
       }}
     >
@@ -345,7 +365,9 @@ function Level(props) {
           <Button
             className={css.levelToolbarButton}
             onClick={() => {
-              clickAudio.play();
+              clickAudio.play().catch((err) => {
+                // Ignore error
+              });
               history.push(`/${gameMode}/levels`);
             }}
           >

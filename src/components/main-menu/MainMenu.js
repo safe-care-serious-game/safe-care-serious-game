@@ -14,10 +14,14 @@ function MainMenu() {
   useEffect(() => {
     const loopEventListener = () => {
       menuMusic.currentTime = 0;
-      menuMusic.play();
+      menuMusic.play().catch((err) => {
+        // Ignore error
+      });
     };
     menuMusic.addEventListener("ended", loopEventListener);
-    menuMusic.play();
+    menuMusic.play().catch((err) => {
+      // Ignore error
+    });
   }, [menuMusic]);
 
   useEffect(() => {

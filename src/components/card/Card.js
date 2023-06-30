@@ -7,7 +7,9 @@ function Card(props) {
 
   let onClick = () => {
     if (props.onClick) {
-      clickAudio.play();
+      clickAudio.play().catch((err) => {
+        // Ignore error
+      });
       props.onClick();
     }
   };

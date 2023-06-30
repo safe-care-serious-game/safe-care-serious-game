@@ -34,7 +34,9 @@ function GameMode() {
       <FooterToolbar>
         <Button
           onClick={() => {
-            clickAudio.play();
+            clickAudio.play().catch((err) => {
+              // Ignore error
+            });
             history.push("/menu");
           }}
         >

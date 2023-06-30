@@ -18,21 +18,27 @@ function LevelDialogue(props) {
 
   function previous() {
     if (props.onPrevious) {
-      clickAudio.play();
+      clickAudio.play().catch((err) => {
+        // Ignore error
+      });
       props.onPrevious();
     }
   }
 
   function next() {
     if (props.onNext) {
-      clickAudio.play();
+      clickAudio.play().catch((err) => {
+        // Ignore error
+      });
       props.onNext();
     }
   }
 
   function end() {
     if (props.onEnd) {
-      clickAudio.play();
+      clickAudio.play().catch((err) => {
+        // Ignore error
+      });
       props.onEnd();
     }
   }

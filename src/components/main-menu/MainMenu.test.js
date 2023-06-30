@@ -8,7 +8,7 @@ beforeAll(() => {
   // Mock `requestFullscreen` to always resolve
   document.body.requestFullscreen = () => new Promise((resolve) => resolve());
   // Mock `HTMLMediaElement.play`
-  HTMLMediaElement.prototype.play = jest.fn();
+  HTMLMediaElement.prototype.play = () => new Promise((resolve) => resolve());
 });
 
 afterAll(() => {

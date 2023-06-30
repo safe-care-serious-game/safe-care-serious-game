@@ -12,7 +12,9 @@ function SplashScreen() {
     <div
       className={css.splashScreen}
       onClick={() => {
-        clickAudio.play();
+        clickAudio.play().catch((err) => {
+          // Ignore error
+        });
         history.replace("/menu");
       }}
     >

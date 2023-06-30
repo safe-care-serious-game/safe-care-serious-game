@@ -21,6 +21,10 @@ function MainMenu() {
   }, [menuMusic]);
 
   useEffect(() => {
+    if (!document.body.requestFullscreen) {
+      // Safari returns undefined for `document.body.requestFullscreen`
+      return;
+    }
     if (!document.fullscreenElement) {
       document.body.requestFullscreen().catch((err) => {
         // Ignore error
